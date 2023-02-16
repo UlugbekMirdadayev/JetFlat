@@ -1,0 +1,58 @@
+.popular {
+  padding-bottom: 150px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: calc(33.3333%);
+  padding: 30px 20px;
+  &__img {
+    margin-bottom: 20px;
+    max-height: 270px;
+    position: relative;
+  }
+  &--big {
+    max-width: calc(100% - 33.3333%);
+    display: flex;
+    &-img {
+      max-height: 100%;
+      margin-bottom: 0;
+    }
+    &-half {
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  &__ship {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+  }
+  &__info {
+    padding: 0 30px;
+    &--big {
+      background-color: var(--teal);
+      padding: 30px;
+      height: calc(100% - 2px);
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}

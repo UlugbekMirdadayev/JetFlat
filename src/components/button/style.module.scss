@@ -1,0 +1,46 @@
+.btn {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  &.fluid {
+    width: 100%;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid var(--tomato);
+
+    &:hover {
+      border-color: darken(#ed6616, 10%);
+      color: #ffffff;
+    }
+  }
+  &.orange {
+    background: linear-gradient(93.45deg, #ed6616 4.22%, #fe7a2c 91.85%);
+    background-size: cover;
+    background-repeat: repeat-x;
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+  &.outlinedWhite {
+    border: 1px solid var(--white);
+    background-color: transparent;
+    &:hover {
+      border-color: darken(#fff, 10%);
+      color: #ffffff;
+    }
+  }
+  &.primary {
+    background: #74c6c9;
+    color: #ffffff;
+    &:hover {
+      background: darken(#74c6c9, 10%);
+    }
+  }
+}

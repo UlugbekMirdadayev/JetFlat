@@ -1,0 +1,156 @@
+.footer {
+  background: #023c40;
+  padding-top: 50px;
+  width: 100%;
+  padding-bottom: 40px;
+  &__inner {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  &__bottom {
+    display: flex;
+  }
+}
+
+.politics {
+  display: flex;
+  margin-left: auto;
+  > a {
+    margin-right: 100px;
+  }
+  a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #fff;
+  }
+}
+
+.copyring {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  sup {
+    font-size: 12px;
+    vertical-align: super;
+  }
+  .red {
+    color: var(--tomato);
+  }
+  &__right {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #fff;
+    margin-left: 60px;
+  }
+}
+
+.logo {
+  width: 268px;
+  display: block;
+  height: auto;
+  margin-bottom: 90px;
+  &__wrap {
+  }
+}
+
+.menu {
+  list-style-type: none;
+  margin-right: 11.25%;
+  &__item {
+    padding: 10px;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+}
+
+.info {
+  color: #fff;
+  margin-right: 11.25%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 50px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+}
+
+.left {
+  flex-direction: column;
+  margin-right: 141px;
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  &__btn {
+    width: 320px;
+    height: 50px;
+    margin-bottom: 42px;
+  }
+}
+
+.bar {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  margin-bottom: 40px;
+  &__item {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    path,
+    rect {
+      transition: 0.3s ease;
+    }
+    &:hover {
+      path {
+        stroke: var(--tomato);
+        fill: var(--tomato);
+      }
+      rect {
+        stroke: var(--tomato);
+      }
+    }
+  }
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  &__text {
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #fff;
+  }
+}

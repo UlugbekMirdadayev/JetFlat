@@ -1,0 +1,40 @@
+.apartment {
+  padding-bottom: 150px;
+}
+
+.links {
+  max-width: 1190px;
+  width: 100%;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 30px;
+
+  border-bottom: 1px solid #909090;
+  &:first-child {
+    border-top: 1px solid #909090;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    opacity: 0.77;
+    transition: 0.3s;
+  }
+  &__icon {
+    transition: 0.3s;
+  }
+  &:hover .link__icon {
+    transform: rotate(-45deg);
+    path {
+      fill: var(--dark);
+      stroke: var(--dark);
+    }
+  }
+  &:hover .link__text {
+    opacity: 1;
+  }
+}

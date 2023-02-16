@@ -1,0 +1,77 @@
+.f {
+  &12 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  &14 {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  &17 {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  &18 {
+    font-size: 18px;
+  }
+  &28 {
+    font-size: 28px;
+    line-height: 140%;
+  }
+  &40 {
+    font-size: 40px;
+    line-height: 120%;
+  }
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.weight {
+  &300 {
+    font-weight: 300;
+  }
+  &400 {
+    font-weight: 400;
+  }
+  &500 {
+    font-weight: 500;
+  }
+  &600 {
+    font-weight: bold;
+  }
+  &700 {
+    font-weight: 700;
+  }
+  &900 {
+    font-weight: 900;
+  }
+}
+
+.align {
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+}
+
+.c {
+  &Dark {
+    color: var(--dark);
+  }
+  &TealLight {
+    color: var(--tealLight);
+  }
+  &Tomato {
+    color: var(--tomato);
+  }
+  &Teal {
+    color: var(--teal);
+  }
+  &White {
+    color: var(--white);
+  }
+}

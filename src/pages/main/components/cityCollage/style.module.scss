@@ -1,0 +1,10 @@
+.collage {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.card {
+  &__info {
+    height: 104px;
+  }
+}

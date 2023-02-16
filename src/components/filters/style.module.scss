@@ -1,0 +1,211 @@
+.filters {
+  width: 1060px;
+  height: 205px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(10, 69, 103, 0.2);
+  padding: 40px 40px 32px;
+  margin: 65px auto 0;
+  &__head {
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__mapLink {
+    color: var(--teal);
+    margin-right: 25px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    opacity: 0.8;
+    transition: 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.search {
+  border: 1px solid #74c6c9;
+  position: relative;
+  margin-right: 40px;
+  flex: 1;
+  height: 45px;
+  max-width: 300px;
+  &__field {
+    border: none;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 9px 51px 9px 20px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: auto;
+  }
+  &-list {
+    background: #ffffff;
+    padding: 13px 0;
+    position: absolute;
+    top: calc(100% + 1px);
+    width: 100%;
+    box-shadow: 0px 4px 20px 1px rgba(70, 119, 182, 0.2);
+    z-index: 99;
+    &__item {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #7d8790;
+      padding: 7px 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: #f0f4f8;
+      }
+    }
+  }
+}
+
+.select {
+  max-width: 300px;
+  flex: 1;
+}
+
+.arrow {
+  width: 24px;
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+  transition: 0.3s;
+  transform: rotate(0);
+  margin-left: auto;
+  margin-top: -7px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+
+  svg {
+    height: auto;
+    width: inherit;
+  }
+  &.active {
+    transform: rotate(-180deg);
+  }
+}
+
+.selectContainer {
+  border: 1px solid #74c6c9;
+  position: relative;
+  height: 45px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.selectList {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px 1px rgba(70, 119, 182, 0.2);
+  position: absolute;
+  top: calc(100% + 1px);
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 10px;
+  z-index: 99;
+}
+
+.selectValue {
+  padding: 10px 64px 10px 20px;
+  height: inherit;
+  align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-transform: lowercase;
+  }
+}
+
+.rooms {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.room {
+  &-container {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__item {
+    background: #ffffff;
+    border: 1px solid var(--tealLight);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    width: 39px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__field {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    &:checked ~ .room__item {
+      background: var(--tealLight);
+      color: #fff;
+    }
+  }
+}
+
+.checkbox {
+  &__item {
+    margin-bottom: 10px;
+    user-select: none;
+  }
+}
+
+.bankList {
+  border: 1px solid var(--tealLight);
+  padding: 0px 0px 0px 20px;
+  margin-right: 6.5px;
+  margin-bottom: 20px;
+  &__item {
+    margin-bottom: 10px;
+    &:first-child {
+      margin-top: 10px;
+    }
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.radioList {
+  margin-bottom: 10px;
+  &__item {
+    margin-bottom: 10px;
+  }
+}

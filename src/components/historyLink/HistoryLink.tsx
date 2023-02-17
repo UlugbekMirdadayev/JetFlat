@@ -4,7 +4,7 @@ import { Button } from '../button';
 import styles from './style.module.scss';
 import { Link } from 'react-router-dom';
 
-export const Header = () => {
+export const HistoryLink = () => {
   return (
     <header className={styles.header}>
       <div className={styles.header__inner}>

@@ -34,9 +34,9 @@ export const Popular = () => {
               </div>
             </div>
 
-            <div className={'border__rightBorder'}></div>
-            <div className={'border__topBorder'}></div>
-            <div className={'border__bottomBorder'}></div>
+            <div className={'border__rightBorder'} />
+            <div className={'border__topBorder'} />
+            <div className={'border__bottomBorder'} />
           </Link>
           <Link to={'/'} className={styles.card}>
             <div className={styles.card__img}>

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState, useRef, FC } from 'react';
+import React, { useState, useRef, FC } from 'react';
 import { ReactComponent as Icon } from '../../assets/svg/arrow-down.svg';
 
 import styles from './style.module.scss';
@@ -65,7 +65,7 @@ export const Select: FC<TSelectProps> = ({
             <Icon />
           </div>
         </div>
-        <span data-label={placeholder}></span>
+        <span data-label={placeholder} />
       </div>
       {isOpen && (
         <ul className={styles.selectList}>

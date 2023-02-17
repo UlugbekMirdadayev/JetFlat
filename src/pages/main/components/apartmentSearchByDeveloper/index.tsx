@@ -1,6 +1,5 @@
-import React, { useState, ReactNode } from 'react';
+import { useState } from 'react';
 import styles from './style.module.scss';
-import clsx from 'clsx';
 import { Select } from '../../../../components/select/Select';
 import { ReactComponent as Gk7Icon } from '../../../../assets/svg/7gk.svg';
 import { ReactComponent as GrinvichIcon } from '../../../../assets/svg/grinvich.svg';
@@ -8,11 +7,6 @@ import { ReactComponent as AstraIcon } from '../../../../assets/svg/astra.svg';
 import { ReactComponent as GolosIcon } from '../../../../assets/svg/golos.svg';
 import { ReactComponent as PickIcon } from '../../../../assets/svg/pick.svg';
 import { Button } from '../../../../components/button';
-
-type Brand = {
-  id: number;
-  brand: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-};
 
 const brands = [
   { id: 0, brand: Gk7Icon },

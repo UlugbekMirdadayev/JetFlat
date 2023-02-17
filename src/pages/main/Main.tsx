@@ -1,5 +1,5 @@
 import React from 'react';
-import { FoxModal } from '../../components/foxModal';
+import { FoxModal } from '../../components/popups/foxModal';
 import { ApartmentByClass } from './components/apartmentByClass';
 import { ApartmentsByTypeOfLayout } from './components/apartmentsByTypeOfLayout';
 import { ApartmentSearch } from './components/apartmentSearch';

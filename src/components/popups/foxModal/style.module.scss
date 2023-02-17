@@ -1,8 +1,15 @@
 .fox_container {
   width: 100%;
   background: #02979d;
-  padding: 100px 0;
+  padding: 100px 40px;
   position: relative;
+  @media screen and (max-width: 1024px) {
+    flex-direction: row-reverse;
+    padding: 160px 40px 160px 40px;
+  }
+  @media screen and (max-width: 450px) {
+    padding: 85px 25px 85px 25px;
+  }
   &_svg {
     position: absolute;
     top: 20px;
@@ -11,16 +18,36 @@
       background: transparent;
       cursor: pointer;
     }
+    @media screen and (max-width: 450px) {
+      top: 10px;
+      right: 10px;
+    }
   }
   &_flex {
     display: flex;
     align-items: center;
     gap: 58px;
     justify-content: center;
+    @media screen and (max-width: 1024px) {
+      flex-direction: row-reverse;
+    }
+    @media screen and (max-width: 450px) {
+      flex-direction: column-reverse;
+    }
   }
   &_image {
-    // width: 300px;
-    // padding: 50px;
+    @media screen and (max-width: 1024px) {
+      width: 60%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 450px) {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
   }
   &_title {
     h1 {
@@ -30,6 +57,11 @@
       line-height: 140%;
       color: #ffffff;
       margin-bottom: 30px;
+      @media screen and (max-width: 450px) {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
     h3 {
       font-style: normal;
@@ -38,6 +70,11 @@
       line-height: 140%;
       color: #ffffff;
       margin-bottom: 30px;
+      @media screen and (max-width: 450px) {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
       span {
         color: #ed6616;
       }
@@ -49,11 +86,43 @@
       line-height: 140%;
       color: #ffffff;
       margin-bottom: 30px;
+      @media screen and (max-width: 450px) {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      width: 80%;
     }
     div {
       display: flex;
       gap: 20px;
       align-items: center;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @media screen and (max-width: 450px) {
+        justify-content: center;
+        gap: 0;
+      }
+      a {
+        width: 100%;
+        button {
+          background: linear-gradient(93.45deg, #ed6616 4.22%, #fe7a2c 91.85%);
+          @media screen and (max-width: 1024px) {
+            width: 500px;
+          }
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+          @media screen and (max-width: 450px) {
+            padding: 22px auto;
+            margin-bottom: 20px;
+          }
+        }
+      }
 
       button {
         padding: 19px 40px;
@@ -68,8 +137,18 @@
         transition: 0.3s ease;
         cursor: pointer;
 
-        &:nth-child(1) {
-          background: linear-gradient(93.45deg, #ed6616 4.22%, #fe7a2c 91.85%);
+        @media screen and (max-width: 1024px) {
+          width: 500px;
+          padding: 22px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+        @media screen and (max-width: 450px) {
+          padding: 22px auto;
+          margin-bottom: 20px;
+          font-size: 12px;
         }
       }
     }

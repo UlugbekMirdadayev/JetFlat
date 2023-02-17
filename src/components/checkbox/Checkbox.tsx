@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, ReactNode, ChangeEvent } from 'react';
+import { FC, ReactElement, ReactNode, ChangeEvent } from 'react';
 import styles from './style.module.scss';
 import clsx from 'clsx';
 
@@ -26,7 +26,7 @@ export const Checkbox: FC<Props> = (props: Props): ReactElement => {
         disabled={disabled}
       />
       <span className={clsx(styles['checkbox-icon'], bgColor && styles[bgColor])} />
-      {children}
+      {label || children}
     </label>
   );
 };

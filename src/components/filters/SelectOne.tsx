@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState, useRef, FC, useMemo } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import { ReactComponent as Icon } from '../../assets/svg/arrow-down.svg';
 
 import styles from './style.module.scss';
@@ -23,14 +23,10 @@ const typeRooms = [
   { id: 4, label: 'Двухуровневая', checked: false, disabled: false }
 ];
 
-type Props = {};
-
 export const SelectOne = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeList, setActiveList] = useState(0);
   const [roomType, setRoomType] = useState(typeRooms);
   const [roomsList, setRoomsList] = useState(rooms);
-  const [isNotStydio, setIsNotStydio] = useState(false);
 
   const checkedRooms = useMemo(() => {
     const filter = roomsList.filter((i) => i.checked);

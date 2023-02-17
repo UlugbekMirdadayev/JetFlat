@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const Radio: FC<Props> = (props: Props): ReactElement => {
-  const { checked, onChange, label, name, children, dis, value } = props;
+  const { checked, onChange, label, name, children, dis = false, value } = props;
   return (
     <label className={styles.labelContainer}>
       <input
@@ -22,9 +22,10 @@ export const Radio: FC<Props> = (props: Props): ReactElement => {
         checked={checked}
         onChange={onChange}
         value={value}
+        disabled={dis}
       />
       <span className={styles.checkboxIcon} />
-      <div className={styles.checkboxLabel}>{children}</div>
+      <div className={styles.checkboxLabel}>{label || children}</div>
     </label>
   );
 };

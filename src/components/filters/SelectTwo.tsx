@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState, useRef, FC, useMemo } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import { ReactComponent as Icon } from '../../assets/svg/arrow-down.svg';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
@@ -22,13 +22,10 @@ const typeRooms = [
   { id: 4, label: 'Сбербанк', checked: false, disabled: false }
 ];
 
-type Props = {};
-
 export const SelectTwo = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeList, setActiveList] = useState(0);
   const [roomType, setRoomType] = useState(typeRooms);
-  const [radioList, setRadioList] = useState(radioBanks);
+  const [radioList] = useState(radioBanks);
   const [activeRadio, setActiveRadio] = useState(0);
 
   const checkedRoomsType = useMemo(() => {
@@ -81,14 +78,11 @@ export const SelectTwo = () => {
           </div>
           <div className={styles.bankList}>
             <Scrollbars
-              // autoHide
-              // autoHideDuration={400}
-
               renderView={({ style, ...props }) => (
                 <div style={{ ...style, overflowX: 'auto', marginBottom: '0px' }} {...props} />
               )}
               renderThumbVertical={({ style, ...props }) => (
-                <div className="thumbVertical" style={{ width: '4px' }} {...props} />
+                <div {...style} className="thumbVertical" style={{ width: '4px' }} {...props} />
               )}
               thumbSize={15}
               renderTrackVertical={(props) => <div className="trackVertical" {...props} />}

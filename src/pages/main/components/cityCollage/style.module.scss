@@ -1,10 +1,43 @@
-.collage {
-  display: flex;
-  margin-bottom: 60px;
-}
+.grid_row {
+  .collage {
+    &.reverse_collage {
+      grid-template-columns: 50% 25% 25%;
+    }
+    display: grid;
+    margin-bottom: 60px;
+    grid-template-columns: 25% 50% 25%;
+    row-gap: 115px;
+    column-gap: 40px;
 
-.card {
-  &__info {
-    height: 104px;
+    .card {
+      display: flex;
+      flex-direction: column;
+
+      &.reverse_column {
+        flex-direction: column-reverse;
+      }
+      &__info {
+        height: 104px;
+      }
+      &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 140%;
+        margin-bottom: 20px;
+        color: #242424;
+      }
+      &__img {
+        img {
+          object-fit: contain;
+          transition: 300ms ease;
+          margin: 10px 0;
+
+          &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }

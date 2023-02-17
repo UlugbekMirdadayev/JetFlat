@@ -23,6 +23,7 @@ export const Search = () => {
     <div className={styles.search} ref={ref}>
       <div onClick={handleOpen}>
         <input
+          placeholder="Выберите город или район"
           type="text"
           className={styles.search__field}
           value={value}

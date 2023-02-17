@@ -2,10 +2,9 @@ import React, { useState, useRef, useCallback } from 'react';
 import { Select } from '../../../../components/select/Select';
 import styles from './style.module.scss';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
 import { Button } from '../../../../components/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType, Navigation } from 'swiper';
+import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import ap1 from '../../../../assets/image/ap1.jpg';
@@ -16,8 +15,6 @@ import { ReactComponent as ArrowIcon } from '../../../../assets/svg/arrow-right.
 
 export const ApartmentSearch = () => {
   const [selectedIbdex, setSelectedIndex] = useState(0);
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
   const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {

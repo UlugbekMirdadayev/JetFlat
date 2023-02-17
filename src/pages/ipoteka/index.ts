@@ -1,0 +1,1 @@
+export { IpotekaOrder } from './IpotekaOrder';

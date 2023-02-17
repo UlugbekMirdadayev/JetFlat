@@ -1,0 +1,21 @@
+.conainer {
+  margin-top: 185px;
+  padding-top: 40px;
+  width: 100%;
+  .row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    align-items: center;
+    .reverse {
+      flex-direction: row-reverse;
+    }
+    .col {
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      width: 50%;
+    }
+  }
+}

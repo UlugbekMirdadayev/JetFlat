@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 
-export const AboutServices = () => {
+export const IpotekaOrder = () => {
   const sliderRef = useRef<any>(null);
   return (
     <div className="container">

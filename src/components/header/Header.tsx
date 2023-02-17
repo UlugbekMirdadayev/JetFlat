@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ChartIcon, HeartIcon, InfoIcon, JfIcon, LogoIcon } from '../../assets';
 import { Button } from '../button';
 import styles from './style.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Header = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  }, [pathname]);
   return (
     <header className={styles.header}>
       <div className={styles.header__inner}>
@@ -46,7 +50,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/'} className={styles.list__link}>
+                <Link to={'/ipoteka'} className={styles.list__link}>
                   Ипотека
                 </Link>
               </li>

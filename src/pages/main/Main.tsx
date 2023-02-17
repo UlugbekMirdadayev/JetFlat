@@ -1,4 +1,5 @@
 import React from 'react';
+import { FoxModal } from '../../components/foxModal';
 import { ApartmentByClass } from './components/apartmentByClass';
 import { ApartmentsByTypeOfLayout } from './components/apartmentsByTypeOfLayout';
 import { ApartmentSearch } from './components/apartmentSearch';
@@ -21,6 +22,7 @@ export const Main = () => {
       <ApartmentByClass />
       <ApartmentSearchByDeveloper />
       <CityCollage />
+      <FoxModal />
     </>
   );
 };

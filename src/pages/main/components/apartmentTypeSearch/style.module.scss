@@ -3,6 +3,9 @@
   h2 {
     @media screen and (max-width: 768px) {
       font-size: 32px;
+      @media screen and (max-width: 425px) {
+        font-size: 22px;
+      }
     }
   }
 }
@@ -17,8 +20,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 40px 30px;
-
-
   border-bottom: 1px solid #909090;
   &:first-child {
     border-top: 1px solid #909090;

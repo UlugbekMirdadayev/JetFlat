@@ -13,7 +13,7 @@ export const ApartmentByClass = () => {
         <div className="heading mb60">
           <div className="heading__line"></div>
           <h2 className="mb40">Поиск по классу жилых домов</h2>
-          <p className="heading__desc">
+          <p className={clsx([styles._desc, 'heading__desc'])}>
             Характеристика класса домов поможет определиться с местом проживания
           </p>
         </div>
@@ -29,7 +29,7 @@ export const ApartmentByClass = () => {
                 <h4 className="f28 w700 mb20">53 ЖК</h4>
               </div>
             </div>
-            <div className={'border__rightBorder'}></div>
+            <div className={clsx([styles.border, 'border__rightBorder'])} />
             <div className={'border__topBorder'}></div>
             <div className={'border__bottomBorder'}></div>
           </div>
@@ -43,7 +43,7 @@ export const ApartmentByClass = () => {
                 <h4 className="f28 w700 mb20">24 ЖК</h4>
               </div>
             </div>
-            <div className={'border__rightBorder'}></div>
+            <div className={clsx([styles.border, 'border__rightBorder'])} />
             <div className={'border__topBorder'}></div>
             <div className={'border__bottomBorder'}></div>
           </div>
@@ -57,7 +57,7 @@ export const ApartmentByClass = () => {
                 <h4 className="f28 w700 mb20">142 ЖК</h4>
               </div>
             </div>
-            <div className={'border__rightBorder'}></div>
+            <div className={clsx([styles.border, 'border__rightBorder'])} />
             <div className={'border__topBorder'}></div>
             <div className={'border__bottomBorder'}></div>
           </div>
@@ -71,7 +71,7 @@ export const ApartmentByClass = () => {
                 <h4 className="f28 w700 mb20">12 ЖК</h4>
               </div>
             </div>
-            <div className={'border__rightBorder'}></div>
+            <div className={clsx([styles.border, 'border__rightBorder'])} />
             <div className={'border__topBorder'}></div>
             <div className={'border__bottomBorder'}></div>
           </div>

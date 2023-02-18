@@ -60,7 +60,7 @@ export const CityCollage = () => {
           <h2 className={clsx([styles.title, 'mb40'])}>
             Екатеринбург — <br className={styles.mobile_br} /> откройте для себя этот город
           </h2>
-          <p className="heading__desc mb40">
+          <p className={clsx([styles.desc, 'heading__desc mb40'])}>
             В этих популярных местах вы точно найдёте что-то для себя
           </p>
           <div className="heading__line" />

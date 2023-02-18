@@ -16,13 +16,13 @@ export const Main = () => {
       <Banner />
       <Recent />
       <Popular />
-      {/*  <ApartmentSearch />
+      <ApartmentSearch />
       <ApartmentTypeSearch />
       <ApartmentsByTypeOfLayout />
       <ApartmentByClass />
       <ApartmentSearchByDeveloper />
       <CityCollage />
-      <FoxModal /> */}
+      <FoxModal />
     </>
   );
 };

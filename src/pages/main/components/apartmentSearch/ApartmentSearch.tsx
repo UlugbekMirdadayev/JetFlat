@@ -32,7 +32,7 @@ export const ApartmentSearch = () => {
       <div className="container">
         <div className={styles.header}>
           <div>
-            <div className="heading mb60">
+            <div className={clsx([styles.heading, 'heading mb60'])}>
               <div className="heading__line"></div>
               <h2 className="mb40">Поиск квартир по районам</h2>
               <p className="heading__desc">
@@ -67,9 +67,6 @@ export const ApartmentSearch = () => {
             ref={sliderRef}
             slidesPerView={'auto'}
             spaceBetween={0}
-            pagination={{
-              clickable: true
-            }}
             className="mySwiper">
             <SwiperSlide className={styles.slide}>
               <div className={styles.card}>
@@ -83,7 +80,6 @@ export const ApartmentSearch = () => {
                     <p className="f18 w400 ">УПИ, парк, близость центра</p>
                   </div>
                 </div>
-                <div className={'border__rightBorder'}></div>
                 <div className={'border__topBorder'}></div>
                 <div className={'border__bottomBorder'}></div>
               </div>
@@ -100,7 +96,6 @@ export const ApartmentSearch = () => {
                     <p className="f18 w400 ">Близость всего, ритм города</p>
                   </div>
                 </div>
-                <div className={'border__rightBorder'}></div>
                 <div className={'border__topBorder'}></div>
                 <div className={'border__bottomBorder'}></div>
               </div>
@@ -117,7 +112,6 @@ export const ApartmentSearch = () => {
                     <p className="f18 w400 ">Новый, яркий, молодой</p>
                   </div>
                 </div>
-                <div className={'border__rightBorder'}></div>
                 <div className={'border__topBorder'}></div>
                 <div className={'border__bottomBorder'}></div>
               </div>
@@ -134,7 +128,6 @@ export const ApartmentSearch = () => {
                     <p className="f18 w400 ">Чистый воздух</p>
                   </div>
                 </div>
-                <div className={'border__rightBorder'}></div>
                 <div className={'border__topBorder'}></div>
                 <div className={'border__bottomBorder'}></div>
               </div>
@@ -151,7 +144,6 @@ export const ApartmentSearch = () => {
                     <p className="f18 w400 ">Чистый воздух</p>
                   </div>
                 </div>
-                <div className={'border__rightBorder'}></div>
                 <div className={'border__topBorder'}></div>
                 <div className={'border__bottomBorder'}></div>
               </div>

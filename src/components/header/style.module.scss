@@ -248,6 +248,13 @@
     &:last-child {
       margin-right: 0;
     }
+    @media screen and (max-width: 1024px) {
+      svg {
+        display: block;
+        width: 29px;
+        height: 29px;
+      }
+    }
   }
   &__link {
     path,

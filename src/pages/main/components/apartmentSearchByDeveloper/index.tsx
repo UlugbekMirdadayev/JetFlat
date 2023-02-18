@@ -35,7 +35,7 @@ export const ApartmentSearchByDeveloper = () => {
         <div className="heading mb60">
           <div className="heading__line"></div>
           <h2 className={clsx([styles.title, 'mb40'])}>Поиск квартир по застройщику</h2>
-          <p className="heading__desc">
+          <p className={clsx([styles.desc, 'heading__desc'])}>
             Надёжность Застройщика проверена. Документы для сделки соответствуют действующему
             законодательству
           </p>

@@ -3,7 +3,23 @@
   h2 {
     @media screen and (max-width: 768px) {
       font-size: 32px;
+      @media screen and (max-width: 425px) {
+        font-size: 22px;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
     }
+  }
+  @media screen and (max-width: 425px) {
+    padding-bottom: 50px;
+  }
+}
+._desc {
+  @media screen and (max-width: 425px) {
+    text-align: center;
   }
 }
 
@@ -22,6 +38,10 @@
 
   @media screen and (max-width: 1024px) {
     width: 50%;
+    @media screen and (max-width: 425px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__inner {
@@ -51,7 +71,7 @@
     height: 80px;
     @media screen and (max-width: 1024px) {
       height: 40px;
-      
+
       h4 {
         font-size: 20px;
         margin-bottom: 0;
@@ -64,6 +84,18 @@
     top: 0;
     @media screen and (max-width: 1024px) {
       font-size: 13px;
+      @media screen and (max-width: 425px) {
+        margin: 0;
+        font-size: 12px;
+        width: 120px;
+        height: 33px;
+      }
     }
+  }
+}
+.border {
+  width: 1px !important;
+  @media screen and (max-width: 425px) {
+    display: none;
   }
 }

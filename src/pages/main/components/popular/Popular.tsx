@@ -16,7 +16,7 @@ export const Popular = () => {
           </div>
           <h2 className="mb40">Популярные ЖК</h2>
           <div className={styles.is_pc}>
-            <p className="heading__desc">
+            <p className="heading__desc mb60 center">
               В этих популярных жилых комплексах вы точно найдёте что-нибудь для себя
             </p>
 

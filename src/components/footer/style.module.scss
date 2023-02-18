@@ -6,17 +6,51 @@
   &__inner {
     display: flex;
     margin-bottom: 50px;
+    @media screen and (max-width: 1440px) {
+      justify-content: space-between;
+      margin-bottom: 20px;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
   }
   &__bottom {
     display: flex;
+    @media screen and (max-width: 1440px) {
+      justify-content: space-between;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
   }
 }
 
 .politics {
   display: flex;
   margin-left: auto;
+  @media screen and (max-width: 1440px) {
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-end;
+    > a {
+      opacity: 0.7;
+      @media screen and (max-width: 1024px) {
+        font-size: 12px !important;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
   > a {
     margin-right: 100px;
+    @media screen and (max-width: 1440px) {
+      margin-right: 0;
+    }
   }
   a {
     font-weight: 400;
@@ -33,6 +67,20 @@
   color: #fff;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 1024px) {
+    p {
+      font-size: 14px;
+      @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        font-size: 13px;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
   sup {
     font-size: 12px;
     vertical-align: super;
@@ -46,14 +94,39 @@
     line-height: 140%;
     color: #fff;
     margin-left: 60px;
+    @media screen and (max-width: 1440px) {
+      margin-left: 0px;
+      opacity: 0.7;
+      @media screen and (max-width: 1024px) {
+        font-size: 12px;
+        @media screen and (max-width: 767px) {
+          order: 1;
+          display: flex;
+          position: relative;
+          left: 10px;
+        }
+      }
+    }
   }
 }
-
+.reverse_column_mobile {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .logo {
   width: 268px;
   display: block;
   height: auto;
   margin-bottom: 90px;
+  @media screen and (max-width: 1024px) {
+    width: 180px;
+    margin-bottom: 60px;
+    @media screen and (max-width: 767px) {
+      margin: 40px auto;
+    }
+  }
   &__wrap {
   }
 }
@@ -63,12 +136,22 @@
   margin-right: 11.25%;
   &__item {
     padding: 10px;
+
+    @media screen and (max-width: 767px) {
+      padding: 0px;
+      margin-bottom: 30px;
+    }
   }
   &__link {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
+    @media screen and (max-width: 767px) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 }
 
@@ -97,6 +180,9 @@
 .left {
   flex-direction: column;
   margin-right: 141px;
+  @media screen and (max-width: 767px) {
+    margin-right: 0px;
+  }
 }
 
 .right {
@@ -104,10 +190,17 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
   &__btn {
     width: 320px;
     height: 50px;
     margin-bottom: 42px;
+    @media screen and (max-width: 1024px) {
+      font-size: 13px;
+      width: 100%;
+    }
   }
 }
 
@@ -116,6 +209,13 @@
   list-style: none;
   margin-left: auto;
   margin-bottom: 40px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
   &__item {
     margin-right: 20px;
     &:last-child {
@@ -126,6 +226,14 @@
     svg {
       width: 40px;
       height: 40px;
+      @media screen and (max-width: 1024px) {
+        width: 30px;
+        height: 30px;
+        opacity: 0.7;
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
+      }
     }
 
     path,
@@ -147,11 +255,30 @@
 .app {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   &__text {
     margin-left: 15px;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     color: #fff;
+    @media screen and (max-width: 1024px) {
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+.is_pc {
+  width: 100%;
+  @media screen and (max-width: 1440px) {
+    display: none;
+  }
+}
+.is_responsive {
+  width: 100%;
+  @media screen and (min-width: 1440px) {
+    display: none;
   }
 }

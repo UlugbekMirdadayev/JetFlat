@@ -1,7 +1,27 @@
 .apartment {
   padding-bottom: 150px;
+  h2 {
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
 }
-
+.pc_nav {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.mobile_nav {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+}
 .select {
   &__wrap {
     width: 340px;
@@ -17,6 +37,9 @@
   width: 410px;
   padding: 30px 20px;
   position: relative;
+  @media screen and (max-width: 768px) {
+    width: calc(50vw - 50px);
+  }
   &__inner {
     cursor: pointer;
     &:hover {
@@ -31,11 +54,23 @@
   &__info {
     padding: 0 25px;
     height: 145px;
+    @media screen and (max-width: 768px) {
+      height: 100px;
+      h4 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
   }
   &__ship {
     position: absolute;
     right: 0;
     top: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -47,4 +82,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.center_button {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    button {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 16px;
+      padding: 22px 85px;
+    }
+  }
 }

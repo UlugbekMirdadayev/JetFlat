@@ -28,7 +28,7 @@ function App() {
         </Routes>
         
         {/* <Cookie /> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );

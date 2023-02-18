@@ -1,5 +1,10 @@
 .apartment {
   padding-bottom: 150px;
+  h2 {
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
 }
 
 .links {
@@ -13,6 +18,7 @@
   justify-content: space-between;
   padding: 40px 30px;
 
+
   border-bottom: 1px solid #909090;
   &:first-child {
     border-top: 1px solid #909090;
@@ -23,6 +29,9 @@
     line-height: 140%;
     opacity: 0.77;
     transition: 0.3s;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
   }
   &__icon {
     transition: 0.3s;

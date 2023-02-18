@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { Search } from './Search';
 import { SelectOne } from './SelectOne';
 import { SelectTwo } from './SelectTwo';
+import { ReactComponent as LocationIcon } from '../../assets/svg/location_primary.svg';
 
 export const Filters = () => {
   return (
@@ -17,18 +18,29 @@ export const Filters = () => {
         <div className={styles.select}>
           <SelectTwo />
         </div>
+        <div className={styles.mobile_btn}>
+          <Button variant="orange">
+            <span>Проверить цены</span>
+          </Button>
+        </div>
       </div>
       <div className={styles.filters__bottom}>
-        <Checkbox>
-          <p className="ml10 f18 mr40">Готовые квартиры</p>
-        </Checkbox>
-        <Checkbox>
-          <p className="ml10 f18 mr40">Заселение до года</p>
-        </Checkbox>
+        <div className={styles.filters__bottom}>
+          <Checkbox>
+            <p className="ml10 f18 mr40">Готовые квартиры</p>
+          </Checkbox>
+          <Checkbox>
+            <p className="ml10 f18 mr40">Заселение до года</p>
+          </Checkbox>
+        </div>
         <a href="/" className={styles.filters__mapLink}>
-          Смотреть на карте
+          <LocationIcon /> Смотреть на карте
         </a>
-        <Button variant="orange">Проверить цены</Button>
+        <div className={styles.pc_btn}>
+          <Button variant="orange">
+            <span>Проверить цены</span>
+          </Button>
+        </div>
       </div>
     </div>
   );

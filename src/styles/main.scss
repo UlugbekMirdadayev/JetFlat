@@ -53,16 +53,34 @@ img {
   font-size: 40px;
   line-height: 120%;
   margin-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 425px) {
+    h2 {
+      font-size: 22px;
+    }
+  }
   &__line {
     width: 370px;
     height: 1px;
     background: var(--tealLight);
     margin-bottom: 40px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   &__desc {
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -93,6 +111,9 @@ img {
     top: 0;
     bottom: 0;
     margin: auto 0;
+    @media screen and (max-width: 425px) {
+      width: calc(100% - 20px);
+    }
   }
   &__topBorder {
     height: 1px;
@@ -101,6 +122,9 @@ img {
     position: absolute;
     top: 0;
     margin: 0 auto;
+    @media screen and (max-width: 425px) {
+      width: calc(100% - 20px);
+    }
   }
   &__bottomBorder {
     height: 1px;
@@ -109,6 +133,9 @@ img {
     margin: 0 auto;
     position: absolute;
     bottom: 0;
+    @media screen and (max-width: 425px) {
+      width: calc(100% - 20px);
+    }
   }
 }
 
@@ -138,7 +165,9 @@ img {
     background: #af62c5;
   }
 }
-
+.w100 {
+  width: 100%;
+}
 .swiper-nav {
   display: flex;
   &__btn {
@@ -154,6 +183,12 @@ img {
     height: 65px;
     margin-left: 20px;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+      margin-left: 10px;
+    }
     &--prev {
       margin-left: 0;
       margin-right: 20px;
@@ -171,6 +206,11 @@ img {
 
 .apartment {
   padding-bottom: 150px;
+}
+#root {
+  @media screen and (max-width: 425px) {
+    padding-bottom: 73px;
+  }
 }
 
 @import './reset.scss';

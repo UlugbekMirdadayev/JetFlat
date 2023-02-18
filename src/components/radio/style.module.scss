@@ -8,6 +8,10 @@
   width: 28px;
   position: relative;
   transition: all 0.2s ease;
+  @media screen and (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
   &:after {
     content: '';
     height: 8px;

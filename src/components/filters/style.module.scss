@@ -5,15 +5,57 @@
   box-shadow: 0px 4px 20px rgba(10, 69, 103, 0.2);
   padding: 40px 40px 32px;
   margin: 65px auto 0;
+  @media screen and (max-width: 1250px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
+  @media screen and (max-width: 450px) {
+    margin-top: 20px;
+    padding: 45px 30px;
+  }
   &__head {
     margin-bottom: 28px;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 20px;
+
+      button span {
+        font-size: 13px;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      grid-template-columns: 100%;
+    }
   }
   &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 1250px) {
+      label p {
+        font-size: 15px;
+        @media screen and (max-width: 1024px) {
+          font-size: 13px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        flex-direction: column;
+        align-items: flex-start;
+        label {
+          margin-bottom: 20px;
+          p {
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
   }
   &__mapLink {
     color: var(--teal);
@@ -23,8 +65,25 @@
     line-height: 21px;
     opacity: 0.8;
     transition: 0.3s;
+    svg {
+      display: none;
+    }
     &:hover {
       opacity: 1;
+    }
+    @media screen and (max-width: 1024px) {
+      margin-right: 0;
+    }
+    @media screen and (max-width: 450px) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      svg {
+        display: inline-block;
+        margin-right: 8px;
+      }
     }
   }
 }
@@ -36,6 +95,16 @@
   flex: 1;
   height: 45px;
   max-width: 300px;
+  @media screen and (max-width: 1024px) {
+    margin-right: 0px;
+    align-items: center;
+    display: flex;
+    height: 60px;
+    @media screen and (max-width: 450px) {
+      height: 50px;
+    }
+  }
+
   &__field {
     border: none;
     width: 100%;
@@ -45,6 +114,9 @@
     padding: 9px 51px 9px 20px;
     &:focus {
       outline: none;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 14px;
     }
   }
   &__icon {
@@ -80,10 +152,13 @@
 .select {
   max-width: 300px;
   flex: 1;
+  @media screen and (max-width: 1024px) {
+    margin-right: 0px;
+  }
 }
 
 .arrow {
-  width: 24px;
+  width: auto;
   display: flex;
   align-items: center;
   margin-right: 3px;
@@ -94,10 +169,14 @@
   position: absolute;
   right: 20px;
   top: 50%;
-
+  transform-origin: center;
   svg {
     height: auto;
     width: inherit;
+    @media screen and (max-width: 1024px) {
+      width: 15px;
+      height: 15px;
+    }
   }
   &.active {
     transform: rotate(-180deg);
@@ -110,6 +189,12 @@
   height: 45px;
   width: 100%;
   cursor: pointer;
+  @media screen and (max-width: 1024px) {
+    height: 60px;
+    @media screen and (max-width: 450px) {
+      height: 50px;
+    }
+  }
 }
 
 .selectList {
@@ -121,8 +206,41 @@
   padding-top: 30px;
   padding-left: 10px;
   z-index: 99;
+  @media screen and (max-width: 1024px) {
+    padding-top: 20px;
+    span {
+      font-size: 13px;
+    }
+  }
 }
-
+.pc_btn {
+  display: block;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  @media screen and (max-width: 425px) {
+    display: contents;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    button {
+      width: 100%;
+      margin-top: 20px;
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.mobile_btn {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: contents;
+  }
+  @media screen and (max-width: 425px) {
+    display: none;
+  }
+}
 .selectValue {
   padding: 10px 64px 10px 20px;
   height: inherit;
@@ -130,6 +248,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+    display: flex;
+  }
   span {
     white-space: nowrap;
     overflow: hidden;
@@ -166,6 +288,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 1024px) {
+      width: 25px;
+      height: 25px;
+    }
   }
   &__field {
     cursor: pointer;

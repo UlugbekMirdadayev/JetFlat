@@ -1,8 +1,21 @@
+import { useRef, useCallback } from 'react';
 import styles from './style.module.scss';
 import clsx from 'clsx';
 import { Button } from '../../../../components/button';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { ReactComponent as ArrowIcon } from '../../../../assets/svg/arrow-right.svg';
 
 export const CityCollage = () => {
+  const sliderRef = useRef<any>(null);
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current?.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
   const cities = [
     [
       {
@@ -40,46 +53,85 @@ export const CityCollage = () => {
     ]
   ];
   return (
-    <section className="apartment">
-      <div className="container">
+    <div className="container">
+      <section className="apartment">
         <div className="heading mb60">
           <div className="heading__line" />
-          <h2 className="mb40">Екатеринбург — откройте для себя этот город</h2>
+          <h2 className={clsx([styles.title, 'mb40'])}>
+            Екатеринбург — <br className={styles.mobile_br} /> откройте для себя этот город
+          </h2>
           <p className="heading__desc mb40">
             В этих популярных местах вы точно найдёте что-то для себя
           </p>
           <div className="heading__line" />
         </div>
-        <div className={styles.grid_row}>
-          <div className={styles.collage}>
-            {cities[0].map((city: any, key: number) => (
-              <div className={clsx([styles.card, key ? styles.reverse_column : ''])} key={key}>
-                <div className="info_">
-                  <h3 className={styles.card__title}>{city.title}</h3>
-                  <p className="heading__desc">{city.desc}</p>
+        <div className={styles.pc_gallery}>
+          <div className={styles.grid_row}>
+            <div className={styles.collage}>
+              {cities[0].map((city: any, key: number) => (
+                <div className={clsx([styles.card, key ? styles.reverse_column : ''])} key={key}>
+                  <div className="info_">
+                    <h3 className={styles.card__title}>{city.title}</h3>
+                    <p className="heading__desc">{city.desc}</p>
+                  </div>
+                  <div className={styles.card__img}>
+                    <img src={city.image} alt="" />
+                  </div>
                 </div>
-                <div className={styles.card__img}>
-                  <img src={city.image} alt="" />
+              ))}
+            </div>
+            <div className={clsx([styles.collage, styles.reverse_collage])}>
+              {cities[1].map((city: any, key: number) => (
+                <div className={clsx([styles.card, styles.reverse_column])} key={key}>
+                  <div className="info_">
+                    <h3 className={styles.card__title}>{city.title}</h3>
+                    <p className="heading__desc">{city.desc}</p>
+                  </div>
+                  <div className={styles.card__img}>
+                    <img src={city.image} alt="" />
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className={clsx([styles.collage, styles.reverse_collage])}>
-            {cities[1].map((city: any, key: number) => (
-              <div className={clsx([styles.card, styles.reverse_column])} key={key}>
-                <div className="info_">
-                  <h3 className={styles.card__title}>{city.title}</h3>
-                  <p className="heading__desc">{city.desc}</p>
-                </div>
-                <div className={styles.card__img}>
-                  <img src={city.image} alt="" />
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-        <Button variant="orange" text="Показать все ориентиры" />
-      </div>
-    </section>
+        <div className={styles.mobile_slider}>
+          <Swiper slidesPerView={'auto'} spaceBetween={0} ref={sliderRef} className="mySwiper">
+            {cities[0].map((item, key) => (
+              <SwiperSlide key={key}>
+                <div className={styles.card}>
+                  <div className={clsx(styles.card__inner, styles.purple)}>
+                    <div className={styles.card__img}>
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className={styles.card__info}>
+                      <h4 className="f28 w700 mb20">{item.title}</h4>
+                      <p className="decs">{item.desc}</p>
+                    </div>
+                  </div>
+                  <div className={'border__topBorder'} />
+                  <div className={'border__bottomBorder'} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className={styles.center_mobile_navs}>
+          <div className="swiper-nav">
+            <button
+              className="swiper-nav__btn swiper-nav__btn--prev swiper-nav__btn--dis"
+              onClick={handlePrev}>
+              <ArrowIcon />
+            </button>
+            <button className="swiper-nav__btn" onClick={handleNext}>
+              <ArrowIcon />
+            </button>
+          </div>
+        </div>
+        <div className={styles.center_button}>
+          <Button variant="orange" text="Показать все ориентиры" />
+        </div>
+      </section>
+    </div>
   );
 };

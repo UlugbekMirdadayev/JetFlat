@@ -28,7 +28,7 @@ export const ApartmentSearch = () => {
   }, []);
 
   return (
-    <section className="apartment">
+    <section className={styles.apartment}>
       <div className="container">
         <div className={styles.header}>
           <div>
@@ -47,15 +47,17 @@ export const ApartmentSearch = () => {
               />
             </div>
           </div>
-          <div className="swiper-nav">
-            <button
-              className="swiper-nav__btn swiper-nav__btn--prev swiper-nav__btn--dis"
-              onClick={handlePrev}>
-              <ArrowIcon />
-            </button>
-            <button className="swiper-nav__btn" onClick={handleNext}>
-              <ArrowIcon />
-            </button>
+          <div className={styles.pc_nav}>
+            <div className="swiper-nav">
+              <button
+                className="swiper-nav__btn swiper-nav__btn--prev swiper-nav__btn--dis"
+                onClick={handlePrev}>
+                <ArrowIcon />
+              </button>
+              <button className="swiper-nav__btn" onClick={handleNext}>
+                <ArrowIcon />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -155,8 +157,22 @@ export const ApartmentSearch = () => {
               </div>
             </SwiperSlide>
           </Swiper>
+          <div className={styles.mobile_nav}>
+            <div className="swiper-nav">
+              <button
+                className="swiper-nav__btn swiper-nav__btn--prev swiper-nav__btn--dis"
+                onClick={handlePrev}>
+                <ArrowIcon />
+              </button>
+              <button className="swiper-nav__btn" onClick={handleNext}>
+                <ArrowIcon />
+              </button>
+            </div>
+          </div>
         </div>
-        <Button variant="orange">Показать все районы</Button>
+        <div className={styles.center_button}>
+          <Button variant="orange">Показать все районы</Button>
+        </div>
       </div>
     </section>
   );

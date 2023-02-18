@@ -1,16 +1,29 @@
 .apartment {
   padding-bottom: 150px;
+  h2 {
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
 }
 
 .list {
   margin-bottom: 60px;
   display: flex;
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 }
 
 .card {
   width: 410px;
   padding: 30px 20px;
   position: relative;
+
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+
   &__inner {
     cursor: pointer;
     transition: 0.3s;
@@ -36,10 +49,21 @@
   &__info {
     padding: 0 25px;
     height: 80px;
+    @media screen and (max-width: 1024px) {
+      height: 40px;
+      
+      h4 {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+    }
   }
   &__ship {
     position: absolute;
     right: 0;
     top: 0;
+    @media screen and (max-width: 1024px) {
+      font-size: 13px;
+    }
   }
 }

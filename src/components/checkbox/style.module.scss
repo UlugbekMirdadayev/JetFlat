@@ -17,6 +17,10 @@
   left: 0;
   position: relative;
   top: 0;
+  @media screen and (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
   //   transition: all 0.2s;
   &:after {
     border-color: transparent;
@@ -31,6 +35,11 @@
     top: -1px;
     transform: rotate(45deg);
     width: 9px;
+    @media screen and (max-width: 768px) {
+      height: 11px;
+      left: 0px;
+      width: 4px;
+    }
   }
 }
 

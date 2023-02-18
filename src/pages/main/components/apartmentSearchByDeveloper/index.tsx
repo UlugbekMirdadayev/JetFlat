@@ -7,6 +7,7 @@ import { ReactComponent as AstraIcon } from '../../../../assets/svg/astra.svg';
 import { ReactComponent as GolosIcon } from '../../../../assets/svg/golos.svg';
 import { ReactComponent as PickIcon } from '../../../../assets/svg/pick.svg';
 import { Button } from '../../../../components/button';
+import clsx from 'clsx';
 
 const brands = [
   { id: 0, brand: Gk7Icon },
@@ -33,7 +34,7 @@ export const ApartmentSearchByDeveloper = () => {
       <div className="container">
         <div className="heading mb60">
           <div className="heading__line"></div>
-          <h2 className="mb40">Поиск квартир по застройщику</h2>
+          <h2 className={clsx([styles.title, 'mb40'])}>Поиск квартир по застройщику</h2>
           <p className="heading__desc">
             Надёжность Застройщика проверена. Документы для сделки соответствуют действующему
             законодательству
@@ -61,7 +62,9 @@ export const ApartmentSearchByDeveloper = () => {
         </div>
       </div>
       <div className="container">
-        <Button variant="orange">Показать всех застройщиков</Button>
+        <div className={styles.center_button}>
+          <Button variant="orange">Показать всех застройщиков</Button>
+        </div>
       </div>
     </section>
   );

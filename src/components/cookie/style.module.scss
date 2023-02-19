@@ -11,19 +11,36 @@
   height: 90px;
   padding: 20px;
   z-index: 999;
+  @media screen and (max-width: 450px) {
+    height: auto;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+    }
   }
   &__text {
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     margin-right: 5px;
+    @media screen and (max-width: 450px) {
+      margin-bottom: 5px;
+    }
   }
   &__link {
     color: #008891;
     text-decoration: none;
     margin-right: 23px;
+  }
+  button {
+    @media screen and (max-width: 450px) {
+      font-size: 14px;
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
   }
 }

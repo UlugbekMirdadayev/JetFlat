@@ -3,7 +3,7 @@ import { Button } from '../button';
 import styles from './style.module.scss';
 
 export const Cookie = () => {
-  const [noneBlock, setNoneBlock] = React.useState(true);
+  const [noneBlock, setNoneBlock] = React.useState<Boolean>(true);
   return (
     <>
       {noneBlock ? (

@@ -16,8 +16,10 @@
   }
   &__bottom {
     display: flex;
+    align-items: center;
     @media screen and (max-width: 1440px) {
       justify-content: space-between;
+      align-items: flex-end;
       @media screen and (max-width: 767px) {
         flex-direction: column;
       }

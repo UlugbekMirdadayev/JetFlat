@@ -6,8 +6,10 @@ import { Search } from './Search';
 import { SelectOne } from './SelectOne';
 import { SelectTwo } from './SelectTwo';
 import { ReactComponent as LocationIcon } from '../../assets/svg/location_primary.svg';
+import { useNavigate } from 'react-router-dom';
 
 export const Filters = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.filters}>
       <div className={styles.filters__head}>
@@ -37,7 +39,7 @@ export const Filters = () => {
           <LocationIcon /> Смотреть на карте
         </a>
         <div className={styles.pc_btn}>
-          <Button variant="orange">
+          <Button variant="orange" onClick={() => navigate('/result')}>
             <span>Проверить цены</span>
           </Button>
         </div>

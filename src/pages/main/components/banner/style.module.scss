@@ -13,8 +13,8 @@
   }
   @media screen and (max-width: 1650px) {
     margin-top: 180px;
-    background-size: cover;
-    background-position: top;
+    background-position: top right;
+    background-size: 50% 100%;
     &__left {
       max-width: none;
       justify-content: center;
@@ -22,6 +22,9 @@
       display: flex;
       flex-direction: column;
       text-align: center;
+    }
+    @media screen and (max-width: 1024px) {
+      background-size: cover;
     }
     @media screen and (max-width: 768px) {
       margin-top: 160px;

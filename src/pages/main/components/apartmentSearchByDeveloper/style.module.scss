@@ -46,7 +46,7 @@
   justify-content: center;
   @media screen and (max-width: 1440px) {
     max-width: calc(100% / 4 - 40px);
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
       max-width: calc(100% / 2 - 10px);
       margin: 0;
       margin-bottom: 20px;

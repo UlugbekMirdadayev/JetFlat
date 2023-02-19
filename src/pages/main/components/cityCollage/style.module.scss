@@ -1,4 +1,7 @@
 .grid_row {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 80px);
   .collage {
     &.reverse_collage {
       grid-template-columns: 50% 25% 25%;

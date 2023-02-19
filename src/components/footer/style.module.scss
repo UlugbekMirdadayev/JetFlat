@@ -47,9 +47,9 @@
     }
   }
   > a {
-    margin-right: 100px;
+    margin-left: 100px;
     @media screen and (max-width: 1440px) {
-      margin-right: 0;
+      margin-left: 0;
     }
   }
   a {
@@ -278,7 +278,7 @@
 }
 .is_responsive {
   width: 100%;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1441px) {
     display: none;
   }
 }

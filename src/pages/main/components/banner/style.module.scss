@@ -16,12 +16,14 @@
     background-position: top right;
     background-size: 50% 100%;
     &__left {
-      max-width: none;
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
-      text-align: center;
+      @media screen and (max-width: 1024px) {
+        max-width: none;
+        text-align: center;
+      }
     }
     @media screen and (max-width: 1024px) {
       background-size: cover;
@@ -51,12 +53,9 @@
   line-height: 110%;
   color: #ed6616;
   margin-bottom: 30px;
-  @media screen and (max-width: 1650px) {
-    color: #242424;
-    font-size: 46px;
-  }
   @media screen and (max-width: 1024px) {
     font-size: 36px;
+    color: #242424;
     width: 80%;
   }
   @media screen and (max-width: 767px) {

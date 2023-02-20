@@ -8,9 +8,15 @@ import { ReactComponent as Minus } from '../../assets/svg/minus.svg';
 import { ReactComponent as Plus } from '../../assets/svg/plus.svg';
 import { ReactComponent as Like } from '../../assets/svg/like.svg';
 import { ReactComponent as Location } from '../../assets/svg/geolocation.svg';
+import { ReactComponent as FilterIcon } from '../../assets/svg/filters.svg';
+import { ReactComponent as FiltersIcon } from '../../assets/svg/filter.svg';
+import { ReactComponent as AccordArrow } from '../../assets/svg/arrow-down.svg';
+import { ReactComponent as SortIcon } from '../../assets/svg/sort.svg';
+import { ReactComponent as MapIcon } from '../../assets/svg/map.svg';
 import { Checkbox } from '../../components/checkbox';
-import { ArrowRightIcon, ChartIcon, HeartIcon } from '../../assets';
+import { ArrowRightIcon, ChartIcon, CloseIcon, HeartIcon } from '../../assets';
 import SalePopup from './salePopup';
+import { Radio } from '../../components/radio';
 const checkboxes = [
   {
     title: 'Предыдущие фильтры',
@@ -95,18 +101,22 @@ const checkboxes = [
 ];
 export const ResultSearch = () => {
   const [index, setIndex] = useState<number>(0);
+  const [openFilters, setOpenFilters] = useState<boolean>(false);
+  const [openFilter, setOpenFilter] = useState<boolean>(false);
+  const [openSort, setOpenSort] = useState<boolean>(false);
+  const [openMap, setOpenMap] = useState<boolean>(false);
 
   return (
     <div className="result_container">
       <div className="container">
         <HistoryLink links={[{ name: 'Результат поиска', link: '/result' }]} />
-        <div className="row_result">
+        <div className="row_result mobile_col">
           <div className="title_result">
             <h2>
               <span>ВИЗ:</span> найдено 15 жилых комплексов
             </h2>
           </div>
-          <div className="row_result">
+          <div className="row_result header_btns">
             <Button variant={'outlined'}>
               <span className="inner_btn text_trans_none">Характеристика района</span>
             </Button>
@@ -118,64 +128,185 @@ export const ResultSearch = () => {
         <div className="location_inner">
           <span>Ориентиры поблизости:</span> Яхт-клуб, Центральный стадион, Гимназия № 2, Брайт ФИТ
         </div>
+        <div className="tab_header_mobile">
+          <button
+            className={openSort ? 'active' : ''}
+            onClick={() => {
+              setOpenSort(!openSort);
+              setOpenFilter(false);
+              setOpenMap(false);
+            }}>
+            <SortIcon />
+            <span>Сортировать</span>
+          </button>
+          <button
+            className={openFilter ? 'active' : ''}
+            onClick={() => {
+              setOpenFilter(!openFilter);
+              setOpenSort(false);
+              setOpenMap(false);
+            }}>
+            <FiltersIcon />
+            <span>Фильтры</span>
+          </button>
+          <button
+            className={openMap ? 'active' : ''}
+            onClick={() => {
+              setOpenMap(!openMap);
+              setOpenFilter(false);
+              setOpenSort(false);
+            }}>
+            <MapIcon />
+            <span>Карта</span>
+          </button>
+        </div>
         <div className="row_container">
-          <div className="space">
-            <div className="card_left">
+          <div className={`space ${openFilter || openSort ? '' : 'ismobile_accord'}`}>
+            {openSort && (
+              <div className={`card_left sort_card`}>
+                <div className="closer_mobile">
+                  <CloseIcon onClick={() => setOpenSort(!openSort)} />
+                </div>
+                <div className="title_card pb20">Сортировать</div>
+                <div className="checkbox_row mb10">
+                  <Radio name="sort" label={'Сначала недавно добавленные'} />
+                </div>
+                <div className="checkbox_row mb10">
+                  <Radio name="sort" label={'По сроку сдачи (сначала готовые)'} />
+                </div>
+                <div className="checkbox_row mb10">
+                  <Radio name="sort" label={'По цене (сначала низкая)'} />
+                </div>
+                <div className="checkbox_row mb10">
+                  <Radio name="sort" label={'Еще пункт сортировки'} />
+                </div>
+                <div className="row_result center_btn left_btn">
+                  <button onClick={() => setOpenSort(!openSort)} className={`submitter_btn`}>
+                    Применить
+                  </button>
+                </div>
+              </div>
+            )}
+            <div className={`card_left ${openSort ? 'ismobile_accord' : ''}`}>
+              <div className="closer_mobile pc_none">
+                <CloseIcon
+                  onClick={() => {
+                    setOpenFilter(false);
+                    setOpenSort(false);
+                  }}
+                />
+              </div>
               <div className="row_result heading_row">
                 <h3>Найти</h3>
                 <button>Очистить</button>
               </div>
-              <div className="label">Город</div>
-              <Select
-                options={['Выберите город']}
-                selectedIbdex={index}
-                setSelectedIndex={setIndex}
-              />
-              <div className="label">Район города или ЖК</div>
-              <div className="search_inp">
-                <Search />
-              </div>
-              <div className="label">Ценовой диапазон, ₽</div>
-              <div className="row_result">
-                <div className="row_calc">
-                  <Button>
-                    <Minus />
-                  </Button>
-                  <span>от</span>
-                  <Button>
-                    <Plus />
-                  </Button>
+              <div className="responsive_grid">
+                <div className="col_responsive">
+                  <div className="label">Город</div>
+                  <Select
+                    options={['Выберите город']}
+                    selectedIbdex={index}
+                    setSelectedIndex={setIndex}
+                  />
                 </div>
-                <div className="row_calc">
-                  <Button>
-                    <Minus />
-                  </Button>
-                  <span>123 000 000</span>
-                  <Button>
-                    <Plus />
-                  </Button>
-                </div>
-              </div>
-              <div className="label">Количество комнат</div>
-              <div className="row_result">
-                {[...Array(6)].map((_, key) => (
-                  <div key={key} className={`${key === 2 ? 'active' : ''} box_quadrad`}>
-                    {key === 5 ? '5 +' : key + 1}
+                <div className="col_responsive">
+                  <div className="label">Район города или ЖК</div>
+                  <div className="search_inp">
+                    <Search />
                   </div>
-                ))}
+                </div>
+                <div className="col_responsive">
+                  <div className="label">Ценовой диапазон, ₽</div>
+                  <div className="row_result">
+                    <div className="row_calc">
+                      <Button>
+                        <Minus />
+                      </Button>
+                      <span>от</span>
+                      <Button>
+                        <Plus />
+                      </Button>
+                    </div>
+                    <div className="row_calc">
+                      <Button>
+                        <Minus />
+                      </Button>
+                      <span>123 000 000</span>
+                      <Button>
+                        <Plus />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+                <div className="col_responsive">
+                  <div className="label">Количество комнат</div>
+                  <div className="row_result">
+                    {[...Array(6)].map((_, key) => (
+                      <div key={key} className={`${key === 2 ? 'active' : ''} box_quadrad`}>
+                        {key === 5 ? '5 +' : key + 1}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="col_responsive">
+                  <div className="label">Тип планировки</div>
+                  <Select
+                    options={['тип любой']}
+                    selectedIbdex={index}
+                    setSelectedIndex={setIndex}
+                  />
+                </div>
+                <div className="col_responsive">
+                  <div className="label">Ипотечное кредитование</div>
+                  <Select
+                    options={['без ипотеки']}
+                    selectedIbdex={index}
+                    setSelectedIndex={setIndex}
+                  />
+                </div>
+                <div className={`col_responsive ${openFilters ? 'ismobile_accord' : ' '}`}>
+                  <label className="checkbox_row">
+                    <Checkbox /> <span className="label_span">Готовые квартиры</span>
+                  </label>
+                </div>
               </div>
-              <div className="label">Тип планировки</div>
-              <Select options={['тип любой']} selectedIbdex={index} setSelectedIndex={setIndex} />
-              <div className="label">Ипотечное кредитование</div>
-              <Select options={['без ипотеки']} selectedIbdex={index} setSelectedIndex={setIndex} />
-              <label className="checkbox_row">
-                <Checkbox /> <span className="label_span">Готовые квартиры</span>
-              </label>
-              <button className="submitter_btn">Применить</button>
+              <div className="bottom_btns">
+                {openFilters && (
+                  <div className="col_responsive mobile-row">
+                    <label className="checkbox_row">
+                      <Checkbox /> <span className="label_span">Готовые квартиры</span>
+                    </label>
+                  </div>
+                )}
+                <button
+                  onClick={() => {
+                    setOpenFilter(false);
+                    setOpenSort(false);
+                  }}
+                  className={`submitter_btn ${openFilters ? 'd_none_mobile' : ' '}`}>
+                  Применить
+                </button>
+
+                <button
+                  className={`others_filters ${openFilters ? 'active' : ''}`}
+                  onClick={() => setOpenFilters(!openFilters)}>
+                  <FilterIcon />
+                  <span>Дополнительные фильтры</span>
+                </button>
+              </div>
             </div>
             {checkboxes.map((item, key) => (
-              <div key={key} className="card_left">
-                <div className="title_card mb20">{item.title}</div>
+              <div key={key} className={`card_left ${openFilters ? '' : 'ismobile_accord'}`}>
+                <input
+                  type={'checkbox'}
+                  className="acc_opener"
+                  hidden
+                  defaultChecked={false}
+                  id={'acc_opener' + key}
+                />
+                <label htmlFor={'acc_opener' + key} className="title_card mb20">
+                  {item.title} <AccordArrow />
+                </label>
                 {item.boxes.map((name, boxKey) => (
                   <label key={boxKey} className="checkbox_row mb10">
                     <Checkbox /> <span className="label_span pl10">{name}</span>
@@ -184,9 +315,17 @@ export const ResultSearch = () => {
                 {item.others && <button className="other_filter_btn">Посмотреть другие</button>}
               </div>
             ))}
+            {openFilters && (
+              <div className="row_result center_btn pc_none">
+                <button onClick={() => setOpenFilter(!openFilter)} className={`submitter_btn`}>
+                  Применить
+                </button>
+              </div>
+            )}
           </div>
+
           <div className="between">
-            <div className="row_result mb50">
+            <div className="row_result mb50 tab_header_">
               <Button variant="outlined">
                 <span className="inner_btn text_trans_none">Мы рекомендуем</span>
               </Button>
@@ -196,26 +335,45 @@ export const ResultSearch = () => {
               <Button className="flex_custome" variant="outlined">
                 <span className="inner_btn text_trans_none">МПо цене (сначала низкая)</span>
               </Button>
-              <Button variant="outlined">
+              <Button variant="outlined" onClick={() => setOpenSort(!openSort)}>
                 <span className="inner_btn text_trans_none">...</span>
               </Button>
             </div>
 
             <div className="card_right">
               <div className="row_result">
-                <div className="space">
+                <div className="space shadow_none">
                   <div className="card_col">
                     <div className="ship">март 2023</div>
                     <img src={require('../../assets/image/popular-big.jpg')} alt="" />
                   </div>
-                  <button>
+                  <button className="mobile_none">
                     <span>ПИК</span>
                   </button>
+                  <div className="row_result pc_none custome_row_btns">
+                    <div className="row_result">
+                      <button className="like_btn">
+                        <Like />
+                      </button>
+                      <div className="col_text">
+                        <h3>8,5</h3>
+                        <p>41 отзыв</p>
+                      </div>
+                    </div>
+                    <div className="row_result">
+                      <button className="chart_icon">
+                        <ChartIcon />
+                      </button>
+                      <button className="heart_icon">
+                        <HeartIcon />
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div className="infos_card">
                   <div className="row_result">
                     <div className="title_">Зеленый остров</div>
-                    <div className="row_result">
+                    <div className="row_result ismobile_accord">
                       <button className="like_btn">
                         <Like />
                       </button>
@@ -246,11 +404,11 @@ export const ResultSearch = () => {
                     </div>
                   </div>
                   <div className="row_result align_end mb15">
-                    <div className="blue_btn__">Одна полоска произвольной длины</div>
-                    <p>2-комнатная, европланировка</p>
+                    <div className="blue_btn__"> Полоска произвольной длины</div>
+                    <p className="mobile_none">2-комнатная, европланировка</p>
                   </div>
-                  <div className="row_result align_end mb15">
-                    <p>
+                  <div className="row_result align_end mb15 ">
+                    <p className="mobile_none">
                       Преимущество номер один примерно такой длины, описание и характеристика на 2
                       строки
                     </p>
@@ -261,7 +419,8 @@ export const ResultSearch = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="row_result align_end mb15">
+
+                  <div className="row_result align_end mb15 mobile_none">
                     <Button className="btn_outlined" variant="outlined">
                       <span>Посмотреть квартиры</span>
                     </Button>
@@ -270,24 +429,46 @@ export const ResultSearch = () => {
                     </div>
                   </div>
                   <div className="sale_text">Акции для зарегистрированных пользователей!</div>
+                  <Button className="btn_outlined mobile_button" variant="outlined">
+                    <span>Посмотреть ВСЕ квартиры</span>
+                  </Button>
                 </div>
               </div>
             </div>
             <div className="card_right">
               <div className="row_result">
-                <div className="space">
+                <div className="space shadow_none">
                   <div className="card_col">
                     <div className="ship">март 2023</div>
                     <img src={require('../../assets/image/popular-big.jpg')} alt="" />
                   </div>
-                  <button>
+                  <button className="mobile_none">
                     <span>ПИК</span>
                   </button>
+                  <div className="row_result pc_none custome_row_btns">
+                    <div className="row_result">
+                      <button className="like_btn">
+                        <Like />
+                      </button>
+                      <div className="col_text">
+                        <h3>8,5</h3>
+                        <p>41 отзыв</p>
+                      </div>
+                    </div>
+                    <div className="row_result">
+                      <button className="chart_icon">
+                        <ChartIcon />
+                      </button>
+                      <button className="heart_icon">
+                        <HeartIcon />
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div className="infos_card">
                   <div className="row_result">
                     <div className="title_">Зеленый остров</div>
-                    <div className="row_result">
+                    <div className="row_result ismobile_accord">
                       <button className="like_btn">
                         <Like />
                       </button>
@@ -318,11 +499,11 @@ export const ResultSearch = () => {
                     </div>
                   </div>
                   <div className="row_result align_end mb15">
-                    <div className="blue_btn__">Одна полоска произвольной длины</div>
-                    <p>2-комнатная, европланировка</p>
+                    <div className="blue_btn__"> Полоска произвольной длины</div>
+                    <p className="mobile_none">2-комнатная, европланировка</p>
                   </div>
-                  <div className="row_result align_end mb15">
-                    <p>
+                  <div className="row_result align_end mb15 ">
+                    <p className="mobile_none">
                       Преимущество номер один примерно такой длины, описание и характеристика на 2
                       строки
                     </p>
@@ -333,7 +514,8 @@ export const ResultSearch = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="row_result align_end mb15">
+
+                  <div className="row_result align_end mb15 mobile_none">
                     <Button className="btn_outlined" variant="outlined">
                       <span>Посмотреть квартиры</span>
                     </Button>
@@ -342,6 +524,9 @@ export const ResultSearch = () => {
                     </div>
                   </div>
                   <div className="sale_text">Акции для зарегистрированных пользователей!</div>
+                  <Button className="btn_outlined mobile_button" variant="outlined">
+                    <span>Посмотреть ВСЕ квартиры</span>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -349,13 +534,15 @@ export const ResultSearch = () => {
               <div className="row_result">
                 <div className="row_result">
                   <ArrowRightIcon className="disabled" />
-                  <div className="text disabled">Назад</div>
-                  <div className="text_info">Страница 1</div>
-                  <div className="text">Далее</div>
+                  <div className="text disabled mobile_none">Назад</div>
+                  <div className="text_info">
+                    <span>Страница</span> 1
+                  </div>
+                  <div className="text mobile_none">Далее</div>
                   <ArrowRightIcon />
                 </div>
                 <div className="row_result">
-                  <p className="disabled">Показаны 1–20 из 25 </p>
+                  <p>Показаны 1–20 из 25 </p>
                   <div className="text ml10">Показать еще</div>
                 </div>
               </div>

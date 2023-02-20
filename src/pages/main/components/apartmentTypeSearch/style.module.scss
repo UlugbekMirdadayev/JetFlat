@@ -14,7 +14,14 @@
   max-width: 1190px;
   width: 100%;
 }
-
+.link_hover {
+  &:hover {
+    .box {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
 .link {
   display: flex;
   align-items: center;
@@ -48,3 +55,4 @@
     opacity: 1;
   }
 }
+

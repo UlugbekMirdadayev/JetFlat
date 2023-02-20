@@ -10,9 +10,11 @@ function SalePopup() {
         <div className="text_popup">
           <div className="title__ mb40">Акция!</div>
           <div className="description__ mb30">
-            Для зарегистрированных пользователей при бронировании квартиры действует АКЦИЯ
+            Для зарегистрированных пользователей при бронировании квартиры действует акция
           </div>
-          <Button className='mr20' variant='orange'>Зарегистрироваться</Button>
+          <Button className="mr20 mb20" variant="orange">
+            Зарегистрироваться
+          </Button>
           <Button variant="outlined">Узнать подробности</Button>
         </div>
       </div>

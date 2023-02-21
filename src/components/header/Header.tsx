@@ -26,37 +26,40 @@ export const Header = () => {
         }
         className={styles.list_mobile}>
         <li className={styles.list__item}>
-          <Link to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
             Новостройки
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link to={'/'} className={styles.list__link}>
+          <Link
+            onClick={() => setOpen(false)}
+            to={'/residential-complexes'}
+            className={styles.list__link}>
             Жилые комплексы
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
             Застройщики
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link to={'/ipoteka'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/ipoteka'} className={styles.list__link}>
             Ипотека
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
             Trade-in
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
             Статьи
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link to={'/about-services'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/about-services'} className={styles.list__link}>
             О сервисе
           </Link>
         </li>
@@ -74,7 +77,7 @@ export const Header = () => {
                 onClick={() => setOpen(!open)}>
                 {open ? <Close /> : <Menu />}
               </button>
-              <Link to={'/'}>
+              <Link onClick={() => setOpen(false)} to={'/'}>
                 <LogoIcon />
               </Link>
             </div>
@@ -82,12 +85,12 @@ export const Header = () => {
               <LocationIcon />
               Екатеринбург
             </div>
-            <Link to={'/'}>
+            <Link onClick={() => setOpen(false)} to={'/'}>
               <Button className={styles.add} variant="outlinedWhite">
                 Добавить новостройку
               </Button>
             </Link>
-            <Link to={'/'}>
+            <Link onClick={() => setOpen(false)} to={'/'}>
               <Button className={styles.lk} variant="outlined">
                 Личный кабинет
               </Button>
@@ -103,37 +106,43 @@ export const Header = () => {
             </div>
             <ul className={styles.list}>
               <li className={styles.list__item}>
-                <Link to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
                   Новостройки
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/residential-complexes'} className={styles.list__link}>
+                <Link
+                  onClick={() => setOpen(false)}
+                  to={'/residential-complexes'}
+                  className={styles.list__link}>
                   Жилые комплексы
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
                   Застройщики
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/ipoteka'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/ipoteka'} className={styles.list__link}>
                   Ипотека
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
                   Trade-in
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
                   Статьи
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/about-services'} className={styles.list__link}>
+                <Link
+                  onClick={() => setOpen(false)}
+                  to={'/about-services'}
+                  className={styles.list__link}>
                   О сервисе
                 </Link>
               </li>

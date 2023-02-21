@@ -5,3 +5,148 @@
 .green_icons {
     gap: 24px;
 }
+
+.tab_btn button.yellow-btn.py10,
+.tab_btn button.gray-btn.py10 {
+    padding: 10px 32px;
+    width: 148px;
+}
+
+.tab_btn button.yellow-btn.py10 {
+    background: #C2D97A;
+}
+
+.fl1 {
+    flex: 1;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.outline-btn-blue {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    background: #FFFFFF;
+    border: 2px solid #74C6C9
+}
+
+.bold_text_ {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.heading_row .location_btn span {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    font-family: 'Jost', sans-serif;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-between .like-btn {
+    width: 40px;
+    height: 40px;
+    background: #ED6616;
+    border-radius: 10px;
+}
+
+.space-between .like-btn svg path {
+    fill: #FFFFFF;
+}
+
+.orange-btn:not(.disabled) {
+    background: linear-gradient(93.45deg, #ed6616 4.22%, #fe7a2c 91.85%) !important;
+    color: #fff !important;
+}
+
+.text-area-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 90%;
+}
+
+.text-area-div .more {
+    background: transparent;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    display: contents;
+}
+
+.map_container {
+    position: relative;
+}
+
+.map_container .card_in_map {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+    background: #FFFFFF;
+    width: 320px;
+}
+
+
+.map_container .card_in_map .img_relative {
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.map_container .card_in_map .img_relative .tab_btn.row {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.map_container .card_in_map .img_relative img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map_container .card_in_map .img_relative .tab_btn.row button {
+    padding: 10px 12.5px;
+    justify-content: center;
+    width: auto;
+}
+
+.map_container .card_in_map .img_relative .tab_btn.row button span {
+    font-size: 17px;
+}
+
+.map_container .card_in_map .img_relative .tab_btn.row button.primary-btn {
+    background: #74C6C9;
+}
+
+.card_text {
+    padding: 20px;
+}
+
+.card_text .title_card__ {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    color: #242424
+}
+
+.orange_color {
+    color: #ED6616;
+}
+
+.card_text button {
+    width: 100%;
+    padding: 19px 0px;
+}

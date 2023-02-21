@@ -113,6 +113,7 @@
 .row_container .space .search_inp div {
   max-width: none;
   margin-right: 0px;
+  height: auto;
 }
 
 .row_container .space .row_calc {
@@ -1249,6 +1250,33 @@
     margin-top: 70px;
   }
 
+  .card_left .bottom_btns,
+  .row_container .space .card_left .responsive_grid {
+    grid-template-columns: 100%;
+  }
+
+  .card_left .bottom_btns button {
+    margin-top: 20px;
+  }
+
+  .row_container .space .row_calc,
+  .row_container .space .box_quadrad,
+  .row_container .space .card_left:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  .row_container .space .search_inp {
+    margin-bottom: 20px;
+  }
+
+  .col_responsive div:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .row_container .space {
+    padding-bottom: 40px;
+  }
+
   .map_card_container {
     padding: 40px 0px;
     width: 100vw;
@@ -1453,7 +1481,7 @@
   }
 
   .slider_row {
-    margin: 0  !important;
+    margin: 0 !important;
     position: relative;
   }
 
@@ -1477,11 +1505,13 @@
     width: 11px;
     height: 11px;
   }
+
   .modal .modal_body .bottom_btns_ button {
     border: 0 !important;
     margin-top: 20px !important;
   }
-  .modal .modal_body .bottom_btns_ button:nth-child(1) span{
+
+  .modal .modal_body .bottom_btns_ button:nth-child(1) span {
     color: #008891 !important;
   }
 

@@ -108,7 +108,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link to={'/'} className={styles.list__link}>
+                <Link to={'/residential-complexes'} className={styles.list__link}>
                   Жилые комплексы
                 </Link>
               </li>

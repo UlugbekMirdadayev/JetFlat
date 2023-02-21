@@ -107,7 +107,9 @@ img {
   height: 100% !important;
   right: 3px;
 }
-
+button {
+  cursor: pointer;
+}
 .border {
   &__rightBorder {
     height: calc(100% - 14px);

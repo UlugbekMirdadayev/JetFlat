@@ -6,7 +6,7 @@ import { Search } from './Search';
 import { SelectOne } from './SelectOne';
 import { SelectTwo } from './SelectTwo';
 import { ReactComponent as LocationIcon } from '../../assets/svg/location_primary.svg';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Filters = () => {
   const navigate = useNavigate();
@@ -35,9 +35,9 @@ export const Filters = () => {
             <p className="ml10 f18 mr40">Заселение до года</p>
           </Checkbox>
         </div>
-        <a href="/" className={styles.filters__mapLink}>
+        <Link to="/" className={styles.filters__mapLink}>
           <LocationIcon /> Смотреть на карте
-        </a>
+        </Link>
         <div className={styles.pc_btn}>
           <Button variant="orange" onClick={() => navigate('/result')}>
             <span>Проверить цены</span>

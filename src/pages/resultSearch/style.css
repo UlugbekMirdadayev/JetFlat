@@ -445,6 +445,7 @@
 .pagination_bar svg {
   width: 28px;
   height: 30px;
+  cursor: pointer;
 }
 
 .pagination_bar svg:nth-child(1) {
@@ -463,6 +464,7 @@
   line-height: 140%;
   text-align: center;
   color: #008891;
+  cursor: pointer;
 }
 
 .pagination_bar .text_info {

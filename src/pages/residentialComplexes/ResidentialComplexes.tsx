@@ -26,22 +26,39 @@ export const ResidentialComplexes = () => {
             { name: 'Зелёный остров', link: '/residential-complexes' }
           ]}
         />
-        <div className="row_result mobile_col mb50">
-          <div className="title_result">
-            <h2>
+        <div className="row_result sm-d-flex-col md-align-center mb50 md-mt-40 sm-align-center sm-mt-30">
+          <div className="title_result sm-text-center md-align-center ">
+            <h2 className='sm-mt-0 md-mt-0'>
               <span>ЖК Зеленый остров</span>
             </h2>
           </div>
           <div className="row_result green_icons">
-            <InfoIcon />
-            <HeartIcon />
-            <ChartIcon />
-            <DownloadIcon />
-            <ShareIcon />
+            <InfoIcon className="sm-size-30 sm-mt-30" />
+            <HeartIcon className="sm-size-30 sm-mt-30" />
+            <ChartIcon className="sm-size-30 sm-mt-30" />
+            <DownloadIcon className="sm-size-30 sm-mt-30" />
+            <ShareIcon className="sm-size-30 sm-mt-30" />
           </div>
         </div>
+        <div className="d-none row_result mb50 tab_header_ md-flex-wrap sm-d-flex-col">
+          <Button variant="outlined">
+            <span className="inner_btn text_trans_none sm-fs-14">Информация и стоимость</span>
+          </Button>
+          <Button variant="outlined">
+            <span className="inner_btn text_trans_none sm-fs-14">Ипотечный калькулятор</span>
+          </Button>
+          <Button variant="outlined">
+            <span className="inner_btn text_trans_none sm-fs-14">Trade in</span>
+          </Button>
+          <Button variant="outlined">
+            <span className="inner_btn text_trans_none sm-fs-14">Условия покупки</span>
+          </Button>
+          <Button variant="outlined">
+            <span className="inner_btn text_trans_none sm-fs-14">Буклет</span>
+          </Button>
+        </div>
         <div className="row_container">
-          <div className={`space`}>
+          <div className={`space sm-full`}>
             <div className={`card_left`}>
               <div className="row_result heading_row">
                 <h3>Найти</h3>
@@ -142,7 +159,15 @@ export const ResidentialComplexes = () => {
         </div>
       </div>
       <SelectHouse />
-      <Popular />
+      <Popular
+        title="Другие ЖК застройщика ЛСР"
+        description="Надёжность Застройщика проверена. Документы для сделки соответствуют действующему законодательству"
+      />
+      <Popular
+        title="Другие ЖК в районе ВИЗ"
+        description="Надёжность Застройщика проверена. Документы для сделки соответствуют действующему законодательству"
+        bigLayout={false}
+      />
     </div>
   );
 };

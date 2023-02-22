@@ -1,3 +1,4 @@
+import { useRef, useCallback } from 'react';
 import styles from './style.module.scss';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
@@ -5,8 +6,19 @@ import house from '../../../../assets/image/popular-img.jpg';
 import houseBig from '../../../../assets/image/popular-big.jpg';
 import { Button } from '../../../../components/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { ArrowRightIcon } from '../../../../assets';
 
-export const Popular = () => {
+export const Popular = ({ title, description, bigLayout = true }: any) => {
+  const sliderRef = useRef<any>(null);
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current?.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
   return (
     <section className={styles.popular}>
       <div className="container">
@@ -14,46 +26,50 @@ export const Popular = () => {
           <div className={styles.pc_line}>
             <div className="heading__line" />
           </div>
-          <h2 className="mb40">Популярные ЖК</h2>
+          <h2 className="mb40">{title || 'Популярные ЖК'}</h2>
+          <p className={`heading__desc mb60 ${description ? '' : 'center'} sm-text-center`}>
+            {description ||
+              'В этих популярных жилых комплексах вы точно найдёте что-нибудь для себя'}
+          </p>
           <div className={styles.is_pc}>
-            <p className="heading__desc mb60 center">
-              В этих популярных жилых комплексах вы точно найдёте что-нибудь для себя
-            </p>
-
             <div className={styles.list}>
-              <Link to={'/'} className={clsx(styles.card, styles['card--big'])}>
-                <div className={styles['card--big-half']}>
-                  <div className={clsx(styles.card__info, styles['card__info--big'])}>
-                    <h4 className={clsx(styles.card__title, 'cWhite')}>Repin Towers</h4>
-                    <p className={clsx(styles.card__desc, 'cWhite')}>
-                      Здесь будет ваш текст любого объёма и содержания
-                    </p>
-                  </div>
-                </div>
-                <div className={styles['card--big-half']}>
-                  <div className={clsx(styles.card__img, styles['card--big-img'])}>
-                    <span className={clsx('ship', styles.card__ship)}>февраль 2023г</span>
-                    <img src={houseBig} alt="" />
-                  </div>
-                </div>
+              {bigLayout && (
+                <>
+                  <Link to={'/'} className={clsx(styles.card, styles['card--big'])}>
+                    <div className={styles['card--big-half']}>
+                      <div className={clsx(styles.card__info, styles['card__info--big'])}>
+                        <h4 className={clsx(styles.card__title, 'cWhite')}>Repin Towers</h4>
+                        <p className={clsx(styles.card__desc, 'cWhite')}>
+                          Здесь будет ваш текст любого объёма и содержания
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles['card--big-half']}>
+                      <div className={clsx(styles.card__img, styles['card--big-img'])}>
+                        <span className={clsx('ship', styles.card__ship)}>февраль 2023г</span>
+                        <img src={houseBig} alt="" />
+                      </div>
+                    </div>
 
-                <div className={'border__rightBorder'} />
-                <div className={'border__topBorder'} />
-                <div className={'border__bottomBorder'} />
-              </Link>
-              <Link to={'/'} className={styles.card}>
-                <div className={styles.card__img}>
-                  <span className={clsx('ship', styles.card__ship)}>май 2023г</span>
-                  <img src={house} alt="" />
-                </div>
-                <div className={styles.card__info}>
-                  <h4 className={styles.card__title}>River Park</h4>
-                  <p className={styles.card__desc}>Здесь будет ваш текст любого объёма</p>
-                </div>
-                {/* <div className={'border__rightBorder'}></div> */}
-                <div className={'border__topBorder'}></div>
-                <div className={'border__bottomBorder'}></div>
-              </Link>
+                    <div className={'border__rightBorder'} />
+                    <div className={'border__topBorder'} />
+                    <div className={'border__bottomBorder'} />
+                  </Link>
+                  <Link to={'/'} className={styles.card}>
+                    <div className={styles.card__img}>
+                      <span className={clsx('ship', styles.card__ship)}>май 2023г</span>
+                      <img src={house} alt="" />
+                    </div>
+                    <div className={styles.card__info}>
+                      <h4 className={styles.card__title}>River Park</h4>
+                      <p className={styles.card__desc}>Здесь будет ваш текст любого объёма</p>
+                    </div>
+                    <div className={'border__rightBorder'}></div>
+                    <div className={'border__topBorder'}></div>
+                    <div className={'border__bottomBorder'}></div>
+                  </Link>
+                </>
+              )}
               <Link to={'/'} className={styles.card}>
                 <div className={styles.card__img}>
                   <span className={clsx('ship', styles.card__ship)}>Есть сданные</span>
@@ -64,7 +80,7 @@ export const Popular = () => {
                   <p className={styles.card__desc}>Здесь будет ваш текст любого объёма</p>
                 </div>
                 <div className={'border__rightBorder'}></div>
-                {/* <div className={'border__topBorder'}></div> */}
+                <div className={'border__topBorder'}></div>
                 <div className={'border__bottomBorder'}></div>
               </Link>
               <Link to={'/'} className={styles.card}>
@@ -79,7 +95,7 @@ export const Popular = () => {
                   </p>
                 </div>
                 <div className={'border__rightBorder'}></div>
-                {/* <div className={'border__topBorder'}></div> */}
+                <div className={'border__topBorder'}></div>
                 <div className={'border__bottomBorder'}></div>
               </Link>
               <Link to={'/'} className={styles.card}>
@@ -91,8 +107,9 @@ export const Popular = () => {
                   <h4 className={styles.card__title}>Vektori</h4>
                   <p className={styles.card__desc}>Здесь будет ваш текст любого объёма</p>
                 </div>
-                {/* <div className={'border__rightBorder'}></div> */}
-                <div className={'border__topBorder'}></div>
+                <div className={'border__rightBorder'}></div>
+                {bigLayout && <div className={'border__topBorder'}></div>}
+                <div className={'border__topBorder'} />
                 <div className={'border__bottomBorder'}></div>
               </Link>
             </div>
@@ -100,6 +117,7 @@ export const Popular = () => {
         </div>
         <div className={styles.is_mobile}>
           <Swiper
+            ref={sliderRef}
             slidesPerView={'auto'}
             spaceBetween={0}
             pagination={{
@@ -112,7 +130,9 @@ export const Popular = () => {
                 <div className={styles.card__ship}>май 2023г</div>
                 <div className={'border__topBorder'} />
                 <div className={'border__bottomBorder'} />
+                <div className={'border__rightBorder'}></div>
                 <div className={styles.card__title}>Discovery Residence</div>
+                <p className={styles.card__desc}>Здесь будет ваш текст любого объёма</p>
               </Link>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
@@ -121,6 +141,9 @@ export const Popular = () => {
                 <div className={styles.card__ship}>май 2023г</div>
                 <div className={'border__topBorder'} />
                 <div className={'border__bottomBorder'} />
+                <div className={'border__rightBorder'}></div>
+                <div className={styles.card__title}>Discovery Residence</div>
+                <p className={styles.card__desc}>Здесь будет ваш текст любого объёма</p>
               </Link>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
@@ -129,9 +152,20 @@ export const Popular = () => {
                 <div className={styles.card__ship}>май 2023г</div>
                 <div className={'border__topBorder'} />
                 <div className={'border__bottomBorder'} />
+                <div className={'border__rightBorder'}></div>
+                <div className={styles.card__title}>Discovery Residence</div>
+                <p className={styles.card__desc}>Здесь будет ваш текст любого объёма</p>
               </Link>
             </SwiperSlide>
           </Swiper>
+          <div className="row center slider_container">
+            <button className="prev relative-btn-border" onClick={handlePrev}>
+              <ArrowRightIcon />
+            </button>
+            <button className="next relative-btn-border" onClick={handleNext}>
+              <ArrowRightIcon />
+            </button>
+          </div>
         </div>
         <div className={styles.center_button}>
           <Button variant="orange">Смотреть все ЖК</Button>

@@ -44,22 +44,34 @@
   width: 100%;
   max-width: calc(33.3333%);
   padding: 30px 20px;
-  @media screen and (max-width: 768px) {
-    max-width: 50%;
-    height: 350px;
-    margin-bottom: 20px;
-  }
+ 
+
   &__img {
     margin-bottom: 20px;
     max-height: 270px;
     position: relative;
   }
+  @media screen and (max-width: 768px) {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    @media screen and (max-width: 650px) {
+      max-width: none;
+      &__img {
+        max-height: none;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   &--big {
     max-width: calc(100% - 33.3333%);
     display: flex;
     @media screen and (max-width: 768px) {
       max-width: 100%;
-      height: 350px;
+      height: auto;
     }
     &-img {
       max-height: 100%;

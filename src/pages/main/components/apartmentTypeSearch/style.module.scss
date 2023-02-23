@@ -1,5 +1,8 @@
 .apartment {
   padding-bottom: 150px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 80px;
+  }
   h2 {
     @media screen and (max-width: 768px) {
       font-size: 32px;
@@ -11,8 +14,11 @@
 }
 
 .links {
-  max-width: 1190px;
+  max-width: 74%;
   width: 100%;
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
 }
 .link_hover {
   &:hover {
@@ -27,10 +33,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 40px 30px;
-  border-bottom: 1px solid #909090;
-  &:first-child {
-    border-top: 1px solid #909090;
-  }
   &__text {
     font-weight: 700;
     font-size: 28px;
@@ -43,6 +45,11 @@
   }
   &__icon {
     transition: 0.3s;
+    @media screen and (max-width: 768px) {
+      path {
+        stroke: #008891;
+      }
+    }
   }
   &:hover .link__icon {
     transform: rotate(-45deg);
@@ -56,3 +63,169 @@
   }
 }
 
+.accord {
+  border-bottom: 1px solid #909090;
+  &:first-child {
+    border-top: 1px solid #909090;
+    @media screen and (max-width: 768px) {
+      border-color: #78d5d9;
+    }
+  }
+  &__item {
+    display: none;
+  }
+  &:hover {
+    border: 0;
+    .link {
+      display: none;
+    }
+    .accord__item {
+      display: flex;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    border-color: #78d5d9;
+  }
+}
+
+.box {
+  padding: 20px 30px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  @media screen and (max-width: 1440px) {
+    margin-right: 0px;
+    padding-bottom: 100px;
+    padding-left: 45px;
+    padding-right: 45px;
+    @media screen and (max-width: 425px) {
+      padding: 40px 30px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+  }
+  filter: drop-shadow(0px 4px 20px rgba(10, 69, 103, 0.2));
+  margin-bottom: 40px;
+  .hImage {
+    position: absolute;
+    right: -390px;
+    top: 0;
+    transform: scale(0);
+    transition: transform var(--transition);
+    @media screen and (max-width: 1650px) {
+      right: -320px;
+      width: 300px;
+    }
+    @media screen and (max-width: 1250px) {
+      right: -270px;
+      width: 250px;
+    }
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+  &:hover .hImage {
+    transform: scale(1);
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &--green {
+    background: #bef2d4;
+  }
+  &--pink {
+    background: #ffdecb;
+  }
+  &--blue {
+    background: #cfe8fd;
+  }
+  &--yellow {
+    background: #ffeabc;
+  }
+  &--violet {
+    background: #eec9fa;
+  }
+  &--purple {
+    background: #e9eff2;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    padding-right: 20px;
+    color: #242424;
+    @media screen and (max-width: 1440px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    margin-left: auto;
+    width: 443px;
+    padding-right: 60px;
+    line-height: 140%;
+    font-weight: 400;
+    font-size: 18px;
+    @media screen and (max-width: 1440px) {
+      width: 60%;
+      padding-right: 0px;
+      font-size: 14px;
+      @media screen and (max-width: 425px) {
+        font-size: 13px;
+        width: auto;
+      }
+    }
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1440px) {
+      position: absolute;
+      bottom: 35px;
+      right: 45px;
+      @media screen and (max-width: 425px) {
+        position: unset;
+        margin-top: 30px;
+        font-size: 13px;
+      }
+    }
+    span {
+      opacity: 0.8;
+    }
+    svg {
+      margin-left: 15px;
+      transform: rotate(-45deg);
+      @media screen and (max-width: 425px) {
+        width: 11px;
+        height: 11px;
+      }
+
+      path {
+        transition: 0.3s;
+        fill: var(--tomato);
+        stroke: var(--tomato);
+      }
+    }
+    &:hover {
+      span {
+        opacity: 1;
+      }
+      svg {
+        path {
+          fill: var(--dark);
+          stroke: var(--dark);
+        }
+      }
+    }
+  }
+}

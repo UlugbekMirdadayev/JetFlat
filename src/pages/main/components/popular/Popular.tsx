@@ -27,7 +27,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
             <div className="heading__line" />
           </div>
           <h2 className="mb40">{title || 'Популярные ЖК'}</h2>
-          <p className={`heading__desc mb60 ${description ? '' : 'center'} sm-text-center`}>
+          <p className={`heading__desc mb60 sm-text-center`}>
             {description ||
               'В этих популярных жилых комплексах вы точно найдёте что-нибудь для себя'}
           </p>

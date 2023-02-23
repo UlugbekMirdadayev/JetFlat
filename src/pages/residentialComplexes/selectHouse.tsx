@@ -1,4 +1,5 @@
 import { useRef, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ArrowRightIcon } from '../../assets';
 import { Button } from '../../components/button';
@@ -6,6 +7,7 @@ import { Button } from '../../components/button';
 const array = [...Array(10)];
 
 export const SelectHouse = () => {
+  const navigate = useNavigate();
   const sliderRef = useRef<any>(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -94,7 +96,10 @@ export const SelectHouse = () => {
                   <div className="desc_card mb15">
                     <p>2-комн.</p> <p>54-83 м2</p> <p>от 3 400 000₽</p>
                   </div>
-                  <Button variant="outlined" className="mt30 mb10 md-mb-0">
+                  <Button
+                    variant="outlined"
+                    className="mt30 mb10 md-mb-0"
+                    onClick={() => navigate('/apartment/:id')}>
                     <span className="md-fs-13">Выбрать квартиру</span>
                   </Button>
                 </div>

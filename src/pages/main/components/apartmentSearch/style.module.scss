@@ -59,10 +59,10 @@
   padding: 30px 20px;
   position: relative;
   @media screen and (max-width: 768px) {
-    width: calc(50vw - 50px);
+    width: auto;
     @media screen and (max-width: 425px) {
-      width: calc(100% - 50px);
-      padding: 20px 0;
+      width: calc(100% - 54px);
+      padding: 20px 0px;
     }
   }
   &__inner {
@@ -88,6 +88,9 @@
         font-size: 14px;
       }
     }
+    @media screen and (max-width: 425px) {
+      padding: 0;
+    }
   }
   &__ship {
     position: absolute;
@@ -95,6 +98,8 @@
     top: 0;
     @media screen and (max-width: 768px) {
       font-size: 14px;
+      width: auto;
+      padding: 0 20px;
     }
   }
 }

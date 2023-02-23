@@ -12,8 +12,10 @@ import { ArrowRightIcon, ChartIcon, HeartIcon } from '../../assets';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { Button } from '../../components/button';
+import { useNavigate } from 'react-router-dom';
 
 function Card() {
+  const navigate = useNavigate();
   const sliderRef = useRef<any>(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -30,16 +32,16 @@ function Card() {
         <div className="row heading_row sm-d-flex-col sm-text-left">
           <div className="heading_text">
             <h2 className="md-mt50 md-mt-0">
-              <span className="md-pr-0 md-fs-28 sm-fs-22 sm-my-20 sm-order-1">Зелёный остров</span>
+              <span className="md-pr-0 md-fs-28 sm-fs-22 sm-my-20 ">Зелёный остров</span>
             </h2>
           </div>
-          <button className="mini-orange lg_btn md-d-block sm-ml-0">
+          <button className="mini-orange lg_btn md-d-block sm-ml-0 sm-order-1">
             <span>ПИК</span>
           </button>
         </div>
         <div className="green_icons row heading_row">
           <button className="like-btn sm-size-30">
-            <LikeIcon className="sm-size-13"/>
+            <LikeIcon className="sm-size-13" />
           </button>
           <ChartIcon className="sm-size-30" />
           <HeartIcon className="sm-size-30" />
@@ -95,7 +97,10 @@ function Card() {
       </div>
       <div className="row_result align-item-center mb40 md-col md-f-start">
         <div className="bold_text_ row md-bold">ДДУ (счета ESCROW), ДКП</div>
-        <Button variant="primary" className="md-mt40 md-m-btn sm-full-btn sm-outline-orange-btn">
+        <Button
+          variant="primary"
+          className="md-mt40 md-m-btn sm-full-btn sm-outline-orange-btn"
+          onClick={() => navigate('/apartment/1')}>
           <span className="md-fs-13">Выбрать квартиру</span>
         </Button>
       </div>

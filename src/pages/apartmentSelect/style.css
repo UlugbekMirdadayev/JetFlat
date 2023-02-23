@@ -1,0 +1,36 @@
+.lg-gap-20 {
+    gap: 20px;
+}
+
+button.outline-primary {
+    background: transparent;
+    background: #FFFFFF;
+    border: 1px solid #008891;
+}
+
+button.outline-primary:hover {
+    background: #008891;
+}
+
+button.outline-primary:hover span {
+    color: #FFFFFF;
+}
+
+.button_inner {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.tr-btn {
+    background: transparent;
+}
+
+.teal_bg {
+    padding: 10px 13px;
+    background: #CEEEEF;
+}
+
+.align-items-center {
+    align-items: center;
+}

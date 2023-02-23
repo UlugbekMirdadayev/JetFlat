@@ -5,6 +5,7 @@ import { IpotekaOrder } from '../pages/ipoteka';
 import { Login } from '../pages/login';
 import { ResultSearch } from '../pages/resultSearch';
 import { ResidentialComplexes } from '../pages/residentialComplexes';
+import { ApartmentSelect } from '../pages/apartmentSelect';
 
 export const routes = [
   { path: '/', element: Main },
@@ -13,5 +14,6 @@ export const routes = [
   { path: '/ipoteka', element: IpotekaOrder },
   { path: '/login', element: Login },
   { path: '/result', element: ResultSearch },
-  { path: "/residential-complexes" ,element: ResidentialComplexes}
+  { path: '/residential-complexes', element: ResidentialComplexes },
+  { path: '/apartment/:id', element: ApartmentSelect }
 ];

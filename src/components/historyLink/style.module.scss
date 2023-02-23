@@ -7,15 +7,20 @@
   }
 
   &__item {
-    margin: 0 10px;
     &:last-child {
-      margin-right: 0;
+      .list__link {
+        margin-right: 0;
+      }
     }
     &:first-child {
-      margin-left: 0;
+      .list__link {
+        margin-left: 0;
+      }
     }
     @media screen and (max-width: 767px) {
-      margin: 0 3px;
+      .list__link {
+        margin: 0 3px;
+      }
     }
   }
 
@@ -27,6 +32,7 @@
     text-decoration: none;
     transition: 0.3s;
     opacity: 0.55;
+    margin: 0 10px;
 
     @media screen and (max-width: 767px) {
       font-size: 13px;

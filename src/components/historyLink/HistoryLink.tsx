@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './style.module.scss';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
@@ -14,14 +13,12 @@ export const HistoryLink = ({ links = [] }: any) => {
         </li>
         {links.length
           ? links?.map(({ link = '/', name = '' }: any) => (
-              <React.Fragment key={link}>
-                \
-                <li className={styles.list__item}>
-                  <NavLink to={link} className={styles.list__link}>
-                    {name}
-                  </NavLink>
-                </li>
-              </React.Fragment>
+              <li className={styles.list__item} key={link}>
+                /
+                <NavLink to={link} className={styles.list__link}>
+                  {name}
+                </NavLink>
+              </li>
             ))
           : null}
       </ul>

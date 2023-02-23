@@ -1,7 +1,6 @@
 import React from 'react';
 import { FoxModal } from '../../components/popups/foxModal';
 import { ApartmentByClass } from './components/apartmentByClass';
-import { ApartmentsByTypeOfLayout } from './components/apartmentsByTypeOfLayout';
 import { ApartmentSearch } from './components/apartmentSearch';
 import { ApartmentSearchByDeveloper } from './components/apartmentSearchByDeveloper';
 import { ApartmentTypeSearch } from './components/apartmentTypeSearch';
@@ -18,7 +17,6 @@ export const Main = () => {
       <Popular />
       <ApartmentSearch />
       <ApartmentTypeSearch />
-      <ApartmentsByTypeOfLayout />
       <ApartmentByClass />
       <ApartmentSearchByDeveloper />
       <CityCollage />

@@ -224,12 +224,36 @@ button:hover {
     }
   }
 }
-
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.fld-column {
+  display: flex;
+  flex-direction: column;
+}
+.line-through {
+  text-decoration: line-through;
+}
 .apartment {
   padding-bottom: 150px;
   @media screen and (max-width: 425px) {
     padding-bottom: 60px;
   }
+}
+.white_color {
+  color: #fff;
+}
+.relative {
+  position: relative;
+}
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+.full_container {
+  width: 100vw;
+  max-width: none;
 }
 #root {
   @media screen and (max-width: 425px) {

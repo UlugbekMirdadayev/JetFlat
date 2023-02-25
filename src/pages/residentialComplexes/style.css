@@ -119,7 +119,6 @@
     box-shadow: 0px 4px 20px rgba(10, 69, 103, 0.2);
 }
 
-
 .card_in_map .border__topBorder,
 .card_in_map .border__bottomBorder {
     width: calc(100% - 60px)
@@ -443,6 +442,20 @@
         margin-left: -20px;
     }
 
+    .onhovered:hover {
+        box-shadow: none
+    }
+
+    .sm-px-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sm-mx-10 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .sm-mx-5 {
         margin: 0 5px;
     }
@@ -481,7 +494,7 @@
     }
 
     .sm-size-360 {
-        width: 360px;
+        width: 100%;
         height: 360px;
     }
 

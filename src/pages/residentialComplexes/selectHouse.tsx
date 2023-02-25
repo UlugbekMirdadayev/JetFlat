@@ -72,7 +72,7 @@ export const SelectHouse = () => {
           }}
           className="mySwiper md-order-1">
           {array.map((_, key) => (
-            <SwiperSlide className="card_in_map" key={key}>
+            <SwiperSlide className="card_in_map sm-mx-10" key={key}>
               <div className={'border__rightBorder'} />
               <div className={'border__topBorder'} />
               <div className={'border__bottomBorder'} />
@@ -88,7 +88,7 @@ export const SelectHouse = () => {
                     </button>
                   </div>
                 </div>
-                <div className="card_text md-px-0 md-pb-0">
+                <div className="card_text sm-px-0 md-pb-0">
                   <div className="title_card__ mb20">Дом 1</div>
                   <div className="desc_card mb15">
                     <p>2-комн.</p> <p>54-83 м2</p> <p>от 3 400 000₽</p>

@@ -12,6 +12,8 @@ import { Select } from '../../components/select/Select';
 import { Button } from '../../components/button';
 import Popup from './popup';
 import Calculator from './calculator';
+import TermsPurchase from './termsPurchase';
+import Similars from './Similars';
 
 export const ApartmentSelect = () => {
   const { id } = useParams();
@@ -325,6 +327,8 @@ export const ApartmentSelect = () => {
       </div>
       <Popup />
       <Calculator />
+      <TermsPurchase />
+      <Similars />
     </div>
   );
 };

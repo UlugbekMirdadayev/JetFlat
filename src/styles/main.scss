@@ -244,6 +244,9 @@ button:hover {
 .white_color {
   color: #fff;
 }
+.black_color {
+  color: #242424;
+}
 .relative {
   position: relative;
 }
@@ -254,6 +257,12 @@ button:hover {
 .full_container {
   width: 100vw;
   max-width: none;
+}
+.align-end {
+  align-items: flex-end;
+}
+.w-auto {
+  width: auto !important;
 }
 #root {
   @media screen and (max-width: 425px) {

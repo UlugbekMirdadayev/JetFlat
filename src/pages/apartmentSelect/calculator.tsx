@@ -103,7 +103,64 @@ function Calculator() {
               </Button>
             </div>
           </div>
-          <div className="col__between__div"></div>
+          <div className="col__between__div fld-column space-between">
+            <div className="row space-between align-items-center mb35 col__head_row">
+              <div className="row space-between gap20 align-items-center left_col_calc">
+                <Button variant="orange" className="py14 px40 percent_btn__">
+                  <span className="desc__text weight600 white_color">от 7,49%</span>
+                </Button>
+                <div className="f16 desc__text">
+                  Минимальный взнос <span className="orange_color weight600">10%</span>
+                </div>
+              </div>
+              <div className="teal_color desc__text weight600">Стандартная программа</div>
+            </div>
+            <div className="row space-between mb35 col__head_row">
+              <div className="info__bank align-items-center row">
+                <div className="img_bank__">
+                  <span className="weight600 desc__text">Банк</span>
+                </div>
+                <div className="weight600 desc__text long__name__bank">
+                  Длинное и очень длинное название банка
+                </div>
+              </div>
+              <div className="fld-column texts__right">
+                <div className="row space-between align-items-center mb25">
+                  <div className="f16 desc__text">Первоначальный взнос</div>
+                  <span className="orange_color desc__text weight600">15,3%</span>
+                  <div className="row calc_row p10 m0 align-items-center justify-center w200">
+                    <div className="desc__text weight600">265 900Р</div>
+                  </div>
+                </div>
+                <div className="row space-between align-items-center mb25">
+                  <div className="f16 desc__text">Сумма кредита</div>
+                  <div className="row calc_row p10 m0 align-items-center justify-center w200">
+                    <div className="desc__text weight600">2 265 900Р</div>
+                  </div>
+                </div>
+                <div className="row space-between align-items-center mb25">
+                  <div className="f16 desc__text">Ежемесячный платеж</div>
+                  <div className="row calc_row active p10 m0 align-items-center justify-center w200">
+                    <div className="desc__text weight600">17 609Р</div>
+                  </div>
+                </div>
+                <div className="small_text orange_color">
+                  Данная информация носит предварительный характер и не является публичной офертой
+                </div>
+              </div>
+            </div>
+            <div className="row space-between align-end mt30">
+              <Button variant="outlined" className="vw__size__btn px40 py19">
+                <span className="desc__text weight600 button_inner">
+                  Посмотреть график платежей
+                </span>
+              </Button>
+              <Button variant="outlined" className="vw__size__btn px40 py19 desc__text">
+                <span className="desc__text weight600 button_inner">Отправить заявку в банк</span>
+              </Button>
+              <div className="f16 desc__text teal_color">подробнее о программе</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

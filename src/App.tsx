@@ -1,13 +1,13 @@
 // import React from 'react';
 // import { Checkbox } from './components/checkbox';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { routes } from './constantes/routes';
+import { BrowserRouter, /* Routes, Route */} from 'react-router-dom';
+// import { routes } from './constantes/routes';
 // import { Button } from './components/button';
 // import { Radio } from './components/radio';
 // import { Select } from './components/select/Select';
 import { Header } from './components/header';
-import { Cookie } from './components/cookie';
-import { Footer } from './components/footer';
+// import { Cookie } from './components/cookie';
+// import { Footer } from './components/footer';
 
 function App() {
   // const [idx, setIdx] = React.useState(0);

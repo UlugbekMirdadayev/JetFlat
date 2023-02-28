@@ -32,7 +32,7 @@ export const IpotekaOrder = () => {
   ];
   return (
     <div className="container">
-      <div className={styles.conainer}>
+      <div className={styles.container}>
         <HistoryLink links={[{ name: 'Ипотека', link: '/ipoteka' }]} />
         <div className={clsx([styles.row, 'mb80', 'pt20'])}>
           <div className={styles.col}>

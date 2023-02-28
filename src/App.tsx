@@ -21,14 +21,14 @@ function App() {
         {/* <Radio />
         <Select options={['ghh', 'gghgj']} selectedIbdex={idx} setSelectedIndex={setIdx} /> */}
 
-        <Routes>
+        {/* <Routes>
           {routes.map((route) => (
             <Route key={route.path} path={route.path} element={<route.element />} />
           ))}
-        </Routes>
+        </Routes> */}
 
-        <Cookie />
-        <Footer />
+        {/* <Cookie />
+        <Footer /> */}
       </div>
     </BrowserRouter>
   );

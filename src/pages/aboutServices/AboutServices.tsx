@@ -9,7 +9,7 @@ export const AboutServices = () => {
   const sliderRef = useRef<any>(null);
   return (
     <div className="container">
-      <div className={styles.conainer}>
+      <div className={styles.container}>
         <HistoryLink links={[{ name: 'О сервисе', link: '/about-services' }]} />
         <div className="heading mb80 mt20">
           <h2>О сервисе</h2>

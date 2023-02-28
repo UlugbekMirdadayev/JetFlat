@@ -1,6 +1,5 @@
 .result_container {
   padding: 40px 0px;
-  margin-top: 184px;
   width: calc(100% - 40px);
 }
 
@@ -1252,9 +1251,9 @@
 }
 
 @media screen and (max-width:767px) {
-  .result_container {
+  /* .result_container {
     margin-top: 70px;
-  }
+  } */
 
   .card_left .bottom_btns,
   .row_container .space .card_left .responsive_grid {

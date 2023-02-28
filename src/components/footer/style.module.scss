@@ -25,6 +25,9 @@
       }
     }
   }
+  @media screen and (max-width: 425px){ 
+    padding-bottom: 110px;
+  }
 }
 
 .politics {
@@ -128,8 +131,6 @@
     @media screen and (max-width: 767px) {
       margin: 40px auto;
     }
-  }
-  &__wrap {
   }
 }
 

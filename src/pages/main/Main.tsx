@@ -1,13 +1,13 @@
 import React from 'react';
-import { FoxModal } from '../../components/popups/foxModal';
-import { ApartmentByClass } from './components/apartmentByClass';
-import { ApartmentSearch } from './components/apartmentSearch';
-import { ApartmentSearchByDeveloper } from './components/apartmentSearchByDeveloper';
-import { ApartmentTypeSearch } from './components/apartmentTypeSearch';
 import { Banner } from './components/banner';
-import { CityCollage } from './components/cityCollage';
-import { Popular } from './components/popular';
 import { Recent } from './components/recent';
+import { Popular } from './components/popular';
+import { ApartmentSearch } from './components/apartmentSearch';
+import { ApartmentTypeSearch } from './components/apartmentTypeSearch';
+import { ApartmentByClass } from './components/apartmentByClass';
+import { ApartmentSearchByDeveloper } from './components/apartmentSearchByDeveloper';
+import { CityCollage } from './components/cityCollage';
+import { FoxModal } from '../../components/popups/foxModal';
 
 export const Main = () => {
   return (
@@ -20,7 +20,7 @@ export const Main = () => {
       <ApartmentByClass />
       <ApartmentSearchByDeveloper />
       <CityCollage />
-      <FoxModal />
+       <FoxModal />
     </>
   );
 };

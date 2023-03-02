@@ -16,18 +16,7 @@ export const Header = () => {
   useEffect(() => {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }, [pathname]);
-  useEffect(() => {
-    const app = document.querySelector('.wrapper');
-    app?.setAttribute('style', `height:calc(100vh - ${ref.current.offsetHeight}px)`);
-  }, [ref.current]);
-
-  useEffect(() => {
-    window.onresize = () => {
-      const app = document.querySelector('.wrapper');
-      app?.setAttribute('style', `height:calc(100vh - ${ref.current.offsetHeight}px)`);
-    };
-  }, [ref.current]);
-
+ 
   const [open, setOpen] = useState<Boolean>(false);
 
   return (

@@ -33,7 +33,7 @@ export const ApartmentSearch = () => {
         <div className={styles.header}>
           <div>
             <div className={clsx([styles.heading, 'heading mb60'])}>
-              <div className="heading__line"></div>
+              <div className="heading__line" />
               <h2 className="mb40">Поиск квартир по районам</h2>
               <p className="heading__desc">
                 Характеристика районов поможет определиться с местом проживания
@@ -73,15 +73,15 @@ export const ApartmentSearch = () => {
                 <div className={styles.card__inner}>
                   <div className={styles.card__img}>
                     <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>
-                    <img src={ap1} alt="" />
+                    <img src={ap1} alt="..." />
                   </div>
                   <div className={styles.card__info}>
                     <h4 className="f28 w700 mb20">Пионерский</h4>
-                    <p className="f18 w400 ">УПИ, парк, близость центра</p>
+                    <p className="f18 w400 pb20">УПИ, парк, близость центра</p>
                   </div>
                 </div>
-                <div className={'border__topBorder'}></div>
-                <div className={'border__bottomBorder'}></div>
+                <div className={'border__topBorder'} />
+                <div className={'border__bottomBorder'} />
               </div>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
@@ -89,15 +89,15 @@ export const ApartmentSearch = () => {
                 <div className={styles.card__inner}>
                   <div className={styles.card__img}>
                     <span className={clsx('ship', styles.card__ship)}>125 ЖК</span>
-                    <img src={ap2} alt="" />
+                    <img src={ap2} alt="..." />
                   </div>
                   <div className={styles.card__info}>
                     <h4 className="f28 w700 mb20">Центр</h4>
-                    <p className="f18 w400 ">Близость всего, ритм города</p>
+                    <p className="f18 w400 pb20">Близость всего, ритм города</p>
                   </div>
                 </div>
-                <div className={'border__topBorder'}></div>
-                <div className={'border__bottomBorder'}></div>
+                <div className={'border__topBorder'} />
+                <div className={'border__bottomBorder'} />
               </div>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
@@ -105,15 +105,15 @@ export const ApartmentSearch = () => {
                 <div className={styles.card__inner}>
                   <div className={styles.card__img}>
                     <span className={clsx('ship', styles.card__ship)}>15 ЖК</span>
-                    <img src={ap3} alt="" />
+                    <img src={ap3} alt="..." />
                   </div>
                   <div className={styles.card__info}>
                     <h4 className="f28 w700 mb20">Академический</h4>
-                    <p className="f18 w400 ">Новый, яркий, молодой</p>
+                    <p className="f18 w400 pb20">Новый, яркий, молодой</p>
                   </div>
                 </div>
-                <div className={'border__topBorder'}></div>
-                <div className={'border__bottomBorder'}></div>
+                <div className={'border__topBorder'} />
+                <div className={'border__bottomBorder'} />
               </div>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
@@ -121,15 +121,15 @@ export const ApartmentSearch = () => {
                 <div className={styles.card__inner}>
                   <div className={styles.card__img}>
                     <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>
-                    <img src={ap4} alt="" />
+                    <img src={ap4} alt="..." />
                   </div>
                   <div className={styles.card__info}>
                     <h4 className="f28 w700 mb20">УНЦ, Краснолесье</h4>
-                    <p className="f18 w400 ">Чистый воздух</p>
+                    <p className="f18 w400 pb20">Чистый воздух</p>
                   </div>
                 </div>
-                <div className={'border__topBorder'}></div>
-                <div className={'border__bottomBorder'}></div>
+                <div className={'border__topBorder'} />
+                <div className={'border__bottomBorder'} />
               </div>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
@@ -137,15 +137,15 @@ export const ApartmentSearch = () => {
                 <div className={styles.card__inner}>
                   <div className={styles.card__img}>
                     <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>
-                    <img src={ap1} alt="" />
+                    <img src={ap1} alt="..." />
                   </div>
                   <div className={styles.card__info}>
                     <h4 className="f28 w700 mb20">УНЦ, Краснолесье</h4>
-                    <p className="f18 w400 ">Чистый воздух</p>
+                    <p className="f18 w400 pb20">Чистый воздух</p>
                   </div>
                 </div>
-                <div className={'border__topBorder'}></div>
-                <div className={'border__bottomBorder'}></div>
+                <div className={'border__topBorder'} />
+                <div className={'border__bottomBorder'} />
               </div>
             </SwiperSlide>
           </Swiper>

@@ -1,7 +1,6 @@
 import { Checkbox } from '../checkbox';
 import { Button } from '../button';
 import styles from './style.module.scss';
-import clsx from 'clsx';
 import { Search } from './Search';
 import { SelectOne } from './SelectOne';
 import { SelectTwo } from './SelectTwo';
@@ -14,7 +13,7 @@ export const Filters = () => {
     <div className={styles.filters}>
       <div className={styles.filters__head}>
         <Search />
-        <div className={clsx(styles.select, 'mr40')}>
+        <div className={styles.mr40}>
           <SelectOne />
         </div>
         <div className={styles.select}>

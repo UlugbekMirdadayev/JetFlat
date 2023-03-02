@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './style.module.scss';
 import clsx from 'clsx';
 import ap1 from '../../../../assets/image/ap1.jpg';
@@ -10,8 +9,8 @@ export const ApartmentByClass = () => {
   return (
     <section className={styles.apartment}>
       <div className="container">
-        <div className="heading mb60">
-          <div className="heading__line"></div>
+        <div className={clsx([styles.heading,"heading mb60"])}>
+          <div className="heading__line" />
           <h2 className="mb40">Поиск по классу жилых домов</h2>
           <p className={clsx([styles._desc, 'heading__desc'])}>
             Характеристика класса домов поможет определиться с местом проживания
@@ -26,7 +25,7 @@ export const ApartmentByClass = () => {
                 <img src={ap1} alt="" />
               </div>
               <div className={styles.card__info}>
-                <h4 className="f28 w700 mb20">53 ЖК</h4>
+                <h4 className="f28 w700 pb20">53 ЖК</h4>
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />
@@ -40,7 +39,7 @@ export const ApartmentByClass = () => {
                 <img src={ap2} alt="" />
               </div>
               <div className={styles.card__info}>
-                <h4 className="f28 w700 mb20">24 ЖК</h4>
+                <h4 className="f28 w700 pb20">24 ЖК</h4>
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />
@@ -54,7 +53,7 @@ export const ApartmentByClass = () => {
                 <img src={ap3} alt="" />
               </div>
               <div className={styles.card__info}>
-                <h4 className="f28 w700 mb20">142 ЖК</h4>
+                <h4 className="f28 w700 pb20">142 ЖК</h4>
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />
@@ -68,7 +67,7 @@ export const ApartmentByClass = () => {
                 <img src={ap4} alt="" />
               </div>
               <div className={styles.card__info}>
-                <h4 className="f28 w700 mb20">12 ЖК</h4>
+                <h4 className="f28 w700 pb20">12 ЖК</h4>
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />

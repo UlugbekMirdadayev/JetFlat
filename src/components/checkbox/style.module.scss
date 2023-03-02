@@ -5,6 +5,10 @@
   line-height: 1;
   position: relative;
   margin-left: 15px;
+  @media screen and (max-width: 1920px) {
+    font-size: 0.7291666666666666vw;
+    margin-left: 0.78125vw;
+  }
 }
 
 .checkbox-icon {
@@ -17,11 +21,10 @@
   left: 0;
   position: relative;
   top: 0;
-  @media screen and (max-width: 768px) {
-    width: 20px;
-    height: 20px;
+  @media screen and (max-width: 1920px) {
+    width: 1.4583333333333333vw;
+    height: 1.4583333333333333vw;
   }
-  //   transition: all 0.2s;
   &:after {
     border-color: transparent;
     border-style: solid;
@@ -35,10 +38,11 @@
     top: -1px;
     transform: rotate(45deg);
     width: 9px;
-    @media screen and (max-width: 768px) {
-      height: 11px;
-      left: 0px;
-      width: 4px;
+    @media screen and (max-width: 1920px) {
+      height: 0.8854166666666666vw;
+      border-width: 0 0.10416666666666667vw 0.10416666666666667vw 0;
+      left: 0.052083333333333336vw;
+      width: 0.46875vw;
     }
   }
 }
@@ -58,6 +62,9 @@
   &:checked ~ .checkbox-icon {
     background: #74c6c9;
     border-width: 2px;
+    @media screen and (max-width: 1920px) {
+      border-width: 0.10416666666666667vw;
+    }
   }
 }
 
@@ -66,4 +73,10 @@
   cursor: pointer;
   display: flex;
   position: relative;
+
+  span {
+    @media screen and (max-width: 1920px) {
+      font-size: 0.9375vw;
+    }
+  }
 }

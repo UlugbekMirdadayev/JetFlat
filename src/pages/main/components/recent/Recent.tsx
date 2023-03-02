@@ -23,7 +23,7 @@ export const Recent = () => {
   return (
     <section className={styles.recent}>
       <div className="container">
-        <div className="heading mb60">
+        <div className={clsx([styles.heading, 'heading mb60'])}>
           <div className={clsx([styles.mobile_line, 'heading__line'])} />
           <h2>Вы недавно смотрели</h2>
         </div>
@@ -36,137 +36,41 @@ export const Recent = () => {
               clickable: true
             }}
             className="mySwiper">
-            <SwiperSlide className={styles.slide}>
-              <Link to={'/'} className={styles.card}>
-                <div className={styles.card__inner}>
-                  <img src={image} className={styles.card__img} alt="" />
-                  <div className={styles.card__info}>
-                    <div className={styles.card__ship}>Есть сданные</div>
-                    <LinesEllipsis
-                      text="Discovery Residence"
-                      maxLine="2"
-                      ellipsis="..."
-                      trimRight
-                      title="Discovery Residence"
-                      basedOn="letters"
-                      className={styles.card__title}
-                      component="h4"
-                    />
-                    <LinesEllipsis
-                      text="Здесь будет ваш текст любого объёма"
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      title="Здесь будет ваш текст любого объёма"
-                      basedOn="letters"
-                      className={styles.card__desc}
-                      component="p"
-                    />
+            {[1, 2, 3, 4, 5, 6].map((_, key) => (
+              <SwiperSlide key={key} className={styles.slide}>
+                <Link to={'/'} className={styles.card}>
+                  <div className={styles.card__inner}>
+                    <img src={image} className={styles.card__img} alt="" />
+                    <div className={styles.card__info}>
+                      <div className={styles.card__ship}>Есть сданные</div>
+                      <LinesEllipsis
+                        text="Discovery Residence"
+                        maxLine="2"
+                        ellipsis="..."
+                        trimRight
+                        title="Discovery Residence"
+                        basedOn="letters"
+                        className={styles.card__title}
+                        component="h4"
+                      />
+                      <LinesEllipsis
+                        text="Здесь будет ваш текст любого объёма"
+                        maxLine="3"
+                        ellipsis="..."
+                        trimRight
+                        title="Здесь будет ваш текст любого объёма"
+                        basedOn="letters"
+                        className={styles.card__desc}
+                        component="p"
+                      />
+                    </div>
+                    <div className={clsx([styles.mb_d_none, 'border__rightBorder'])} />
+                    <div className={'border__topBorder'} />
+                    <div className={'border__bottomBorder'} />
                   </div>
-                  <div className={clsx([styles.mb_d_none,'border__rightBorder'])} />
-                  <div className={'border__topBorder'} />
-                  <div className={'border__bottomBorder'} />
-                </div>
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <Link to={'/'} className={styles.card}>
-                <div className={styles.card__inner}>
-                  <img src={image} className={styles.card__img} alt="" />
-                  <div className={styles.card__info}>
-                    <div className={styles.card__ship}>Есть сданные</div>
-                    <LinesEllipsis
-                      text="Discovery Residence"
-                      maxLine="2"
-                      ellipsis="..."
-                      trimRight
-                      title="Discovery Residence"
-                      basedOn="letters"
-                      className={styles.card__title}
-                      component="h4"
-                    />
-                    <LinesEllipsis
-                      text="Здесь будет ваш текст любого объёма"
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      title="Здесь будет ваш текст любого объёма"
-                      basedOn="letters"
-                      className={styles.card__desc}
-                      component="p"
-                    />
-                  </div>
-                  <div className={clsx([styles.mb_d_none,'border__rightBorder'])} />
-                  <div className={'border__topBorder'} />
-                  <div className={'border__bottomBorder'} />
-                </div>
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <Link to={'/'} className={styles.card}>
-                <div className={styles.card__inner}>
-                  <img src={image} className={styles.card__img} alt="" />
-                  <div className={styles.card__info}>
-                    <div className={styles.card__ship}>Есть сданные</div>
-                    <LinesEllipsis
-                      text="Discovery Residence"
-                      maxLine="2"
-                      ellipsis="..."
-                      trimRight
-                      title="Discovery Residence"
-                      basedOn="letters"
-                      className={styles.card__title}
-                      component="h4"
-                    />
-                    <LinesEllipsis
-                      text="Здесь будет ваш текст любого объёма"
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      title="Здесь будет ваш текст любого объёма"
-                      basedOn="letters"
-                      className={styles.card__desc}
-                      component="p"
-                    />
-                  </div>
-                  <div className={clsx([styles.mb_d_none,'border__rightBorder'])} />
-                  <div className={'border__topBorder'} />
-                  <div className={'border__bottomBorder'} />
-                </div>
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <Link to={'/'} className={styles.card}>
-                <div className={styles.card__inner}>
-                  <img src={image} className={styles.card__img} alt="" />
-                  <div className={styles.card__info}>
-                    <div className={styles.card__ship}>Есть сданные</div>
-                    <LinesEllipsis
-                      text="Discovery Residence"
-                      maxLine="2"
-                      ellipsis="..."
-                      trimRight
-                      title="Discovery Residence"
-                      basedOn="letters"
-                      className={styles.card__title}
-                      component="h4"
-                    />
-                    <LinesEllipsis
-                      text="Здесь будет ваш текст любого объёма"
-                      maxLine="3"
-                      ellipsis="..."
-                      trimRight
-                      title="Здесь будет ваш текст любого объёма"
-                      basedOn="letters"
-                      className={styles.card__desc}
-                      component="p"
-                    />
-                  </div>
-                  <div className={'border__topBorder'} />
-                  <div className={'border__bottomBorder'} />
-                </div>
-              </Link>
-            </SwiperSlide>
+                </Link>
+              </SwiperSlide>
+            ))}
           </Swiper>
           <div className={styles.center_mobile_navs}>
             <div className="swiper-nav">

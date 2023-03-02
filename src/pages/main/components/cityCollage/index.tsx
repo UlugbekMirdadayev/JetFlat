@@ -55,7 +55,7 @@ export const CityCollage = () => {
   return (
     <div className="container">
       <section className="apartment">
-        <div className="heading mb60">
+        <div className={clsx([styles.heading,"heading mb60"])}>
           <div className="heading__line" />
           <h2 className={clsx([styles.title, 'mb40'])}>
             Екатеринбург — <br className={styles.mobile_br} /> откройте для себя этот город
@@ -70,7 +70,7 @@ export const CityCollage = () => {
             <div className={styles.collage}>
               {cities[0].map((city: any, key: number) => (
                 <div className={clsx([styles.card, key ? styles.reverse_column : ''])} key={key}>
-                  <div className="info_">
+                  <div className={styles.card_info_}>
                     <h3 className={styles.card__title}>{city.title}</h3>
                     <p className="heading__desc">{city.desc}</p>
                   </div>
@@ -83,7 +83,7 @@ export const CityCollage = () => {
             <div className={clsx([styles.collage, styles.reverse_collage])}>
               {cities[1].map((city: any, key: number) => (
                 <div className={clsx([styles.card, styles.reverse_column])} key={key}>
-                  <div className="info_">
+                  <div className={styles.card_info_}>
                     <h3 className={styles.card__title}>{city.title}</h3>
                     <p className="heading__desc">{city.desc}</p>
                   </div>

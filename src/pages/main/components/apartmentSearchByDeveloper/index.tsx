@@ -32,8 +32,8 @@ export const ApartmentSearchByDeveloper = () => {
   return (
     <section className="apartment">
       <div className="container">
-        <div className="heading mb60">
-          <div className="heading__line"></div>
+        <div className={clsx([styles.heading, 'heading mb60'])}>
+          <div className="heading__line" />
           <h2 className={clsx([styles.title, 'mb40'])}>Поиск квартир по застройщику</h2>
           <p className={clsx([styles.desc, 'heading__desc'])}>
             Надёжность Застройщика проверена. Документы для сделки соответствуют действующему
@@ -41,6 +41,7 @@ export const ApartmentSearchByDeveloper = () => {
           </p>
         </div>
         <div className={styles.select__wrap}>
+          <div className="heading__line" />
           <Select
             options={['Выбрать застройщика', 'Голос', 'Пик']}
             selectedIbdex={selectedIbdex}

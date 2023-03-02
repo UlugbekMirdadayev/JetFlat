@@ -22,7 +22,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
   return (
     <section className={styles.popular}>
       <div className="container">
-        <div className="heading mb60">
+        <div className={clsx([styles.heading, 'heading mb60'])}>
           <div className={styles.pc_line}>
             <div className="heading__line" />
           </div>

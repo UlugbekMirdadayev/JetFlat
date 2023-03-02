@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC /*useState*/ } from 'react';
 
 type Props = {
   label?: string;
@@ -10,13 +10,13 @@ type Props = {
 };
 
 export const Accord: FC<Props> = ({
-  label,
-  onClick,
-  className,
-  color,
-  defaultOpen = false,
-  children
+  // label,
+  // onClick,
+  className
+  // color,
+  // defaultOpen = false,
+  // children
 }) => {
-  const [open, setOpen] = useState<boolean>(defaultOpen);
+  // const [open, setOpen] = useState<boolean>(defaultOpen);
   return <div className={className}>Accord</div>;
 };

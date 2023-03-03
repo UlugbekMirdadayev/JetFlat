@@ -22,7 +22,7 @@ export const HistoryLink = ({ links = [] }: any) => {
             ))
           : null}
       </ul>
-      <div className="heading__line" style={{ width: 300 + links.length * 80 }} />
+      <div className="heading__line" style={{ width: 15.625 + links.length * 4.166666666666667 + 'vw' }} />
     </div>
   );
 };

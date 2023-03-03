@@ -312,7 +312,7 @@ export const ResultSearch = () => {
               <Button className="btn_outlined" variant="outlined">
                 <span>Посмотреть квартиры</span>
               </Button>
-              <div className="col_price_ text_right">
+              <div className="col_price_ text_right f18">
                 Осталось всего 2 варианта <br /> этой планировки
               </div>
             </div>
@@ -403,10 +403,10 @@ export const ResultSearch = () => {
             <div className={`space ${openFilter || openSort ? '' : 'ismobile_accord'}`}>
               {openSort && (
                 <div className={`card_left sort_card`}>
-                  <div className="closer_mobile">
+                  {/* <div className="closer_mobile">
                     <CloseIcon onClick={() => setOpenSort(!openSort)} />
-                  </div>
-                  <div className="title_card pb20">Сортировать</div>
+                  </div> */}
+                  <div className="title_card">Сортировать</div>
                   <div className="checkbox_row mb10">
                     <Radio name="sort" label={'Сначала недавно добавленные'} />
                   </div>

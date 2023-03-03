@@ -1,5 +1,4 @@
 .banner {
-  //margin-top: 180px;
   padding-top: 90px;
   padding-bottom: 94px;
   width: 100%;
@@ -12,19 +11,43 @@
   margin-left: auto;
   margin-right: auto;
   background-size: 50% 100%;
-  @media screen and (max-width: 1920px) {
-    height: 37.1875vw;
-    padding-top: 4.6875vw;
-    padding-bottom: 4.895833333333333vw;
-  }
+
   &__left {
     max-width: calc(50% - 112px);
     width: 100%;
     @media screen and (max-width: 1920px) {
       max-width: calc(50% - 5.833333333333333vw);
+      @media screen and (max-width: 1024px) {
+        max-width: 64.32291666666667vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        @media screen and (max-width:425px) {
+          max-width: 100%;
+        }
+      }
     }
   }
-  // background-image: url('../../../../assets/image/banner_mobile.png');
+  @media screen and (max-width: 1920px) {
+    height: 37.1875vw;
+    padding-top: 4.6875vw;
+    padding-bottom: 4.895833333333333vw;
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 18.098958333333332vw;
+      padding-top: 14.322916666666666vw;
+      height: auto;
+      background-image: url('../../../../assets/image/banner_mobile.png');
+      background-position: top left;
+      background-size: 100vw 100%;
+    }
+    @media screen and (max-width:425px) {
+      padding-top: 14.444444444444445vw;
+      padding-bottom: 19.166666666666668vw;
+    }
+  }
 }
 
 .hr {
@@ -53,6 +76,16 @@
   @media screen and (max-width: 1920px) {
     margin-bottom: 1.5625vw;
     font-size: 3.125vw;
+    @media screen and (max-width: 1024px) {
+      font-size: 4.6875vw;
+      color: #242424;
+      margin-bottom: 3.90625vw;
+      @media screen and (max-width:425px) {
+        color: #ed6616;
+        font-size: 7.222222222222222vw;
+        margin-bottom: 5.555555555555555vw;
+      }
+    }
   }
 }
 
@@ -62,5 +95,12 @@
   line-height: 140%;
   @media screen and (max-width: 1920px) {
     font-size: 1.25vw;
+    @media screen and (max-width: 1024px) {
+      font-size: 2.0833333333333335vw;
+      @media screen and (max-width:425px) {
+        font-size: 3.888888888888889vw;
+        line-height: 128.5%;
+      }
+    }
   }
 }

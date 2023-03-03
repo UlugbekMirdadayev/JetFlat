@@ -11,6 +11,14 @@
   @media screen and (max-width: 1920px) {
     height: 1.4583333333333333vw;
     width: 1.4583333333333333vw;
+    @media screen and (max-width: 1024px) {
+      height: 3vw;
+      width: 3vw;
+      @media screen and (max-width: 425px) {
+        height: 5.555555555555555vw;
+        width: 5.555555555555555vw;
+      }
+    }
   }
   &:after {
     content: '';
@@ -44,12 +52,22 @@
     margin-left: 0;
     @media screen and (max-width: 1920px) {
       font-size: 0.9375vw;
+      @media screen and (max-width: 1024px) {
+        font-size: 1.8229166666666667vw;
+        @media screen and (max-width: 425px) {
+          font-size: 3.3333333333333335vw
+        }
+      }
     }
   }
   @media screen and (max-width: 1920px) {
     font-size: 0.7291666666666666vw;
     line-height: 0.8333333333333334vw;
     margin-left: 0.5208333333333334vw;
+    @media screen and (max-width: 1024px) {
+      font-size: 1.8229166666666667vw;
+      margin-left: 1.3020833333333333vw;
+    }
   }
 }
 

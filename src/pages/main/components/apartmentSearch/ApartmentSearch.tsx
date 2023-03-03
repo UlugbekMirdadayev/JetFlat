@@ -12,7 +12,7 @@ import ap2 from '../../../../assets/image/ap2.jpg';
 import ap3 from '../../../../assets/image/ap3.jpg';
 import ap4 from '../../../../assets/image/ap4.jpg';
 import { ReactComponent as ArrowIcon } from '../../../../assets/svg/arrow-right.svg';
-
+const images = [ap1, ap2, ap3, ap4, ap1, ap2];
 export const ApartmentSearch = () => {
   const [selectedIbdex, setSelectedIndex] = useState(0);
   const sliderRef = useRef<any>(null);
@@ -36,12 +36,12 @@ export const ApartmentSearch = () => {
               <div className="heading__line" />
               <h2 className="mb40">Поиск квартир по районам</h2>
               <p className="heading__desc">
-                Характеристика районов поможет определиться с местом проживания
+                Характеристика районов поможет определиться c местом проживания
               </p>
             </div>
             <div className={styles.select__wrap}>
               <Select
-                options={['Все районы', 'Академический']}
+                options={['Bce районы', 'Академический']}
                 selectedIbdex={selectedIbdex}
                 setSelectedIndex={setSelectedIndex}
               />
@@ -68,86 +68,25 @@ export const ApartmentSearch = () => {
             slidesPerView={'auto'}
             spaceBetween={0}
             className="mySwiper">
-            <SwiperSlide className={styles.slide}>
-              <div className={styles.card}>
-                <div className={styles.card__inner}>
-                  <div className={styles.card__img}>
-                    <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>
-                    <img src={ap1} alt="..." />
+            {[1, 2, 3, 4, 5, 6].map((_, key) => (
+              <SwiperSlide key={key} className={styles.slide}>
+                <div className={styles.card}>
+                  <div className={styles.card__inner}>
+                    <div className={styles.card__img}>
+                      <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>
+                      <img src={images[key]} alt="..." />
+                    </div>
+                    <div className={styles.card__info}>
+                      <h4 className="f28 w700 mb20">Пионерский</h4>
+                      <p className="f18 w400 pb20">УПИ, парк, близость центра</p>
+                    </div>
                   </div>
-                  <div className={styles.card__info}>
-                    <h4 className="f28 w700 mb20">Пионерский</h4>
-                    <p className="f18 w400 pb20">УПИ, парк, близость центра</p>
-                  </div>
+                  <div className={'border__topBorder'} />
+                  <div className={'border__bottomBorder'} />
+                  <div className={clsx([styles.border__rightBorder, 'border__rightBorder'])} />
                 </div>
-                <div className={'border__topBorder'} />
-                <div className={'border__bottomBorder'} />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <div className={styles.card}>
-                <div className={styles.card__inner}>
-                  <div className={styles.card__img}>
-                    <span className={clsx('ship', styles.card__ship)}>125 ЖК</span>
-                    <img src={ap2} alt="..." />
-                  </div>
-                  <div className={styles.card__info}>
-                    <h4 className="f28 w700 mb20">Центр</h4>
-                    <p className="f18 w400 pb20">Близость всего, ритм города</p>
-                  </div>
-                </div>
-                <div className={'border__topBorder'} />
-                <div className={'border__bottomBorder'} />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <div className={styles.card}>
-                <div className={styles.card__inner}>
-                  <div className={styles.card__img}>
-                    <span className={clsx('ship', styles.card__ship)}>15 ЖК</span>
-                    <img src={ap3} alt="..." />
-                  </div>
-                  <div className={styles.card__info}>
-                    <h4 className="f28 w700 mb20">Академический</h4>
-                    <p className="f18 w400 pb20">Новый, яркий, молодой</p>
-                  </div>
-                </div>
-                <div className={'border__topBorder'} />
-                <div className={'border__bottomBorder'} />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <div className={styles.card}>
-                <div className={styles.card__inner}>
-                  <div className={styles.card__img}>
-                    <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>
-                    <img src={ap4} alt="..." />
-                  </div>
-                  <div className={styles.card__info}>
-                    <h4 className="f28 w700 mb20">УНЦ, Краснолесье</h4>
-                    <p className="f18 w400 pb20">Чистый воздух</p>
-                  </div>
-                </div>
-                <div className={'border__topBorder'} />
-                <div className={'border__bottomBorder'} />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className={styles.slide}>
-              <div className={styles.card}>
-                <div className={styles.card__inner}>
-                  <div className={styles.card__img}>
-                    <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>
-                    <img src={ap1} alt="..." />
-                  </div>
-                  <div className={styles.card__info}>
-                    <h4 className="f28 w700 mb20">УНЦ, Краснолесье</h4>
-                    <p className="f18 w400 pb20">Чистый воздух</p>
-                  </div>
-                </div>
-                <div className={'border__topBorder'} />
-                <div className={'border__bottomBorder'} />
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
           <div className={styles.mobile_nav}>
             <div className="swiper-nav">

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from '../button';
 import styles from './style.module.scss';
 import { ChartIcon, HeartIcon, InfoIcon, JfColorIcon, LogoIcon, ProfileIcon } from '../../assets';
+import clsx from 'clsx';
 
 export const Footer = () => {
   return (
@@ -109,8 +110,8 @@ export const Footer = () => {
                 <p className={styles.copyring__right}>Все права защищены</p>
               </div>
               <div className={styles.politics}>
-                <a href="/">Политика конфиденциальности</a>
-                <a href="/">Пользовательское соглашение</a>
+                <NavLink to="/">Политика конфиденциальности</NavLink>
+                <NavLink to="/">Пользовательское соглашение</NavLink>
               </div>
             </div>
           </div>
@@ -214,16 +215,22 @@ export const Footer = () => {
               </div>
             </div>
             <div className={styles.footer__bottom}>
+              <div className={clsx([styles.copyring__sm__text, styles.copyring])}>
+                <p>
+                  ©2021-2022, jet-flat.<span className={styles.red}>com</span> <sup>TM</sup>
+                </p>
+                <span className={styles.copyring__right}>Все права защищены</span>
+              </div>
               <div className={styles.copyring}>
                 <p>
                   <span className={styles.copyring__right}>Все права защищены</span>
                   <br />
-                  ©2021–2022, jet-flat.<span className={styles.red}>com</span> <sup>TM</sup>{' '}
+                  ©2021–2022, jet-flat.<span className={styles.red}>com</span> <sup>TM</sup>
                 </p>
               </div>
               <div className={styles.politics}>
-                <a href="/">Политика конфиденциальности</a>
-                <a href="/">Пользовательское соглашение</a>
+                <NavLink to="/">Политика конфиденциальности</NavLink>
+                <NavLink to="/">Пользовательское соглашение</NavLink>
               </div>
             </div>
           </div>

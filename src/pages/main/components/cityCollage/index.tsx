@@ -55,7 +55,7 @@ export const CityCollage = () => {
   return (
     <div className="container">
       <section className="apartment">
-        <div className={clsx([styles.heading,"heading mb60"])}>
+        <div className={clsx([styles.heading, 'heading mb60'])}>
           <div className="heading__line" />
           <h2 className={clsx([styles.title, 'mb40'])}>
             Екатеринбург — <br className={styles.mobile_br} /> откройте для себя этот город
@@ -98,20 +98,18 @@ export const CityCollage = () => {
         <div className={styles.mobile_slider}>
           <Swiper slidesPerView={'auto'} spaceBetween={0} ref={sliderRef} className="mySwiper">
             {cities[0].map((item, key) => (
-              <SwiperSlide key={key}>
-                <div className={styles.card}>
-                  <div className={clsx(styles.card__inner, styles.purple)}>
-                    <div className={styles.card__img}>
-                      <img src={item.image} alt="" />
-                    </div>
-                    <div className={styles.card__info}>
-                      <h4 className="f28 w700 mb20">{item.title}</h4>
-                      <p className="decs">{item.desc}</p>
-                    </div>
+              <SwiperSlide key={key} className={styles.card}>
+                <div className={clsx(styles.card__inner, styles.purple)}>
+                  <div className={styles.card__img}>
+                    <img src={require('../../../../assets/image/ap5.jpg')} alt="" />
                   </div>
-                  <div className={'border__topBorder'} />
-                  <div className={'border__bottomBorder'} />
+                  <div className={styles.card__info}>
+                    <h4 className="f28 w700 mb20">{item.title}</h4>
+                    <p className={styles.card__info__desc}>{item.desc}</p>
+                  </div>
                 </div>
+                <div className={clsx([styles.border__y, 'border__topBorder'])} />
+                <div className={clsx([styles.border__y, 'border__bottomBorder'])} />
               </SwiperSlide>
             ))}
           </Swiper>

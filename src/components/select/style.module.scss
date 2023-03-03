@@ -29,6 +29,9 @@
   }
   @media screen and (max-width: 1920px) {
     padding: 0.3645833333333333vw 1.0416666666666667vw;
+    @media screen and (max-width: 1024px) {
+      padding: 2.4739583333vw;
+    }
   }
 }
 
@@ -39,6 +42,12 @@
   color: #7d8790;
   @media screen and (max-width: 1920px) {
     font-size: 0.8333333333333334vw;
+    @media screen and (max-width: 1024px) {
+      font-size: 1.8229166667vw;
+      @media screen and (max-width: 425px) {
+        font-size: 3.3333333333333335vw;
+      }
+    }
   }
 }
 
@@ -49,6 +58,9 @@
   width: 100%;
   @media screen and (max-width: 1920px) {
     margin-bottom: 1.5625vw;
+    @media screen and (max-width: 1920px) {
+      margin-bottom: 2.6041666666666665vw;
+    }
   }
 }
 
@@ -68,6 +80,16 @@
     font-size: 0.9375vw;
     height: 2.34375vw;
     padding: 0.2604166666666667vw 0.625vw;
+    @media screen and (max-width: 1024px) {
+      padding: 1.8229166666666667vw 2.6041666666666665vw;
+      font-size: 1.953125vw;
+      height: 6.510416666666667vw;
+      @media screen and (max-width: 425px) {
+        padding: 4.166666666666667vw 5.555555555555555vw;
+        height: 13.88888888888889vw;
+        font-size: 3.888888888888889vw;
+      }
+    }
   }
   @media (max-width: 992px) {
     transition: none;
@@ -131,5 +153,15 @@
     height: 1.25vw;
     margin-right: 0.15625vw;
     right: 1.0416666666666667vw;
+    @media screen and (max-width: 1024px) {
+      width: 1.8229166666666667vw;
+      height: 1.8229166666666667vw;
+      margin-right: 2.6041666666666665vw;
+      @media screen and (max-width: 425px) {
+        height: 3.888888888888889vw;
+        width: 3.888888888888889vw;
+        margin-right: 5.555555555555555vw;
+      }
+    }
   }
 }

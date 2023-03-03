@@ -9,7 +9,7 @@ export const ApartmentTypeSearch = () => {
   return (
     <section className={styles.apartment}>
       <div className="container">
-        <div className="heading mb50">
+        <div className={clsx(styles.heading, 'heading mb50')}>
           <h2 className="">Поиск квартир по типу планировки</h2>
         </div>
         <div className={styles.links}>
@@ -26,6 +26,10 @@ export const ApartmentTypeSearch = () => {
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
                   уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
+                  <span className={clsx([styles.box__link, styles.box__link_md])}>
+                    <span>Смотреть варианты</span>
+                    <ArrowLinkIcon />
+                  </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>Смотреть варианты</span>
@@ -46,6 +50,10 @@ export const ApartmentTypeSearch = () => {
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
                   уютными балконами или лоджиями, изолированными комнатами и кухней.
+                  <span className={clsx([styles.box__link, styles.box__link_md])}>
+                    <span>Смотреть варианты</span>
+                    <ArrowLinkIcon />
+                  </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>Смотреть варианты</span>
@@ -68,6 +76,10 @@ export const ApartmentTypeSearch = () => {
                   уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый. В этом
                   классе жилья, как правило, во всех квартирах один санузел, часто совмещённый.
+                  <span className={clsx([styles.box__link, styles.box__link_md])}>
+                    <span>Смотреть варианты</span>
+                    <ArrowLinkIcon />
+                  </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>Смотреть варианты</span>
@@ -87,6 +99,10 @@ export const ApartmentTypeSearch = () => {
                 <h4 className={styles.box__title}>Двухуровневые</h4>
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами.
+                  <span className={clsx([styles.box__link, styles.box__link_md])}>
+                    <span>Смотреть варианты</span>
+                    <ArrowLinkIcon />
+                  </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>Смотреть варианты</span>
@@ -108,6 +124,10 @@ export const ApartmentTypeSearch = () => {
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
                   уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
+                  <span className={clsx([styles.box__link, styles.box__link_md])}>
+                    <span>Смотреть варианты</span>
+                    <ArrowLinkIcon />
+                  </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>Смотреть варианты</span>
@@ -129,6 +149,10 @@ export const ApartmentTypeSearch = () => {
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
                   уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
+                  <span className={clsx([styles.box__link, styles.box__link_md])}>
+                    <span>Смотреть варианты</span>
+                    <ArrowLinkIcon />
+                  </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>Смотреть варианты</span>

@@ -9,7 +9,7 @@ export const ApartmentByClass = () => {
   return (
     <section className={styles.apartment}>
       <div className="container">
-        <div className={clsx([styles.heading,"heading mb60"])}>
+        <div className={clsx([styles.heading, 'heading mb60'])}>
           <div className="heading__line" />
           <h2 className="mb40">Поиск по классу жилых домов</h2>
           <p className={clsx([styles._desc, 'heading__desc'])}>
@@ -29,8 +29,8 @@ export const ApartmentByClass = () => {
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />
-            <div className={'border__topBorder'}></div>
-            <div className={'border__bottomBorder'}></div>
+            <div className={clsx([styles.border_y, 'border__topBorder'])} />
+            <div className={clsx([styles.border_y, 'border__bottomBorder'])} />
           </div>
           <div className={styles.card}>
             <div className={clsx(styles.card__inner, styles.green)}>
@@ -43,8 +43,8 @@ export const ApartmentByClass = () => {
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />
-            <div className={'border__topBorder'}></div>
-            <div className={'border__bottomBorder'}></div>
+            <div className={clsx([styles.border_y, 'border__topBorder'])} />
+            <div className={clsx([styles.border_y, 'border__bottomBorder'])} />
           </div>
           <div className={styles.card}>
             <div className={clsx(styles.card__inner, styles.teal)}>
@@ -57,8 +57,8 @@ export const ApartmentByClass = () => {
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />
-            <div className={'border__topBorder'}></div>
-            <div className={'border__bottomBorder'}></div>
+            <div className={clsx([styles.border_y, 'border__topBorder'])} />
+            <div className={clsx([styles.border_y, 'border__bottomBorder'])} />
           </div>
           <div className={styles.card}>
             <div className={clsx(styles.card__inner, styles.purple)}>
@@ -71,8 +71,8 @@ export const ApartmentByClass = () => {
               </div>
             </div>
             <div className={clsx([styles.border, 'border__rightBorder'])} />
-            <div className={'border__topBorder'}></div>
-            <div className={'border__bottomBorder'}></div>
+            <div className={clsx([styles.border_y, 'border__topBorder'])} />
+            <div className={clsx([styles.border_y, 'border__bottomBorder'])} />
           </div>
         </div>
       </div>

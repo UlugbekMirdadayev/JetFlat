@@ -20,7 +20,7 @@ export const Main = () => {
       <ApartmentByClass />
       <ApartmentSearchByDeveloper />
       <CityCollage />
-       <FoxModal />
+      <FoxModal />
     </>
   );
 };

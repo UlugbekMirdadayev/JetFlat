@@ -2,14 +2,24 @@
   list-style: none;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 425px) {
-    flex-wrap: wrap;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 0;
+    @media screen and (max-width: 425px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     @media screen and (max-width: 1920px) {
       font-size: 0.9375vw;
       line-height: 1.1458333333333333vw;
+      @media screen and (max-width: 1024px) {
+        font-size: 1.6927083333333333vw;
+        line-height: 1;
+        @media screen and (max-width: 425px) {
+          font-size: 3.611111111111111vw;
+        }
+      }
     }
     &:last-child {
       .list__link {
@@ -41,10 +51,15 @@
       font-size: 0.9375vw;
       line-height: 1.1458333333333333vw;
       margin: 0 0.5208333333333334vw;
+      @media screen and (max-width: 1024px) {
+        font-size: 1.6927083333333333vw;
+        line-height: 1;
+        margin: 0 1.953125vw;
+      }
     }
 
     @media screen and (max-width: 425px) {
-      font-size: 13px;
+      font-size: 3.611111111111111vw;
     }
 
     &:hover {

@@ -370,6 +370,7 @@ export const ResultSearch = () => {
               setOpenSort(!openSort);
               setOpenFilter(false);
               setOpenMap(false);
+              setOpenCharact(false);
             }}>
             <SortIcon />
             <span>Сортировать</span>
@@ -380,6 +381,7 @@ export const ResultSearch = () => {
               setOpenFilter(!openFilter);
               setOpenSort(false);
               setOpenMap(false);
+              setOpenCharact(false);
             }}>
             <FiltersIcon />
             <span>Фильтры</span>
@@ -406,7 +408,7 @@ export const ResultSearch = () => {
                   {/* <div className="closer_mobile">
                     <CloseIcon onClick={() => setOpenSort(!openSort)} />
                   </div> */}
-                  <div className="title_card">Сортировать</div>
+                  <div className="title_card sort_card_title">Сортировать</div>
                   <div className="checkbox_row mb10">
                     <Radio name="sort" label={'Сначала недавно добавленные'} />
                   </div>

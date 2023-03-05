@@ -26,6 +26,7 @@ function Card() {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+
   return (
     <div className="charact_container sm-py-40">
       <div className="row heading_row space-between sm-d-flex-col sm-text-left">
@@ -145,6 +146,16 @@ function Card() {
                 </SwiperSlide>
               </Swiper>
             </div>
+            <Swiper
+              slidesPerView={'auto'}
+              spaceBetween={14}
+              className="mySwiper d-none">
+              {[...Array(10)].map((_, key) => (
+                <SwiperSlide key={key} className="slide-item__">
+                  <img src={require('../../assets/image/ap2.jpg')} alt="" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
             <div className="scroll_items">
               <Scrollbars
                 universal={true}

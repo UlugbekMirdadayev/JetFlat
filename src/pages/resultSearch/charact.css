@@ -249,6 +249,7 @@
 @media screen and (max-width:1920px) {
     .charact_container {
         padding: 3.125vw 2.0833333333333335vw 2.6041666666666665vw 1.5625vw;
+        margin-bottom: 4.166666666666667vw;
     }
 
     .heading_text h2 {
@@ -739,7 +740,7 @@
     }
 
     .orange_btn {
-        padding:4.861111111111111vw;
+        padding: 4.861111111111111vw;
         font-size: 3.3333333333333335vw;
         line-height: 1;
         display: flex;
@@ -751,9 +752,11 @@
     button.orange_btn span {
         font-size: 3.3333333333333335vw;
     }
+
     .orange_btn.mb10 {
         margin-bottom: 2.7777777777777777vw;
     }
+
     .text_paragraph .f14 {
         font-size: 3.3333333333333335vw;
     }

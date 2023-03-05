@@ -60,7 +60,7 @@ export const SelectHouse = () => {
         />
       </div>
       <div className="slider_row_ py80 md-col md-pb-0">
-        <button className="prev" onClick={handlePrev}>
+        <button className="prev is_pc" onClick={handlePrev}>
           <ArrowRightIcon />
         </button>
         <Swiper
@@ -72,7 +72,7 @@ export const SelectHouse = () => {
           }}
           className="mySwiper md-order-1">
           {array.map((_, key) => (
-            <SwiperSlide className="card_in_map sm-mx-10" key={key}>
+            <SwiperSlide className="card_in_map" key={key}>
               <div className={'border__rightBorder'} />
               <div className={'border__topBorder'} />
               <div className={'border__bottomBorder'} />
@@ -108,6 +108,14 @@ export const SelectHouse = () => {
           ))}
         </Swiper>
 
+        <button className="next is_pc" onClick={handleNext}>
+          <ArrowRightIcon />
+        </button>
+      </div>
+      <div className='slider_row_ center-row-md d-none '>
+        <button className="prev" onClick={handlePrev}>
+          <ArrowRightIcon />
+        </button>
         <button className="next" onClick={handleNext}>
           <ArrowRightIcon />
         </button>

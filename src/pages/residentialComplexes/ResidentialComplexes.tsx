@@ -18,7 +18,7 @@ export const ResidentialComplexes = () => {
   const [index, setIndex] = useState<number>(0);
 
   return (
-    <div className="result_container">
+    <div className="result_container residentials">
       <div className="container">
         <HistoryLink
           links={[

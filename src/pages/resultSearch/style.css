@@ -1816,7 +1816,7 @@
 
   .popup_container {
     margin-left: -5.555555555555555vw;
-    padding: 16.666666666666668vw 5.555555555555555vw;
+    padding: 27.77777777777778vw 5.555555555555555vw
   }
 
   .popup_container .row_result {
@@ -1971,6 +1971,25 @@
 
   .row_container .space .checkbox_row {
     margin-bottom: 2.7777777777777777vw;
+  }
+
+  .popup_container .text_popup .description__ {
+    font-size: 5vw;
+    margin-bottom: 11.11111111111111vw;
+  }
+
+  .text_popup button.mb20 {
+    margin-bottom: 5.555555555555555vw;
+  }
+
+  .text_popup button {
+    padding: 4.722222222222222vw;
+    font-size: 3.3333333333333335vw;
+    line-height: 140%;
+  }
+
+  .popup_container img {
+    width: 60.55555555555556vw;
   }
 }
 

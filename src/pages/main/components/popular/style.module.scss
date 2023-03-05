@@ -78,13 +78,7 @@
 }
 .slide {
   @media screen and (max-width: 425px) {
-    max-width: 69.44444444444444vw;
-    &:first-child {
-      margin-left: -5vw;
-    }
-    &:last-child{
-      right: -10vw;
-    }
+    max-width: 88.88888888888889vw;
   }
 }
 .card {
@@ -98,7 +92,7 @@
       max-width: 50%;
       padding: 3.7760416666666665vw;
       @media screen and (max-width: 425px) {
-        max-width: 69.44444444444444vw;
+        max-width: 88.88888888888889vw;
         padding: 5.555555555555555vw;
         display: block;
       }
@@ -111,8 +105,9 @@
     @media screen and (max-width: 1920px) {
       margin-bottom: 1.0416666666666667vw;
       @media screen and (max-width: 1024px) {
-        img {
-          height: 26.041666666666668vw;
+        height: 26.041666666666668vw;
+        @media screen and (max-width: 425px) {
+          height: 55.55555555555556vw;
         }
       }
     }
@@ -160,6 +155,9 @@
         @media screen and (max-width: 425px) {
           top: 5.555555555555555vw;
           right: 5.555555555555555vw;
+          font-size: 3.888888888888889vw;
+          width: 37.22222222222222vw;
+          height: 13.88888888888889vw;
         }
       }
     }
@@ -199,6 +197,10 @@
         font-size: 3.125vw;
         text-align: left;
         margin-bottom: 2.6041666666666665vw;
+        @media screen and (max-width: 425px) {
+          font-size: 5vw;
+          margin-bottom: 2.2222222222222223vw;
+        }
       }
     }
   }
@@ -213,6 +215,10 @@
         font-size: 1.8229166666666667vw;
         text-align: left;
         margin-bottom: 6.510416666666667vw;
+        @media screen and (max-width: 425px) {
+          font-size: 3.888888888888889vw;
+          margin-bottom: 2.2222222222222223vw;
+        }
       }
     }
   }

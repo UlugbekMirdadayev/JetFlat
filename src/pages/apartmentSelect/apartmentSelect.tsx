@@ -19,7 +19,7 @@ import Questions from './questions';
 export const ApartmentSelect = () => {
   const { id } = useParams();
   return (
-    <div className="result_container">
+    <div className="result_container apartment">
       <div className="container">
         <HistoryLink
           links={[
@@ -28,25 +28,29 @@ export const ApartmentSelect = () => {
             { name: 'Выбор квартиры', link: `/apartment/${id}` }
           ]}
         />
-        <div className="row space-between mb50">
+        <div className="row space-between md-col mb50 md-mb-40">
           <div className="align-items-center">
             <h2 className="title_head">
               <span>ЖК Зелёный остров:</span> выбор квартиры
             </h2>
           </div>
-          <div className="row lg-gap-20 align-items-center">
-            <button className="outline-primary py19 px40 btn-head-row">
-              <span className="button_inner  weight600">Вернуться к ЖК</span>
-            </button>
-            <button className="outline-primary  py19 px40 btn-head-row">
-              <span className="button_inner weight600">Ипотечный калькулятор</span>
-            </button>
-            <button className="tr-btn">
-              <ListIcon />
-            </button>
-            <button className="tr-btn">
-              <ShahmatIcon />
-            </button>
+          <div className="row lg-gap-20 apartment_head_row align-items-center">
+            <div className="row lg-gap-20">
+              <button className="outline-primary py19 px40 btn-head-row">
+                <span className="button_inner  weight600">Вернуться к ЖК</span>
+              </button>
+              <button className="outline-primary  py19 px40 btn-head-row">
+                <span className="button_inner weight600">Ипотечный калькулятор</span>
+              </button>
+            </div>
+            <div className="row align-items-center lg-gap-20 ">
+              <button className="tr-btn">
+                <ListIcon />
+              </button>
+              <button className="tr-btn">
+                <ShahmatIcon />
+              </button>
+            </div>
           </div>
         </div>
         <div className="grid_col_5 mb50 ">
@@ -101,7 +105,7 @@ export const ApartmentSelect = () => {
         </div>
         <div className="grid_col_5 gap-0 indexes_custome_grid align-start">
           <div className="grid_item">
-            <div className="col_title align-center button_inner weight600">Квартира</div>
+            <div className="col_title align-center button_inner weight600 md-d-flex">Квартира</div>
             <div className="column_block">
               <div className="desc__text">2-комнатная, планировка А</div>
               <div className="row align-items-center space-between">
@@ -109,8 +113,8 @@ export const ApartmentSelect = () => {
                 <div className="f14 teal_color">С отделкой</div>
               </div>
               <div className="row align-items-center space-between">
-                <div className="desc__text weight600 gray_color">№ 12345</div>
-                <div className="desc__text weight600">53,8 м2</div>
+                <div className="desc__text weight600 md-f18 gray_color">№ 12345</div>
+                <div className="desc__text md-f18 weight600">53,8 м2</div>
               </div>
               <div className="plan_place">
                 <img src={require('../../assets/image/plan.png')} alt="" />
@@ -122,7 +126,7 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
-            <div className="col_title align-center button_inner weight600">Стоимость</div>
+            <div className="col_title align-center button_inner weight600 md-d-flex">Стоимость</div>
             <div className="column_block">
               <div className="fld-column">
                 <div className="f28 orange_color weight600">4 785 590₽</div>
@@ -143,9 +147,9 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
-            <div className="col_title align-center button_inner weight600">Информация</div>
+            <div className="col_title align-center button_inner weight600 md-d-flex">Информация</div>
             <div className="column_block">
-              <div className="desc__text teal_color weight600">ЖК Зеленый остров</div>
+              <div className="desc__text teal_color md-f22 weight600">ЖК Зеленый остров</div>
               <div className="fld-column">
                 <div className="row space-between align-items-center">
                   <div className="desc__text teal_color weight600">Дом 2</div>
@@ -173,7 +177,7 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
-            <div className="col_title align-center button_inner weight600">Этаж</div>
+            <div className="col_title align-center button_inner weight600 md-d-flex">Этаж</div>
             <div className="column_block select__head">
               <Select
                 options={['4 этаж', '10 этаж', 'Продажа от физлица']}
@@ -183,7 +187,7 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
-            <div className="col_title align-center button_inner weight600">
+            <div className="col_title align-center button_inner weight600 md-d-flex">
               Бронирование квартиры
             </div>
             <div className="column_block">
@@ -211,6 +215,7 @@ export const ApartmentSelect = () => {
         </div>
         <div className="grid_col_5 gap-0 indexes_custome_grid align-start">
           <div className="grid_item">
+            <div className="col_title align-center button_inner weight600 d-none md-d-flex">Квартира</div>
             <div className="column_block">
               <div className="desc__text">2-комнатная, планировка А</div>
               <div className="row align-items-center space-between">
@@ -231,6 +236,7 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
+            <div className="col_title align-center button_inner weight600 d-none md-d-flex">Стоимость</div>
             <div className="column_block space-between">
               <div className="fld-column gap20">
                 <div className="fld-column">
@@ -247,8 +253,9 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
+            <div className="col_title align-center button_inner weight600 d-none md-d-flex">Этаж</div>
             <div className="column_block">
-              <div className="desc__text teal_color weight600">ЖК Зеленый остров</div>
+              <div className="desc__text teal_color  md-f22 weight600">ЖК Зеленый остров</div>
               <div className="fld-column">
                 <div className="row space-between align-items-center">
                   <div className="desc__text teal_color weight600">Дом 2</div>
@@ -276,6 +283,7 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
+          <div className="col_title align-center button_inner weight600 d-none md-d-flex">Информация</div>
             <div className="column_block select__head">
               <Select
                 options={['4 этаж', '10 этаж', 'Продажа от физлица']}
@@ -285,6 +293,7 @@ export const ApartmentSelect = () => {
             </div>
           </div>
           <div className="grid_item">
+          <div className="col_title align-center button_inner weight600 d-none md-d-flex">Бронирование</div>
             <div className="column_block">
               <div className="row green_icons gap20">
                 <InfoIcon />
@@ -317,7 +326,7 @@ export const ApartmentSelect = () => {
             </div>
           </div>
         </div>
-        <div className="row space-evenly my80">
+        <div className="row space-evenly my80 md-space-between">
           <button className="row green_btn py15 px80">
             <span className="f24 white_color">Показать еще</span>
           </button>
@@ -326,11 +335,12 @@ export const ApartmentSelect = () => {
           </button>
         </div>
       </div>
-      <Popup />
+      <Popup title={'Не нашли подходящего варианта?'} />
       <Calculator />
       <TermsPurchase />
       <Similars />
       <Questions />
+      <Popup title="Не нашли ответ на вопрос?" />
     </div>
   );
 };

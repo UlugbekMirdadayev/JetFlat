@@ -14,9 +14,10 @@ export const Header = () => {
   const ref = useRef<any>(null);
 
   useEffect(() => {
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    const window = document.querySelector('.wrapper');
+    window?.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }, [pathname]);
- 
+
   const [open, setOpen] = useState<Boolean>(false);
 
   return (

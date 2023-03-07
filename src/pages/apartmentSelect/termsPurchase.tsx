@@ -4,13 +4,13 @@ import { ReactComponent as AnswerIcon } from '../../assets/svg/answer.svg';
 
 export default function TermsPurchase() {
   return (
-    <div className="full_container bg_primary">
+    <div className="full_container bg_primary terms-purchase">
       <div className="container py80">
-        <div className="mx20 px80">
+        <div className="mx20 px80 ">
           <h2 className="title_head vw-size mb50">
             <span>Условия покупки</span>
           </h2>
-          <div className="grid_col3_gap100 align-start vw-size mb50">
+          <div className="grid_col3_gap100 align-start vw-size mb50 md-d-none">
             <div className="card_400_w">
               <div className="desc__text weight600 teal_color mb20">
                 Ипотечное кредитование от банков
@@ -53,6 +53,61 @@ export default function TermsPurchase() {
               <div className="desc__text weight600 teal_color mb20">Ипотека по двум документам</div>
               <div className="desc__text weight600 teal_color mb20">Жилищные сертификаты</div>
               <div className="desc__text weight600 teal_color">Рассрочка</div>
+            </div>
+          </div>
+          <div className="grid_col3_gap100 align-start vw-size mb50 d-none md-d-flex">
+            <div className="fld-column space-between">
+              <div className="card_400_w mb50">
+                <div className="desc__text weight600 teal_color mb20">
+                  Ипотечное кредитование от банков
+                </div>
+                <div className="desc__text mb20">Банк 1, еще банк, другой банк, разные банки</div>
+                <div className="row space-between align-items-center">
+                  <Button
+                    variant="outlined"
+                    className="vw__size__btn desc__text px40 py19 mr25 fl1">
+                    <span className="desc__text weight600 black_color text_trans_none">
+                      Подать заявку в банк
+                    </span>
+                  </Button>
+                  <AnswerIcon className="answer_icon" />
+                </div>
+              </div>
+              <div className="card_400_w">
+                <div className="desc__text weight600 teal_color mb20">
+                  Зачет вторичного жилья/ Trade-in
+                </div>
+                <div className="row space-between align-items-center">
+                  <Button variant="outlined" className="vw__size__btn desc__text px0 py19 mr25 fl1">
+                    <span className="desc__text weight600 black_color text_trans_none">
+                      Запросить оценку квартиры
+                    </span>
+                  </Button>
+                  <AnswerIcon className="answer_icon" />
+                </div>
+              </div>
+            </div>
+            <div className="fld-column space-between">
+              <div className="card_400_w mb50">
+                <div className="desc__text weight600 teal_color">
+                  Сертификат материнского капитала
+                </div>
+              </div>
+              <div className="card_400_w">
+                <div className="desc__text weight600 teal_color mb20">
+                  Дополнительные возможности
+                </div>
+                <div className="desc__text weight600 teal_color mb20">Военная ипотека</div>
+                <div className="desc__text weight600 teal_color mb20">Семейная ипотека</div>
+                <div className="desc__text weight600 teal_color mb20">
+                  Ипотека без первого взноса
+                </div>
+                <div className="desc__text weight600 teal_color mb20">
+                  Ипотека по двум документам
+                </div>
+                <div className="desc__text weight600 teal_color mb20">Жилищные сертификаты</div>
+                <div className="desc__text weight600 teal_color">Рассрочка</div>
+              </div>
             </div>
           </div>
           <div className="grid_col3_gap100 align-start vw-size mb50">

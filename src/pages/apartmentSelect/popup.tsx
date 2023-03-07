@@ -1,13 +1,17 @@
-import { useState } from 'react';
+import { useState, FC } from 'react';
 import { CloseIcon } from '../../assets';
 import { Button } from '../../components/button';
 
-function Popup() {
+type Props = {
+  title?: string;
+};
+
+const Popup: FC<Props> = ({ title }) => {
   const [visible, setVisible] = useState<boolean>(true);
   return visible ? (
     <div className="full_container green_bg">
       <div className="container py20">
-        <div className="row align-items-center relative justify-center">
+        <div className="row align-items-center md-row-reverse relative justify-center">
           <div className="closer_popup__x" onClick={() => setVisible(false)}>
             <CloseIcon />
           </div>
@@ -17,7 +21,7 @@ function Popup() {
             alt=""
           />
           <div className="fld-column">
-            <h1 className="white_color f40">Не нашли подходящего варианта?</h1>
+            <h1 className="white_color f40">{title}</h1>
             <Button
               variant="orange"
               className="w_max_cont mt40 py20 px40 row align-items-center justify-center">
@@ -30,6 +34,6 @@ function Popup() {
       </div>
     </div>
   ) : null;
-}
+};
 
 export default Popup;

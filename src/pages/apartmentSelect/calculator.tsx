@@ -35,7 +35,7 @@ function Calculator() {
           </div>
         </div>
         <div className="row mt50 calc_slider align-items-center">
-          <button className="prev tr-btn" onClick={handlePrev}>
+          <button className="prev tr-btn md-d-none" onClick={handlePrev}>
             <ArrowRightIcon />
           </button>
           <Swiper slidesPerView={'auto'} spaceBetween={0} ref={sliderRef}>
@@ -45,6 +45,14 @@ function Calculator() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <button className="next tr-btn md-d-none md-d-flex" onClick={handleNext}>
+            <ArrowRightIcon />
+          </button>
+        </div>
+        <div className="row mt50 calc_slider align-items-center d-none md-d-flex justify-center">
+          <button className="prev tr-btn" onClick={handlePrev}>
+            <ArrowRightIcon />
+          </button>
           <button className="next tr-btn" onClick={handleNext}>
             <ArrowRightIcon />
           </button>
@@ -70,7 +78,7 @@ function Calculator() {
           <button className="white_color f14 text_f14">Ремонт</button>
           <button className="white_color f14 text_f14">Новостройка</button>
         </div>
-        <div className="row mt50 calc_slider">
+        <div className="row mt50 calc_slider md-col">
           <div className="col__space__div">
             <div className="column_label">
               <div className="">
@@ -144,21 +152,21 @@ function Calculator() {
                     <div className="desc__text weight600">17 609Р</div>
                   </div>
                 </div>
-                <div className="small_text orange_color">
+                <div className="small_text orange_color md-f10">
                   Данная информация носит предварительный характер и не является публичной офертой
                 </div>
               </div>
             </div>
             <div className="row space-between align-end mt30">
               <Button variant="outlined" className="vw__size__btn px40 py19">
-                <span className="desc__text weight600 button_inner">
+                <span className="desc__text weight600 button_inner  md-fs-11">
                   Посмотреть график платежей
                 </span>
               </Button>
               <Button variant="outlined" className="vw__size__btn px40 py19 desc__text">
-                <span className="desc__text weight600 button_inner">Отправить заявку в банк</span>
+                <span className="desc__text weight600 button_inner  md-fs-11">Отправить заявку в банк</span>
               </Button>
-              <div className="f16 desc__text teal_color">подробнее о программе</div>
+              <div className="f16 desc__text teal_color md-fs-11 md-btn-teal">подробнее о программе</div>
             </div>
           </div>
         </div>

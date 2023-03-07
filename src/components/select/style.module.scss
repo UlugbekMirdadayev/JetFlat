@@ -99,10 +99,6 @@
   &:focus-visible {
     outline: none;
     border-color: #8a2be2;
-    @media (max-width: 992px) {
-      outline: none;
-      border-color: transparent;
-    }
     span {
       &::before {
         color: #caa5ec;

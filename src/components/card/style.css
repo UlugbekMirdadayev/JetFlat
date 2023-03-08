@@ -81,8 +81,73 @@
     .card_third.py40.px20 {
         padding: 3.2552083333333335vw 3.90625vw;
     }
+
     .card_third .card_inner_box img {
         width: 20.182291666666668vw;
         height: 23.4375vw;
+        margin-right: 1.953125vw;
+    }
+
+    .card_third .card_inner_box .card__inner__texts {
+        width: 17.578125vw;
+    }
+
+    .card_third .card_inner_box .card__inner__texts .ship {
+        width: 17.578125vw;
+        height: 5.208333333333333vw;
+        margin-bottom: 2.6041666666666665vw;
+        font-size: 1.8229166666666667vw;
+    }
+
+    .card_third .card_title_inner {
+        font-size: 2.34375vw;
+        margin-bottom: 2.6041666666666665vw;
+    }
+
+    .card_third .card_desc_inner {
+        font-size: 1.5625vw;
+    }
+
+    .card_third .border__topBorder,
+    .card_third .border__bottomBorder {
+        width: calc(100% - 7.8125vw);
+    }
+}
+
+@media screen and (max-width:425px) {
+    .card_third.py40.px20 {
+        padding: 6.944444444444445vw 0;
+        margin-right: 6.944444444444445vw;
+    }
+    .swiper-slide:last-child .card_third.py40.px20 {
+        margin-right: 0;
+    }
+    .card_third.py40.px20 .border__rightBorder {
+        display: none;
+    }
+    .card_third .card_inner_box img {
+        width: 29.72222222222222vw;
+        min-height: 34.44444444444444vw;
+        margin-right: 4.166666666666667vw;
+        height: 100%;
+    }
+    .card_third .card_inner_box .card__inner__texts {
+        width: 31.11111111111111vw;
+    }
+    .card_third .card_inner_box .card__inner__texts .ship {
+        width: 31.11111111111111vw;
+        height: 9.166666666666666vw;
+        margin-bottom: 3.888888888888889vw;
+        font-size: 3.611111111111111vw;
+    }
+    .card_third .card_title_inner {
+        font-size: 4.444444444444445vw;
+        margin-bottom: 2.7777777777777777vw;
+    }
+    .card_third .card_desc_inner {
+        font-size: 3.3333333333333335vw;
+    }
+    .card_third .border__topBorder, .card_third .border__bottomBorder {
+        width: calc(100%);
     }
 }

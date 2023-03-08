@@ -115,15 +115,20 @@ function Calculator() {
             <div className="row space-between align-items-center mb35 col__head_row">
               <div className="row space-between gap20 align-items-center left_col_calc">
                 <Button variant="orange" className="py14 px40 percent_btn__">
-                  <span className="desc__text weight600 white_color">от 7,49%</span>
+                  <span className="desc__text weight600 white_color sm-f14">от 7,49%</span>
                 </Button>
-                <div className="f16 desc__text">
+                <div className="f16 desc__text sm-d-none">
                   Минимальный взнос <span className="orange_color weight600">10%</span>
                 </div>
               </div>
-              <div className="teal_color desc__text weight600">Стандартная программа</div>
+              <div>
+                <div className="f16 desc__text d-none sm-d-block sm-f14">
+                  Минимальный взнос <span className="orange_color weight600">10%</span>
+                </div>
+                <div className="teal_color desc__text weight600 sm-f14">Стандартная программа</div>
+              </div>
             </div>
-            <div className="row space-between mb35 col__head_row">
+            <div className="row space-between mb35 col__head_row sm-fld-column">
               <div className="info__bank align-items-center row">
                 <div className="img_bank__">
                   <span className="weight600 desc__text">Банк</span>
@@ -134,8 +139,8 @@ function Calculator() {
               </div>
               <div className="fld-column texts__right">
                 <div className="row space-between align-items-center mb25">
-                  <div className="f16 desc__text">Первоначальный взнос</div>
-                  <span className="orange_color desc__text weight600">15,3%</span>
+                  <div className="f16 desc__text">Первоначальный взнос <span className="orange_color desc__text weight600 d-none sm-d-block">15,3%</span></div>
+                  <span className="orange_color desc__text weight600 sm-d-none">15,3%</span>
                   <div className="row calc_row p10 m0 align-items-center justify-center w200">
                     <div className="desc__text weight600">265 900Р</div>
                   </div>
@@ -157,16 +162,20 @@ function Calculator() {
                 </div>
               </div>
             </div>
-            <div className="row space-between align-end mt30">
+            <div className="row space-between align-end mt30 sm-fld-column bottom_btns_sm__full">
               <Button variant="outlined" className="vw__size__btn px40 py19">
                 <span className="desc__text weight600 button_inner  md-fs-11">
                   Посмотреть график платежей
                 </span>
               </Button>
               <Button variant="outlined" className="vw__size__btn px40 py19 desc__text">
-                <span className="desc__text weight600 button_inner  md-fs-11">Отправить заявку в банк</span>
+                <span className="desc__text weight600 button_inner  md-fs-11">
+                  Отправить заявку в банк
+                </span>
               </Button>
-              <div className="f16 desc__text teal_color md-fs-11 md-btn-teal">подробнее о программе</div>
+              <div className="f16 desc__text teal_color md-fs-11 md-btn-teal">
+                подробнее о программе
+              </div>
             </div>
           </div>
         </div>

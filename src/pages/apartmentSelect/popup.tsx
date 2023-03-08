@@ -11,7 +11,7 @@ const Popup: FC<Props> = ({ title }) => {
   return visible ? (
     <div className="full_container green_bg">
       <div className="container py20">
-        <div className="row align-items-center md-row-reverse relative justify-center">
+        <div className="row align-items-center md-row-reverse relative justify-center sm-fld-column-reverse sm-py80">
           <div className="closer_popup__x" onClick={() => setVisible(false)}>
             <CloseIcon />
           </div>

@@ -6,8 +6,10 @@ import { ReactComponent as ShareIcon } from '../../assets/svg/share.svg';
 import { ChartIcon, HeartIcon } from '../../assets';
 import { Select } from '../../components/select/Select';
 import { Button } from '../../components/button';
+import { useNavigate } from 'react-router-dom';
 
 export default function Lists() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="grid_col_5 mb50 ">
@@ -162,7 +164,7 @@ export default function Lists() {
             </div>
             <div className="f18 orange_color desc__text weight600">Осталось всего 5 квартир!</div>
             <div className="relative">
-              <Button variant="orange" className="full___btn py19">
+              <Button variant="orange" className="full___btn py19"  onClick={() => navigate('/booking/:id')}>
                 <span className="desc__text weight600">Забронировать</span>
               </Button>
               <div className="popup_absolute">
@@ -279,7 +281,10 @@ export default function Lists() {
             </div>
             <div className="f18 orange_color desc__text weight600">Осталось всего 5 квартир!</div>
             <div className="relative">
-              <Button variant="orange" className="full___btn py19">
+              <Button
+                variant="orange"
+                className="full___btn py19"
+                onClick={() => navigate('/booking/:id')}>
                 <span className="desc__text weight600">Забронировать</span>
               </Button>
               <div className="popup_absolute">

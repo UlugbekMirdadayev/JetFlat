@@ -1,4 +1,5 @@
 import { useRef, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './charact.css';
 import { ReactComponent as Location } from '../../assets/svg/geolocation.svg';
 import { ReactComponent as InfoIcon } from '../../assets/svg/info.svg';
@@ -14,6 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
 function Characteristics({ onClose }: any) {
+  const navigate = useNavigate();
   const sliderRef = useRef<any>(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -106,7 +108,10 @@ function Characteristics({ onClose }: any) {
               </div>
             </ul>
             <ul>
-              <Button className="mb10 orange_btn" variant="orange">
+              <Button
+                className="mb10 orange_btn"
+                variant="orange"
+                onClick={() => navigate('/booking/:id')}>
                 <span>Забронировать</span>
               </Button>
               <div className="text_paragraph mb20">

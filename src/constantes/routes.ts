@@ -6,6 +6,7 @@ import { Login } from '../pages/login';
 import { ResultSearch } from '../pages/resultSearch';
 import { ResidentialComplexes } from '../pages/residentialComplexes';
 import { ApartmentSelect } from '../pages/apartmentSelect';
+import { Booking } from '../pages/booking';
 
 export const routes = [
   { path: '/', element: Main },
@@ -15,5 +16,6 @@ export const routes = [
   { path: '/login', element: Login },
   { path: '/result', element: ResultSearch },
   { path: '/residential-complexes', element: ResidentialComplexes },
-  { path: '/apartment/:id', element: ApartmentSelect }
+  { path: '/apartment/:id', element: ApartmentSelect },
+  { path: '/booking/:id', element: Booking }
 ];

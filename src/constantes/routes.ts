@@ -7,6 +7,7 @@ import { ResultSearch } from '../pages/resultSearch';
 import { ResidentialComplexes } from '../pages/residentialComplexes';
 import { ApartmentSelect } from '../pages/apartmentSelect';
 import { Booking } from '../pages/booking';
+import { Library } from '../pages/library';
 
 export const routes = [
   { path: '/', element: Main },
@@ -17,5 +18,6 @@ export const routes = [
   { path: '/result', element: ResultSearch },
   { path: '/residential-complexes', element: ResidentialComplexes },
   { path: '/apartment/:id', element: ApartmentSelect },
-  { path: '/booking/:id', element: Booking }
+  { path: '/booking/:id', element: Booking },
+  { path: '/library', element: Library }
 ];

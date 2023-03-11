@@ -1,8 +1,8 @@
-import clsx from 'clsx';
 import { FC } from 'react';
 import s from './style.module.scss';
 import { ReactComponent as GeoLocation } from '../../assets/svg/geolocation.svg';
 import { ReactComponent as Info } from '../../assets/svg/info.svg';
+import clsx from 'clsx';
 
 type Props = { step: number; setStep: Function };
 
@@ -12,7 +12,9 @@ const FirstStep: FC<Props> = ({ step, setStep }) => {
     <div className={s.step__first}>
       <div className={s.wrapper}>
         <div className={clsx([s.wrapper__col, s.wrapper__left])}>
-          <div className={s.title}>Детали вашего бронирования</div>
+          <div className={s.title}>
+            Детали <br className="d-none" /> вашего бронирования
+          </div>
           <div className={s.wrapper_col}>
             <div className={s.column}>
               <div className={s.row}>
@@ -72,7 +74,7 @@ const FirstStep: FC<Props> = ({ step, setStep }) => {
         <div className={clsx([s.wrapper__col, s.wrapper__right])}>
           <div className={s.title}>Детали вашей цены</div>
           <div className={clsx([s.row, 'space-between'])}>
-            <div className={s.paragraph}>№ 1240, 2-к квартира, 4 этаж, 53,8 м2</div>
+            <div className={s.paragraph}>№ 1240, 2-к квартира</div>
             <div className={s.paragraph_w600}>4 934 400 ₽</div>
           </div>
           <div className={clsx([s.row, 'space-between'])}>

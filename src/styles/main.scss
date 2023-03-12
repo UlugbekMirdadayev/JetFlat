@@ -42,9 +42,6 @@ a {
   text-decoration: none;
 }
 
-a.active {
-  opacity: 1;
-}
 img {
   max-width: 100%;
   max-height: 100%;
@@ -256,6 +253,10 @@ button:hover {
         @media screen and (max-width: 1024px) {
           width: 1.8229166666666667vw;
           height: 1.8229166666666667vw;
+          @media screen and (max-width: 425px) {
+            width: 3.888888888888889vw;
+            height: 4.166666666666667vw;
+          }
         }
       }
       @media screen and (max-width: 1024px) {
@@ -263,6 +264,12 @@ button:hover {
         height: 7.161458333333333vw;
         padding: 2.6041666666666665vw;
         margin-left: 3.90625vw;
+        @media screen and (max-width: 425px) {
+          width: 15.277777777777779vw;
+          height: 15.277777777777779vw;
+          padding: 5.555555555555555vw;
+          margin-left: 8.333333333333334vw;
+        }
       }
     }
 

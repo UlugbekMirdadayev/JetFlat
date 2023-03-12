@@ -199,5 +199,13 @@
   @media screen and (max-width: 1920px) {
     margin-top: 2.0833333333333335vw;
     margin-bottom: 2.0833333333333335vw;
+    @media screen and (max-width: 1024px) {
+      margin-top: 5.208333333333333vw;
+      margin-bottom: 5.208333333333333vw;
+      @media screen and (max-width: 425px) {
+        margin-top: 5.555555555555555vw;
+        margin-bottom: 5.555555555555555vw;
+      }
+    }
   }
 }

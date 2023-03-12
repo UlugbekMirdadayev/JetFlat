@@ -1,28 +1,37 @@
 import styles from './style.module.scss';
-import { NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 
 export const HistoryLink = ({ links = [] }: any) => {
+  const { pathname } = useLocation();
   return (
     <div>
       <ul className={clsx([styles.list, 'mb10'])}>
         <li className={styles.list__item}>
-          <NavLink to={'/'} className={styles.list__link}>
+          <Link to={'/'} className={styles.list__link}>
             Главная
-          </NavLink>
+          </Link>
         </li>
         {links.length
           ? links?.map(({ link = '/', name = '' }: any) => (
               <li className={styles.list__item} key={link}>
                 /
-                <NavLink to={link} className={styles.list__link}>
+                <Link
+                  to={link}
+                  className={clsx([
+                    styles.list__link,
+                    pathname === link ? styles.list__link__active : ''
+                  ])}>
                   {name}
-                </NavLink>
+                </Link>
               </li>
             ))
           : null}
       </ul>
-      <div className="heading__line" style={{ width: 15.625 + links.length * 4.166666666666667 + 'vw' }} />
+      <div
+        className="heading__line"
+        style={{ width: 15.625 + links.length * 4.166666666666667 + 'vw' }}
+      />
     </div>
   );
 };

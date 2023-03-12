@@ -62,7 +62,9 @@
     @media screen and (max-width: 425px) {
       font-size: 3.611111111111111vw;
     }
-
+    &__active {
+      opacity: 1;
+    }
     &:hover {
       color: var(--tomato);
       opacity: 1;

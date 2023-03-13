@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { HistoryLink } from '../../components/historyLink';
 import { ReactComponent as ListIcon } from '../../assets/svg/list.svg';
 import { ReactComponent as ShahmatIcon } from '../../assets/svg/shahmat.svg';
@@ -39,9 +39,11 @@ export const ApartmentSelect = () => {
           </div>
           <div className="row lg-gap-20 apartment_head_row align-items-center sm-fld-column-reverse">
             <div className="row lg-gap-20 sm-mt-20 sm-fld-column">
-              <button className="outline-primary py19 px40 btn-head-row">
-                <span className="button_inner  weight600">Вернуться к ЖК</span>
-              </button>
+              <Link to={'/residential-complexes'}>
+                <button className="outline-primary py19 px40 btn-head-row">
+                  <span className="button_inner  weight600">Вернуться к ЖК</span>
+                </button>
+              </Link>
               <button className="outline-primary  py19 px40 btn-head-row">
                 <span className="button_inner weight600">Ипотечный калькулятор</span>
               </button>

@@ -5,6 +5,7 @@ import { HistoryLink } from '../../components/historyLink';
 import s from './style.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ReactComponent as ArrowIcon } from '../../assets/svg/arrow-right.svg';
+import { Link } from 'react-router-dom';
 
 type Props = {};
 
@@ -14,7 +15,8 @@ const array = [
     color: '#E8EDF2',
     label: 'Стандарт',
     description:
-      'Грамотно продуманные планировки квартир, с небольшими холлами и коридорами, уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе жилья, как правило, во всех квартирах один санузел, часто совмещённый.'
+      'Грамотно продуманные планировки квартир, с небольшими холлами и коридорами, уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе жилья, как правило, во всех квартирах один санузел, часто совмещённый.',
+    link: '/library/classes'
   },
   {
     defaultOpen: true,
@@ -86,7 +88,9 @@ export const Classes: FC<Props> = () => {
               premium performance base toggle paddles. You can adjust your FX mix from Dry to Wet as
               you feel the mix.
             </div>
-            <button>142 жилых комплекса</button>
+            <button>
+              <Link to={'/residential-complexes'}> 142 жилых комплекса</Link>
+            </button>
           </div>
           <div className={s.gallery__slider}>
             <Swiper slidesPerView={1} ref={sliderRef}>
@@ -112,7 +116,9 @@ export const Classes: FC<Props> = () => {
                     <ArrowIcon />
                   </button>
                 </div>
-                <button className={s.link__btn}>142 жилых комплекса</button>
+                <button className={s.link__btn}>
+                  <Link to={'/residential-complexes'}> 142 жилых комплекса</Link>
+                </button>
               </div>
             </div>
           </div>

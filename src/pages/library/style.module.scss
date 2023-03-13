@@ -45,6 +45,43 @@
         }
       }
     }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      @media screen and (max-width: 1920px) {
+        gap: 1.0416666666666667vw;
+        @media screen and (max-width: 1024px) {
+          gap: 2.6041666666666665vw;
+          @media screen and (max-width: 425px) {
+            gap: 5.555555555555555vw;
+            flex-direction: column-reverse;
+            .title__row {
+              flex-direction: row;
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+
+      svg {
+        width: 34px;
+        height: 34px;
+        @media screen and (max-width: 1920px) {
+          width: 1.7708333333333333vw;
+          height: 1.7708333333333333vw;
+          @media screen and (max-width: 1024px) {
+            width: 3.90625vw;
+            height: 3.90625vw;
+            @media screen and (max-width: 425px) {
+              width: 8.333333333333334vw;
+              height: 8.333333333333334vw;
+            }
+          }
+        }
+      }
+    }
   }
   .gallery {
     width: 100%;
@@ -307,6 +344,7 @@
     flex-direction: row;
     align-items: flex-start;
     width: max-content;
+    max-width: 100%;
     @media screen and (max-width: 1920px) {
       padding: 0.20833333333333334vw 1.0416666666666667vw;
       @media screen and (max-width: 1024px) {
@@ -333,6 +371,41 @@
           }
         }
       }
+    }
+    &__evro {
+      background-color: #ceeeef;
+      color: #242424;
+      margin: 40px 0;
+      @media screen and (max-width: 1920px) {
+        margin: 2.0833333333333335vw 0;
+        @media screen and (max-width: 1024px) {
+          margin: 2.6041666666666665vw 0;
+          @media screen and (max-width: 425px) {
+            margin: 2.7777777777777777vw 0;
+          }
+        }
+      }
+    }
+    &__transparent {
+      padding: 0;
+    }
+  }
+  .inner__location {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    color: #242424;
+    @media screen and (max-width: 1920px) {
+      font-size: 0.9375vw;
+      @media screen and (max-width: 1024px) {
+        font-size: 1.8229166666666667vw;
+        @media screen and (max-width: 425px) {
+          font-size: 3.3333333333333335vw;
+        }
+      }
+    }
+    span {
+      color: #008891;
     }
   }
 }

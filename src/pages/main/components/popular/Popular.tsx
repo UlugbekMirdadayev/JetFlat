@@ -35,7 +35,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
             <div className={styles.list}>
               {bigLayout && (
                 <>
-                  <Link to={'/'} className={clsx(styles.card, styles['card--big'])}>
+                  <Link to={'/residential-complexes'} className={clsx(styles.card, styles['card--big'])}>
                     <div className={styles['card--big-half']}>
                       <div className={clsx(styles.card__info, styles['card__info--big'])}>
                         <h4 className={clsx(styles.card__title, 'cWhite')}>Repin Towers</h4>
@@ -55,7 +55,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
                     <div className={'border__topBorder'} />
                     <div className={'border__bottomBorder'} />
                   </Link>
-                  <Link to={'/'} className={styles.card}>
+                  <Link to={'/residential-complexes'} className={styles.card}>
                     <div className={styles.card__img}>
                       <span className={clsx('ship', styles.card__ship)}>май 2023г</span>
                       <img src={house} alt="" />
@@ -71,7 +71,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
                 </>
               )}
               {[1, 2, 3].map((_, key) => (
-                <Link key={key} to={'/'} className={styles.card}>
+                <Link key={key} to={'/residential-complexes'} className={styles.card}>
                   <div className={styles.card__img}>
                     <span className={clsx('ship', styles.card__ship)}>Есть сданные</span>
                     <img src={house} alt="" />
@@ -91,7 +91,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
         <div className={styles.is_mobile}>
           <Swiper ref={sliderRef} slidesPerView={'auto'}>
             <SwiperSlide className={styles.slide}>
-              <Link to={'/'} className={styles.card}>
+              <Link to={'/residential-complexes'} className={styles.card}>
                 <img src={house} className={styles.card__img} alt="" />
                 <div className={clsx([styles.card__ship, 'ship'])}>май 2023г</div>
                 <div className={'border__topBorder'} />
@@ -102,7 +102,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
               </Link>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
-              <Link to={'/'} className={styles.card}>
+              <Link to={'/residential-complexes'} className={styles.card}>
                 <img src={house} className={styles.card__img} alt="" />
                 <div className={clsx([styles.card__ship, 'ship'])}>май 2023г</div>
                 <div className={'border__topBorder'} />
@@ -113,7 +113,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
               </Link>
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
-              <Link to={'/'} className={styles.card}>
+              <Link to={'/residential-complexes'} className={styles.card}>
                 <img src={house} className={styles.card__img} alt="" />
                 <div className={clsx([styles.card__ship, 'ship'])}>май 2023г</div>
                 <div className={'border__topBorder'} />
@@ -134,7 +134,9 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
           </div>
         </div>
         <div className={styles.center_button}>
-          <Button variant="orange">Смотреть все ЖК</Button>
+          <Button variant="orange">
+            <Link to={'/residential-complexes'}>Смотреть все ЖК</Link>
+          </Button>
         </div>
       </div>
     </section>

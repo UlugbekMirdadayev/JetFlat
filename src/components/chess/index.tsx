@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { Select } from '../select/Select';
 import s from './style.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 const colors = ['#FFDECB', '#BEF2D4', '#D9E6F1', '#FFEABC', '#E6E9EB', '#EEC9FA'];
 
 const status = [
@@ -56,7 +57,7 @@ export const Chess = () => {
           </div>
         </div>
         <div className={s.header__row__right}>
-          <button className={s.header__gray_btn}>Стандарт</button>
+          <button className={s.header__gray_btn}><Link to="/library/classes"> Стандарт</Link></button>
           <div className={clsx([s.header__label__inner, s.mb0])}>Март 2022, сдан</div>
         </div>
       </div>

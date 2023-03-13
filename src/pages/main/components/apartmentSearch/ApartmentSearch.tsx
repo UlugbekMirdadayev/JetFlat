@@ -12,6 +12,7 @@ import ap2 from '../../../../assets/image/ap2.jpg';
 import ap3 from '../../../../assets/image/ap3.jpg';
 import ap4 from '../../../../assets/image/ap4.jpg';
 import { ReactComponent as ArrowIcon } from '../../../../assets/svg/arrow-right.svg';
+import { Link } from 'react-router-dom';
 const images = [ap1, ap2, ap3, ap4, ap1, ap2];
 export const ApartmentSearch = () => {
   const [selectedIbdex, setSelectedIndex] = useState(0);
@@ -102,7 +103,9 @@ export const ApartmentSearch = () => {
           </div>
         </div>
         <div className={styles.center_button}>
-          <Button variant="orange">Показать все районы</Button>
+          <Button variant="orange">
+            <Link to={'/regions'}>Показать все районы</Link>
+          </Button>
         </div>
       </div>
     </section>

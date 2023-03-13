@@ -40,7 +40,7 @@ export const Footer = () => {
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/library'} className={styles.menu__link}>
                     Библиотека
                   </Link>
                 </li>
@@ -54,17 +54,17 @@ export const Footer = () => {
                 </li>
 
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/residential-complexes'} className={styles.menu__link}>
                     Жилые Комплексы
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/regions'} className={styles.menu__link}>
                     Районы
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/about-services'} className={styles.menu__link}>
                     О сервисе
                   </Link>
                 </li>
@@ -167,7 +167,7 @@ export const Footer = () => {
                     </li>
 
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={'/ipoteka'} className={styles.menu__link}>
                         Ипотека
                       </Link>
                     </li>
@@ -182,7 +182,7 @@ export const Footer = () => {
                       </Link>
                     </li>
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={'/library'} className={styles.menu__link}>
                         Библиотека
                       </Link>
                     </li>
@@ -196,12 +196,12 @@ export const Footer = () => {
                     </li>
 
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={'/residential-complexes'} className={styles.menu__link}>
                         Жилые Комплексы
                       </Link>
                     </li>
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={'/regions'} className={styles.menu__link}>
                         Районы
                       </Link>
                     </li>

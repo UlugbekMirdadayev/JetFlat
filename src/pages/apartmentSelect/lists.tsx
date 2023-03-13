@@ -6,7 +6,7 @@ import { ReactComponent as ShareIcon } from '../../assets/svg/share.svg';
 import { ChartIcon, HeartIcon } from '../../assets';
 import { Select } from '../../components/select/Select';
 import { Button } from '../../components/button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Lists() {
   const navigate = useNavigate();
@@ -118,7 +118,7 @@ export default function Lists() {
               </div>
               <div className="row sm-mt-15">
                 <button className="green-yellow desc__text weight500 white_color py10 px30">
-                  Комфорт
+                  <Link to="/library/classes/comforts"> Комфорт</Link>
                 </button>
                 <div className="d-none sm-d-block">
                   <button className="mini-btn-orange tr-btn">
@@ -164,7 +164,10 @@ export default function Lists() {
             </div>
             <div className="f18 orange_color desc__text weight600">Осталось всего 5 квартир!</div>
             <div className="relative">
-              <Button variant="orange" className="full___btn py19"  onClick={() => navigate('/booking/:id')}>
+              <Button
+                variant="orange"
+                className="full___btn py19"
+                onClick={() => navigate('/booking/:id')}>
                 <span className="desc__text weight600">Забронировать</span>
               </Button>
               <div className="popup_absolute">
@@ -233,7 +236,7 @@ export default function Lists() {
               </div>
               <div className="row sm-mt-15">
                 <button className="green-yellow desc__text weight500 white_color py10 px30">
-                  Комфорт
+                  <Link to="/library/classes/comforts"> Комфорт</Link>
                 </button>
                 <div className="d-none sm-d-block">
                   <button className="mini-btn-orange tr-btn">

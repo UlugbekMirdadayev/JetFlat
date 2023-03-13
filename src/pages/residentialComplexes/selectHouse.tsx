@@ -1,5 +1,5 @@
 import { useRef, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ArrowRightIcon } from '../../assets';
 import { Button } from '../../components/button';
@@ -32,7 +32,7 @@ export const SelectHouse = () => {
             <img src={require('../../assets/image/ap2.jpg')} alt="" />
             <div className="tab_btn row absolute">
               <button className="gray-btn">
-                <span>Стандарт</span>
+                <span><Link to="/library/classes"> Стандарт</Link></span>
               </button>
               <button className="gray-btn primary-btn  py10">
                 <span>декабрь 2022, сдан</span>
@@ -81,7 +81,7 @@ export const SelectHouse = () => {
                   <img src={require('../../assets/image/ap3.jpg')} alt="" />
                   <div className="tab_btn row absolute">
                     <button className="gray-btn">
-                      <span>Стандарт</span>
+                      <span><Link to="/library/classes"> Стандарт</Link></span>
                     </button>
                     <button className="gray-btn primary-btn  py10">
                       <span>декабрь 2022, сдан</span>

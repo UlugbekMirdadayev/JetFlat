@@ -13,7 +13,7 @@ export const HistoryLink = ({ links = [] }: any) => {
           </Link>
         </li>
         {links.length
-          ? links?.map(({ link = '/', name = '' }: any) => (
+          ? links?.filter(Boolean).map(({ link = '/', name = '' }: any) => (
               <li className={styles.list__item} key={link}>
                 /
                 <Link
@@ -30,7 +30,7 @@ export const HistoryLink = ({ links = [] }: any) => {
       </ul>
       <div
         className="heading__line"
-        style={{ width: 15.625 + links.length * 4.166666666666667 + 'vw' }}
+        style={{ width: 15.625 + links?.filter(Boolean)?.length * 4.166666666666667 + 'vw' }}
       />
     </div>
   );

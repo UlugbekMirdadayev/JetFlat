@@ -1,5 +1,5 @@
 import { useRef, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './charact.css';
 import { ReactComponent as Location } from '../../assets/svg/geolocation.svg';
 import { ReactComponent as InfoIcon } from '../../assets/svg/info.svg';
@@ -82,7 +82,7 @@ function Characteristics({ onClose }: any) {
               <div className="row heading_row mb20">
                 <div className="text_paragraph">Класс дома </div>
                 <button className="gray-btn ml10">
-                  <span>Стандарт</span>
+                  <span><Link to="/library/classes"> Стандарт</Link></span>
                 </button>
               </div>
               <div className="row heading_row mb20">

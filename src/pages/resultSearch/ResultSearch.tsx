@@ -19,6 +19,7 @@ import SalePopup from './salePopup';
 import { Radio } from '../../components/radio';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Characteristics from './characteristics';
+import { Link } from 'react-router-dom';
 
 const checkboxes = [
   {
@@ -279,8 +280,12 @@ export const ResultSearch = () => {
               </div>
             </div>
             <div className="tab_btn">
-              <button>Стандарт</button>
-              <button>Комфорт</button>
+              <button>
+                <Link to="/library/classes"> Стандарт</Link>
+              </button>
+              <button>
+                <Link to="/library/classes/comforts"> Комфорт</Link>
+              </button>
             </div>
             <div className="row_result mb20">
               <div className="row_result">
@@ -399,7 +404,7 @@ export const ResultSearch = () => {
           </button>
         </div>
         {openCharact ? (
-          <Characteristics onClose={()=>setOpenCharact(false)} />
+          <Characteristics onClose={() => setOpenCharact(false)} />
         ) : (
           <div className="row_container">
             <div className={`space ${openFilter || openSort ? '' : 'ismobile_accord'}`}>

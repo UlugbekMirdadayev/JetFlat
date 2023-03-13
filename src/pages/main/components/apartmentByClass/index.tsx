@@ -4,6 +4,7 @@ import ap1 from '../../../../assets/image/ap1.jpg';
 import ap2 from '../../../../assets/image/ap2.jpg';
 import ap3 from '../../../../assets/image/ap3.jpg';
 import ap4 from '../../../../assets/image/ap4.jpg';
+import { Link } from 'react-router-dom';
 
 export const ApartmentByClass = () => {
   return (
@@ -21,7 +22,9 @@ export const ApartmentByClass = () => {
           <div className={styles.card}>
             <div className={styles.card__inner}>
               <div className={styles.card__img}>
-                <span className={clsx('ship ', styles.card__ship)}>Стандарт</span>
+                <span className={clsx('ship ', styles.card__ship)}>
+                  <Link to="/library/classes"> Стандарт</Link>
+                </span>
                 <img src={ap1} alt="" />
               </div>
               <div className={styles.card__info}>
@@ -35,7 +38,9 @@ export const ApartmentByClass = () => {
           <div className={styles.card}>
             <div className={clsx(styles.card__inner, styles.green)}>
               <div className={styles.card__img}>
-                <span className={clsx('ship ship--green', styles.card__ship)}>Комфорт</span>
+                <span className={clsx('ship ship--green', styles.card__ship)}>
+                  <Link to="/library/classes/comforts"> Комфорт</Link>
+                </span>
                 <img src={ap2} alt="" />
               </div>
               <div className={styles.card__info}>
@@ -49,7 +54,9 @@ export const ApartmentByClass = () => {
           <div className={styles.card}>
             <div className={clsx(styles.card__inner, styles.teal)}>
               <div className={styles.card__img}>
-                <span className={clsx('ship ship--teal', styles.card__ship)}>Бизнес</span>
+                <span className={clsx('ship ship--teal', styles.card__ship)}>
+                  <Link to="/library/classes">Бизнес</Link>
+                </span>
                 <img src={ap3} alt="" />
               </div>
               <div className={styles.card__info}>
@@ -63,7 +70,9 @@ export const ApartmentByClass = () => {
           <div className={styles.card}>
             <div className={clsx(styles.card__inner, styles.purple)}>
               <div className={styles.card__img}>
-                <span className={clsx('ship ship--purple', styles.card__ship)}>Элит</span>
+                <span className={clsx('ship ship--purple', styles.card__ship)}>
+                  <Link to="/library/classes">Элит</Link>
+                </span>
                 <img src={ap4} alt="" />
               </div>
               <div className={styles.card__info}>

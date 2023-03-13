@@ -12,7 +12,7 @@ import { ArrowRightIcon, ChartIcon, HeartIcon } from '../../assets';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { Button } from '../../components/button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Card() {
   const navigate = useNavigate();
@@ -51,10 +51,10 @@ function Card() {
 
       <div className="tab_btn row mt20">
         <button className="gray-btn py10 md-w-25 md-center sm-w-50">
-          <span>Стандарт</span>
+          <span><Link to="/library/classes"> Стандарт</Link></span>
         </button>
         <button className="gray-btn yellow-btn  py10 md-w-25 md-center sm-w-50">
-          <span>Комфорт</span>
+          <span><Link to="/library/classes/comforts"> Комфорт</Link></span>
         </button>
       </div>
 

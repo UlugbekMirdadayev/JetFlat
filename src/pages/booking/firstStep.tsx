@@ -3,6 +3,7 @@ import s from './style.module.scss';
 import { ReactComponent as GeoLocation } from '../../assets/svg/geolocation.svg';
 import { ReactComponent as Info } from '../../assets/svg/info.svg';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 type Props = { step: number; setStep: Function };
 
@@ -41,7 +42,9 @@ const FirstStep: FC<Props> = ({ step, setStep }) => {
               </div>
               <div className={s.row}>
                 <div className={s.title}>Дом 1</div>
-                <div className={s.status__button}>Комфорт</div>
+                <div className={s.status__button}>
+                  <Link to="/library/classes/comforts"> Комфорт</Link>
+                </div>
               </div>
               <div className={s.row}>
                 <div className={s.location_btn}>

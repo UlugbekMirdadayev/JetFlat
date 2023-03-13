@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 import { ReactComponent as ArrowLinkIcon } from '../../../../assets/svg/arrow-link.svg';
 import hImg from '../../../../assets/image/hover.jpg';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 export const ApartmentTypeSearch = () => {
   return (
@@ -27,12 +28,16 @@ export const ApartmentTypeSearch = () => {
                   уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
-                    <span>Смотреть варианты</span>
+                    <span>
+                      <Link to="/library/classes">Смотреть варианты</Link>
+                    </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
-                  <span>Смотреть варианты</span>
+                  <span>
+                    <Link to="/library/classes">Смотреть варианты</Link>
+                  </span>
                   <ArrowLinkIcon />
                 </div>
               </div>
@@ -51,12 +56,16 @@ export const ApartmentTypeSearch = () => {
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
                   уютными балконами или лоджиями, изолированными комнатами и кухней.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
-                    <span>Смотреть варианты</span>
+                    <span>
+                      <Link to="/library/classes">Смотреть варианты</Link>
+                    </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
-                  <span>Смотреть варианты</span>
+                  <span>
+                    <Link to="/library/classes">Смотреть варианты</Link>
+                  </span>
                   <ArrowLinkIcon />
                 </div>
               </div>
@@ -77,12 +86,16 @@ export const ApartmentTypeSearch = () => {
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый. В этом
                   классе жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
-                    <span>Смотреть варианты</span>
+                    <span>
+                      <Link to="/library/classes">Смотреть варианты</Link>
+                    </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
-                  <span>Смотреть варианты</span>
+                  <span>
+                    <Link to="/library/classes">Смотреть варианты</Link>
+                  </span>
                   <ArrowLinkIcon />
                 </div>
               </div>
@@ -100,12 +113,16 @@ export const ApartmentTypeSearch = () => {
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
-                    <span>Смотреть варианты</span>
+                    <span>
+                      <Link to="/library/classes">Смотреть варианты</Link>
+                    </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
-                  <span>Смотреть варианты</span>
+                  <span>
+                    <Link to="/library/classes">Смотреть варианты</Link>
+                  </span>
                   <ArrowLinkIcon />
                 </div>
               </div>
@@ -125,12 +142,16 @@ export const ApartmentTypeSearch = () => {
                   уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
-                    <span>Смотреть варианты</span>
+                    <span>
+                      <Link to="/library/classes">Смотреть варианты</Link>
+                    </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
-                  <span>Смотреть варианты</span>
+                  <span>
+                    <Link to="/library/classes">Смотреть варианты</Link>
+                  </span>
                   <ArrowLinkIcon />
                 </div>
               </div>
@@ -150,12 +171,16 @@ export const ApartmentTypeSearch = () => {
                   уютными балконами или лоджиями, изолированными комнатами и кухней. В этом классе
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
-                    <span>Смотреть варианты</span>
+                    <span>
+                      <Link to="/library/classes">Смотреть варианты</Link>
+                    </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
-                  <span>Смотреть варианты</span>
+                  <span>
+                    <Link to="/library/classes">Смотреть варианты</Link>
+                  </span>
                   <ArrowLinkIcon />
                 </div>
               </div>

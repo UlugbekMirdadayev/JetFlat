@@ -8,6 +8,7 @@ import { ResidentialComplexes } from '../pages/residentialComplexes';
 import { ApartmentSelect } from '../pages/apartmentSelect';
 import { Booking } from '../pages/booking';
 import { Classes, Comforts, Library, Regions } from '../pages/library';
+import { Developers } from '../pages/developers';
 
 export const routes = [
   { path: '/', element: Main },
@@ -23,5 +24,6 @@ export const routes = [
   { path: '/library/classes', element: Classes },
   { path: '/library/classes/comforts', element: Comforts },
   { path: '/regions', element: Regions },
-  { path: '/regions/:id', element: Regions }
+  { path: '/regions/:id', element: Regions },
+  { path: '/developers', element: Developers }
 ];

@@ -48,7 +48,7 @@ export const Footer = () => {
 
               <ul className={styles.menu}>
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={"/developers"} className={styles.menu__link}>
                     Застройщики
                   </Link>
                 </li>
@@ -190,7 +190,7 @@ export const Footer = () => {
 
                   <ul className={styles.menu}>
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={"/developers"} className={styles.menu__link}>
                         Застройщики
                       </Link>
                     </li>

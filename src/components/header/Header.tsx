@@ -43,7 +43,7 @@ export const Header = () => {
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={"/developers"} className={styles.list__link}>
             Застройщики
           </Link>
         </li>
@@ -125,7 +125,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={"/developers"} className={styles.list__link}>
                   Застройщики
                 </Link>
               </li>

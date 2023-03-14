@@ -61,7 +61,15 @@ img {
   overflow: hidden;
   overflow-y: auto;
   &::-webkit-scrollbar {
-    display: none;
+    background: #9edee0;
+    border: 2px solid #ffffff;
+    border-width: 0px 2px 0px 2px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #74c6c9;
+    border-radius: 20px;
   }
   @media screen and (max-width: 425px) {
     margin-bottom: 14vw;

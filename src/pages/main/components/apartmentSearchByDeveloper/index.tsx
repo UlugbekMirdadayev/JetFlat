@@ -8,6 +8,7 @@ import { ReactComponent as GolosIcon } from '../../../../assets/svg/golos.svg';
 import { ReactComponent as PickIcon } from '../../../../assets/svg/pick.svg';
 import { Button } from '../../../../components/button';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 const brands = [
   { id: 0, brand: Gk7Icon },
@@ -64,7 +65,9 @@ export const ApartmentSearchByDeveloper = () => {
       </div>
       <div className="container">
         <div className={styles.center_button}>
-          <Button variant="orange">Показать всех застройщиков</Button>
+          <Link to="/developers">
+            <Button variant="orange">Показать всех застройщиков</Button>
+          </Link>
         </div>
       </div>
     </section>

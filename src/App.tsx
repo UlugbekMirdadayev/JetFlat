@@ -6,7 +6,7 @@ import { routes } from './constantes/routes';
 // import { Radio } from './components/radio';
 // import { Select } from './components/select/Select';
 import { Header } from './components/header';
-// import { Cookie } from './components/cookie';
+import { Cookie } from './components/cookie';
 import { Footer } from './components/footer';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           ))}
         </Routes>
 
-        {/* <Cookie /> */}
+        <Cookie />
         <Footer />
       </div>
     </BrowserRouter>

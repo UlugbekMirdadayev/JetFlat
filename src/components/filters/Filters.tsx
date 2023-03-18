@@ -13,7 +13,7 @@ export const Filters = () => {
     <div className={styles.filters}>
       <div className={styles.filters__head}>
         <Search />
-        <div className={styles.mr40}>
+        <div>
           <SelectOne />
         </div>
         <div className={styles.select}>

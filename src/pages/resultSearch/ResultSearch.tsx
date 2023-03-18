@@ -587,13 +587,13 @@ export const ResultSearch = () => {
                   <Button variant="outlined">
                     <span className="inner_btn text_trans_none">Мы рекомендуем</span>
                   </Button>
-                  <Button className="flex_custome" variant="outlined">
+                  <Button variant="outlined">
                     <span className="inner_btn text_trans_none">
                       По сроку сдачи (сначала готовые)
                     </span>
                   </Button>
-                  <Button className="flex_custome" variant="outlined">
-                    <span className="inner_btn text_trans_none">МПо цене (сначала низкая)</span>
+                  <Button variant="outlined">
+                    <span className="inner_btn text_trans_none">По цене (сначала низкая)</span>
                   </Button>
                   <Button variant="outlined" onClick={() => setOpenSort(!openSort)}>
                     <span className="inner_btn text_trans_none">...</span>

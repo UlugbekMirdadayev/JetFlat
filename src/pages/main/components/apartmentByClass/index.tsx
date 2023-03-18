@@ -22,7 +22,7 @@ export const ApartmentByClass = () => {
           <div className={styles.card}>
             <div className={styles.card__inner}>
               <div className={styles.card__img}>
-                <span className={clsx('ship ', styles.card__ship)}>
+                <span className={clsx('ship ship--gray', styles.card__ship)}>
                   <Link to="/library/classes"> Стандарт</Link>
                 </span>
                 <img src={ap1} alt="" />

@@ -82,8 +82,8 @@ export const ApartmentSearch = () => {
                       <p className="f18 w400 pb20">УПИ, парк, близость центра</p>
                     </div>
                   </div>
-                  <div className={'border__topBorder'} />
-                  <div className={'border__bottomBorder'} />
+                  <div className={clsx([styles.border__topBorder, 'border__topBorder'])} />
+                  <div className={clsx([styles.border__bottomBorder, 'border__bottomBorder'])} />
                   <div className={clsx([styles.border__rightBorder, 'border__rightBorder'])} />
                 </div>
               </SwiperSlide>

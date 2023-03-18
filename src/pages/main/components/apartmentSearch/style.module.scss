@@ -96,11 +96,16 @@
 }
 
 .list {
+  width: calc(100% + 20px);
   margin-bottom: 60px;
   @media screen and (max-width: 1920px) {
+    width: calc(100% + 1.0416666666666667vw);
     margin-bottom: 3.125vw;
-    @media screen and (max-width: 425px) {
-      margin-bottom: 8.333333333333334vw;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      @media screen and (max-width: 425px) {
+        margin-bottom: 8.333333333333334vw;
+      }
     }
   }
 }
@@ -120,6 +125,7 @@
       }
     }
   }
+
   &__inner {
     cursor: pointer;
     &:hover {
@@ -131,10 +137,10 @@
     position: relative;
     img {
       width: 100%;
-      max-height: 270px;
+      max-height: 274px;
       object-fit: cover;
       @media screen and (max-width: 1920px) {
-        max-height: 14.0625vw;
+        max-height: 14.270833333333334vw;
         @media screen and (max-width: 1024px) {
           max-height: 26.041666666666668vw;
           @media screen and (max-width: 425px) {
@@ -151,9 +157,9 @@
     }
   }
   &__info {
-    padding: 0 25px;
+    padding: 20px 25px;
     @media screen and (max-width: 1920px) {
-      padding: 0 1.3020833333333333vw;
+      padding: 1.0416666666666667vw 1.3020833333333333vw;
       @media screen and (max-width: 425px) {
         padding: 0;
       }
@@ -210,16 +216,25 @@
     }
   }
 }
-.border__rightBorder {
-  display: none;
-  @media screen and (max-width: 1024px) {
-    display: block;
-  }
-}
 .slide {
   width: auto !important;
   .border__topBorder {
     width: calc(100% - 40px);
+    @media screen and (max-width: 425px) {
+      width: calc(100% - 20px);
+    }
+  }
+  &:first-child {
+    margin-left: -20px;
+    @media screen and (max-width: 1920px) {
+      margin-left: -1.0416666666666667vw;
+      @media screen and (max-width: 1024px) {
+        margin-left: -3.2552083333333335vw;
+        @media screen and (max-width: 425px) {
+          margin-left: -3.2552083333333335vw;
+        }
+      }
+    }
   }
 }
 

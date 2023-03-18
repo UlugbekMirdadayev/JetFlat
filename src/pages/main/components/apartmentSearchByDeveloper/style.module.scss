@@ -105,7 +105,7 @@
       @media screen and (max-width: 425px) {
         max-width: 41.666666666666664vw;
         height: 27.77777777777778vw;
-        margin-right: 5.555555555555555vw;
+        margin-right: auto;
         padding: 7vw;
         &:nth-child(4n + 4) {
           margin-right: 5.555555555555555vw;
@@ -148,8 +148,13 @@
         background: transparent !important;
         color: #242424;
         width: 100%;
-        padding: 6.111111111111111vw 0 ;
+        padding: 6.111111111111111vw 0;
         font-size: 3.3333333333333335vw;
+      }
+    }
+    @media screen and (max-width: 425px) {
+      a {
+        width: 100%;
       }
     }
   }

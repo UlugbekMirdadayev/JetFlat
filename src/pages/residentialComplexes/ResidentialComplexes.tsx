@@ -141,7 +141,7 @@ export const ResidentialComplexes = () => {
               <Button variant="outlined">
                 <span className="inner_btn text_trans_none">Информация и стоимость</span>
               </Button>
-              <Button className="fl1" variant="outlined">
+              <Button variant="outlined">
                 <span className="inner_btn text_trans_none">Ипотечный калькулятор</span>
               </Button>
               <Button variant="outlined">

@@ -59,7 +59,7 @@ img {
   align-items: baseline;
   max-width: 100vw;
   overflow: hidden;
-  overflow-y: auto;
+  overflow-y: overlay;
   &::-webkit-scrollbar {
     background: #9edee0;
     border: 2px solid #ffffff;
@@ -227,6 +227,9 @@ button:hover {
   }
   &--purple {
     background: #af62c5;
+  }
+  &--gray {
+    background: #7D8790;
   }
 }
 .w100 {

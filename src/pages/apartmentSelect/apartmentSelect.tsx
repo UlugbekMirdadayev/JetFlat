@@ -39,11 +39,12 @@ export const ApartmentSelect = () => {
           </div>
           <div className="row lg-gap-20 apartment_head_row align-items-center sm-fld-column-reverse">
             <div className="row lg-gap-20 sm-mt-20 sm-fld-column">
-              <Link to={'/residential-complexes'}>
-                <button className="outline-primary py19 px40 btn-head-row">
-                  <span className="button_inner  weight600">Вернуться к ЖК</span>
-                </button>
-              </Link>
+              <button className="outline-primary py19 px40 btn-head-row">
+                <span className="button_inner  weight600">
+                  <Link to={'/residential-complexes'}>Вернуться к ЖК </Link>
+                </span>
+              </button>
+
               <button className="outline-primary  py19 px40 btn-head-row">
                 <span className="button_inner weight600">Ипотечный калькулятор</span>
               </button>

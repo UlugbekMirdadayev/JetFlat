@@ -243,6 +243,10 @@
     display: none;
 }
 
+.residentials .tab_header_ button {
+    flex: auto;
+}
+
 @media screen and (max-width:1920px) {
     .text-area-div .more {
         font-size: 0.7291666666666666vw;
@@ -761,6 +765,7 @@
         text-align: left;
         align-items: flex-start;
     }
+
     .mini-btn-orange.sm-d-none,
     .text-area-div .more.md-d-block.sm-d-none,
     .sm-d-none {

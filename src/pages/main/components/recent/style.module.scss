@@ -75,15 +75,15 @@
 }
 
 .card {
-  padding: 40px 20px;
+  padding: 40px;
   position: relative;
-  width: 390px;
+  width: 410px;
   display: block;
-  height: 280px;
+  height: 260px;
   @media screen and (max-width: 1920px) {
-    width: 20.3125vw;
-    height: 14.583333333333334vw;
-    padding: 2.0833333333333335vw 1.0416666666666667vw;
+    width: 21.354166666666668vw;
+    height: 13.541666666666666vw;
+    padding: 2.0833333333333335vw;
     @media screen and (max-width: 1024px) {
       width: 48.567708333333336vw;
       height: 31.770833333333332vw;

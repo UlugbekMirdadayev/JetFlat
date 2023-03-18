@@ -21,10 +21,11 @@
   &__head {
     margin-bottom: 28px;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 300px 300px 300px;
     justify-content: space-between;
     @media screen and (max-width: 1920px) {
       margin-bottom: 1.4583333333333333vw;
+      grid-template-columns: 15.625vw 15.625vw 15.625vw;
     }
     @media screen and (max-width: 1024px) {
       display: grid;
@@ -117,13 +118,10 @@
 .search {
   border: 1px solid #74c6c9;
   position: relative;
-  margin-right: 40px;
   flex: 1;
   height: auto;
   @media screen and (max-width: 1920px) {
-    margin-right: 2.0833333333333335vw;
     @media screen and (max-width: 1024px) {
-      margin-right: 0;
       margin-bottom: 3.125vw;
       @media screen and (max-width: 425px) {
         margin-bottom: 0;
@@ -354,6 +352,7 @@
       padding: 2.4739583333333335vw;
       font-size: 1.8229166666666667vw;
       height: 6.510416666666667vw;
+      line-height: 1;
       @media screen and (max-width: 425px) {
         font-size: 3.888888888888889vw;
         padding: 4.166666666666667vw 5.555555555555555vw;

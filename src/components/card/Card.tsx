@@ -1,4 +1,4 @@
-import { FC, useLayoutEffect, useRef, useState } from 'react';
+import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import './style.css';
 
 type index = 0 | 1 | 2;
@@ -7,20 +7,22 @@ type Props = { index?: index };
 const FirstCardStyle: FC<Props> = () => {
   const [size, setSize] = useState([0, 0]);
   const ref = useRef<any>(null);
-
+  function updateSize() {
+    if (!ref?.current) return;
+    setSize([
+      ref?.current?.getBoundingClientRect()?.width,
+      ref?.current?.getBoundingClientRect()?.height
+    ]);
+  }
   useLayoutEffect(() => {
-    function updateSize() {
-      if (!ref?.current) return;
-      setSize([
-        ref?.current?.getBoundingClientRect()?.width,
-        ref?.current?.getBoundingClientRect()?.height
-      ]);
-    }
     window.addEventListener('resize', updateSize);
-    updateSize();
-
     return () => window.removeEventListener('resize', updateSize);
   }, []);
+
+  useEffect(() => {
+    updateSize();
+  }, [ref?.current]);
+
 
   return (
     <div className="row py40 px20 card_first">

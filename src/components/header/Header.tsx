@@ -30,7 +30,7 @@ export const Header = () => {
         }
         className={styles.list_mobile}>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/new-building'} className={styles.list__link}>
             Новостройки
           </Link>
         </li>
@@ -43,7 +43,7 @@ export const Header = () => {
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={"/developers"} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/developers'} className={styles.list__link}>
             Застройщики
           </Link>
         </li>
@@ -53,12 +53,12 @@ export const Header = () => {
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/trade-in'} className={styles.list__link}>
             Trade-in
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/articles'} className={styles.list__link}>
             Статьи
           </Link>
         </li>
@@ -90,12 +90,12 @@ export const Header = () => {
               Екатеринбург
             </div>
             <div className="row">
-              <Link onClick={() => setOpen(false)} to={'/'}>
+              <Link onClick={() => setOpen(false)} to={'/new-building'}>
                 <Button className={styles.add} variant="outlinedWhite">
                   Добавить новостройку
                 </Button>
               </Link>
-              <Link onClick={() => setOpen(false)} to={'/'}>
+              <Link onClick={() => setOpen(false)} to={'/user-account'}>
                 <Button className={styles.lk} variant="outlined">
                   Личный кабинет
                 </Button>
@@ -112,7 +112,7 @@ export const Header = () => {
             </div>
             <ul className={styles.list}>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/new-building'} className={styles.list__link}>
                   Новостройки
                 </Link>
               </li>
@@ -125,7 +125,10 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={"/developers"} className={styles.list__link}>
+                <Link
+                  onClick={() => setOpen(false)}
+                  to={'/developers'}
+                  className={styles.list__link}>
                   Застройщики
                 </Link>
               </li>
@@ -135,12 +138,12 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/trade-in'} className={styles.list__link}>
                   Trade-in
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={'/'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/articles'} className={styles.list__link}>
                   Статьи
                 </Link>
               </li>
@@ -156,13 +159,7 @@ export const Header = () => {
 
             <ul className={styles.bar}>
               <li className={styles.bar__item}>
-                <NavLink
-                  to={'/'}
-                  className={({ isActive }) =>
-                    clsx([styles.bar__link, isActive ? styles.active_link : ''])
-                  }>
-                  <JfIcon />
-                </NavLink>
+                <JfIcon />
               </li>
               <li className={clsx([styles.bar__item, styles.user_mobile_btn])}>
                 <NavLink
@@ -192,13 +189,7 @@ export const Header = () => {
                 </NavLink>
               </li>
               <li className={styles.bar__item}>
-                <NavLink
-                  to={'/about'}
-                  className={({ isActive }) =>
-                    clsx([styles.bar__link, isActive ? styles.active_link : ''])
-                  }>
-                  <InfoIcon />
-                </NavLink>
+                <InfoIcon />
               </li>
             </ul>
           </div>

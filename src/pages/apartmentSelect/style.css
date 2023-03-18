@@ -1398,7 +1398,7 @@ button.outline-primary:hover span {
 
     .select__head>div>div {
         font-size: unset;
-        height: unset;
+        height: 50px;
     }
 
     .teal_bg {

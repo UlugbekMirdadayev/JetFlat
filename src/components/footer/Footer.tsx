@@ -19,23 +19,23 @@ export const Footer = () => {
               </div>
               <ul className={styles.menu}>
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/new-building'} className={styles.menu__link}>
                     Новостройки
                   </Link>
                 </li>
 
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/ipoteka'} className={styles.menu__link}>
                     Ипотека
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/trade-in'} className={styles.menu__link}>
                     Trade-in
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/'} className={styles.menu__link}>
+                  <Link to={'/articles'} className={styles.menu__link}>
                     Статьи
                   </Link>
                 </li>
@@ -48,7 +48,7 @@ export const Footer = () => {
 
               <ul className={styles.menu}>
                 <li className={styles.menu__item}>
-                  <Link to={"/developers"} className={styles.menu__link}>
+                  <Link to={'/developers'} className={styles.menu__link}>
                     Застройщики
                   </Link>
                 </li>
@@ -71,27 +71,30 @@ export const Footer = () => {
               </ul>
 
               <div className={styles.right}>
-                <Button variant="outlined" className={styles.right__btn}>
-                  Добавить новостройку
-                </Button>
+                <Link to={'/new-building'} className={styles.menu__link}>
+                  <Button variant="outlined" className={styles.right__btn}>
+                    Добавить новостройку
+                  </Button>
+                </Link>
+
                 <ul className={styles.bar}>
                   <li className={styles.bar__item}>
-                    <Link to={'/'} className={styles.bar__link}>
+                    <Link to={'/comparison'} className={styles.bar__link}>
                       <ChartIcon />
                     </Link>
                   </li>
                   <li className={styles.bar__item}>
-                    <Link to={'/'} className={styles.bar__link}>
+                    <Link to={'/likes'} className={styles.bar__link}>
                       <HeartIcon />
                     </Link>
                   </li>
                   <li className={styles.bar__item}>
-                    <Link to={'/'} className={styles.bar__link}>
+                    <Link to={'/user-account'} className={styles.bar__link}>
                       <ProfileIcon />
                     </Link>
                   </li>
                   <li className={styles.bar__item}>
-                    <Link to={'/'} className={styles.bar__link}>
+                    <Link to={'#'} className={styles.bar__link}>
                       <InfoIcon />
                     </Link>
                   </li>
@@ -154,14 +157,16 @@ export const Footer = () => {
               </div>
               <div className={styles.reverse_column_mobile}>
                 <div className={styles.right}>
+                  <Link to={'/new-building'} className={styles.menu__link}>
                   <Button variant="outlined" className={styles.right__btn}>
                     Добавить новостройку
                   </Button>
+                </Link>
                 </div>
                 <div className={styles.bar}>
                   <ul className={styles.menu}>
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={'/new-building'} className={styles.menu__link}>
                         Новостройки
                       </Link>
                     </li>
@@ -172,12 +177,12 @@ export const Footer = () => {
                       </Link>
                     </li>
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={'/trade-in'} className={styles.menu__link}>
                         Trade-in
                       </Link>
                     </li>
                     <li className={styles.menu__item}>
-                      <Link to={'/'} className={styles.menu__link}>
+                      <Link to={'/articles'} className={styles.menu__link}>
                         Статьи
                       </Link>
                     </li>
@@ -190,7 +195,7 @@ export const Footer = () => {
 
                   <ul className={styles.menu}>
                     <li className={styles.menu__item}>
-                      <Link to={"/developers"} className={styles.menu__link}>
+                      <Link to={'/developers'} className={styles.menu__link}>
                         Застройщики
                       </Link>
                     </li>

@@ -21,7 +21,9 @@ export const ApartmentTypeSearch = () => {
             </div>
             <div className={styles.accord__item}>
               <div className={clsx(styles.box, styles['box--green'])}>
-                <img src={hImg} alt="" className={styles.hImage} />
+                <div className={styles.image__absolute}>
+                  <img src={hImg} alt="" className={styles.hImage} />
+                </div>
                 <h4 className={styles.box__title}>Классика</h4>
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
@@ -50,7 +52,9 @@ export const ApartmentTypeSearch = () => {
             </div>
             <div className={styles.accord__item}>
               <div className={clsx(styles.box, styles['box--pink'])}>
-                <img src={hImg} alt="" className={styles.hImage} />
+                <div className={styles.image__absolute}>
+                  <img src={hImg} alt="" className={styles.hImage} />
+                </div>
                 <h4 className={styles.box__title}>Студия</h4>
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
@@ -78,7 +82,9 @@ export const ApartmentTypeSearch = () => {
             </div>
             <div className={styles.accord__item}>
               <div className={clsx(styles.box, styles['box--blue'])}>
-                <img src={hImg} alt="" className={styles.hImage} />
+                <div className={styles.image__absolute}>
+                  <img src={hImg} alt="" className={styles.hImage} />
+                </div>
                 <h4 className={styles.box__title}>Европланировка</h4>
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
@@ -108,7 +114,9 @@ export const ApartmentTypeSearch = () => {
             </div>
             <div className={styles.accord__item}>
               <div className={clsx(styles.box, styles['box--yellow'])}>
-                <img src={hImg} alt="" className={styles.hImage} />
+                <div className={styles.image__absolute}>
+                  <img src={hImg} alt="" className={styles.hImage} />
+                </div>
                 <h4 className={styles.box__title}>Двухуровневые</h4>
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами.
@@ -135,7 +143,9 @@ export const ApartmentTypeSearch = () => {
             </div>
             <div className={styles.accord__item}>
               <div className={clsx(styles.box, styles['box--violet'])}>
-                <img src={hImg} alt="" className={styles.hImage} />
+                <div className={styles.image__absolute}>
+                  <img src={hImg} alt="" className={styles.hImage} />
+                </div>
                 <h4 className={styles.box__title}>Пентхаус</h4>
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,
@@ -164,7 +174,9 @@ export const ApartmentTypeSearch = () => {
             </div>
             <div className={styles.accord__item}>
               <div className={clsx(styles.box, styles['box--purple'])}>
-                <img src={hImg} alt="" className={styles.hImage} />
+                <div className={styles.image__absolute}>
+                  <img src={hImg} alt="" className={styles.hImage} />
+                </div>
                 <h4 className={styles.box__title}>Свободной планировки</h4>
                 <p className={styles.box__text}>
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами,

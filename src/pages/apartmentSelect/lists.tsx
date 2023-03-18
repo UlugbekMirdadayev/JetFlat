@@ -43,12 +43,12 @@ export default function Lists() {
         </div>
         <div className="column_label">
           <div className="f17 desc__text">Количество комнат</div>
-          <div className="mt18 select__head">
-            <Select
-              options={['Дом или корпус , дом 1']}
-              selectedIbdex={0}
-              setSelectedIndex={(e) => e}
-            />
+            <div className="row_result mt18">
+              {[...Array(6)].map((_, key) => (
+                <div key={key} className={`${key === 2 ? 'active' : ''} box_quadrad`}>
+                  {key === 5 ? '5 +' : key + 1}
+                </div>
+              ))}
           </div>
         </div>
         <div className="column_label">

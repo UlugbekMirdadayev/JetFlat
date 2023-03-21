@@ -112,7 +112,10 @@ export const Header = () => {
             </div>
             <ul className={styles.list}>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={'/new-building'} className={styles.list__link}>
+                <Link
+                  onClick={() => setOpen(false)}
+                  to={'/new-building'}
+                  className={styles.list__link}>
                   Новостройки
                 </Link>
               </li>
@@ -159,7 +162,9 @@ export const Header = () => {
 
             <ul className={styles.bar}>
               <li className={styles.bar__item}>
-                <JfIcon />
+                <div className={styles.bar__link}>
+                  <JfIcon />
+                </div>
               </li>
               <li className={clsx([styles.bar__item, styles.user_mobile_btn])}>
                 <NavLink
@@ -189,7 +194,9 @@ export const Header = () => {
                 </NavLink>
               </li>
               <li className={styles.bar__item}>
-                <InfoIcon />
+                <div className={styles.bar__link}>
+                  <InfoIcon />
+                </div>
               </li>
             </ul>
           </div>

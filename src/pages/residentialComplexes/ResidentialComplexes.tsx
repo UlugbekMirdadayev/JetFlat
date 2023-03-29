@@ -23,7 +23,7 @@ export const ResidentialComplexes = () => {
         <HistoryLink
           links={[
             { name: 'Жилые комплексы', link: '/' },
-            { name: 'Зелёный остров', link: '/residential-complexes' }
+            { name: 'Зелёный остров', link: '/residential-estates' }
           ]}
         />
         <div className="row_result sm-d-flex-col md-align-center mb50 md-mt-40 sm-align-center sm-mt-30">

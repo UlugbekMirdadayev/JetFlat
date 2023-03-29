@@ -19,13 +19,13 @@ export const Footer = () => {
               </div>
               <ul className={styles.menu}>
                 <li className={styles.menu__item}>
-                  <Link to={'/new-building'} className={styles.menu__link}>
+                  <Link to={'/join'} className={styles.menu__link}>
                     Новостройки
                   </Link>
                 </li>
 
                 <li className={styles.menu__item}>
-                  <Link to={'/ipoteka'} className={styles.menu__link}>
+                  <Link to={'/mortgage'} className={styles.menu__link}>
                     Ипотека
                   </Link>
                 </li>
@@ -35,7 +35,7 @@ export const Footer = () => {
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/articles'} className={styles.menu__link}>
+                  <Link to={'/blog'} className={styles.menu__link}>
                     Статьи
                   </Link>
                 </li>
@@ -54,24 +54,24 @@ export const Footer = () => {
                 </li>
 
                 <li className={styles.menu__item}>
-                  <Link to={'/residential-complexes'} className={styles.menu__link}>
+                  <Link to={'/residential-estates'} className={styles.menu__link}>
                     Жилые Комплексы
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/regions'} className={styles.menu__link}>
+                  <Link to={'/districts'} className={styles.menu__link}>
                     Районы
                   </Link>
                 </li>
                 <li className={styles.menu__item}>
-                  <Link to={'/about-services'} className={styles.menu__link}>
+                  <Link to={'/about'} className={styles.menu__link}>
                     О сервисе
                   </Link>
                 </li>
               </ul>
 
               <div className={styles.right}>
-                <Link to={'/new-building'} className={styles.menu__link}>
+                <Link to={'/join'} className={styles.menu__link}>
                   <Button variant="outlined" className={styles.right__btn}>
                     Добавить новостройку
                   </Button>
@@ -79,17 +79,17 @@ export const Footer = () => {
 
                 <ul className={styles.bar}>
                   <li className={styles.bar__item}>
-                    <Link to={'/comparison'} className={styles.bar__link}>
+                    <Link to={'/compare'} className={styles.bar__link}>
                       <ChartIcon />
                     </Link>
                   </li>
                   <li className={styles.bar__item}>
-                    <Link to={'/likes'} className={styles.bar__link}>
+                    <Link to={'/favourite'} className={styles.bar__link}>
                       <HeartIcon />
                     </Link>
                   </li>
                   <li className={styles.bar__item}>
-                    <Link to={'/user-account'} className={styles.bar__link}>
+                    <Link to={'/lk'} className={styles.bar__link}>
                       <ProfileIcon />
                     </Link>
                   </li>
@@ -113,8 +113,8 @@ export const Footer = () => {
                 <p className={styles.copyring__right}>Все права защищены</p>
               </div>
               <div className={styles.politics}>
-                <NavLink to="/">Политика конфиденциальности</NavLink>
-                <NavLink to="/">Пользовательское соглашение</NavLink>
+                <NavLink to="/privacy-policy">Политика конфиденциальности</NavLink>
+                <NavLink to="/service-rules">Пользовательское соглашение</NavLink>
               </div>
             </div>
           </div>
@@ -157,7 +157,7 @@ export const Footer = () => {
               </div>
               <div className={styles.reverse_column_mobile}>
                 <div className={styles.right}>
-                  <Link to={'/new-building'} className={styles.menu__link}>
+                  <Link to={'/join'} className={styles.menu__link}>
                   <Button variant="outlined" className={styles.right__btn}>
                     Добавить новостройку
                   </Button>
@@ -166,13 +166,13 @@ export const Footer = () => {
                 <div className={styles.bar}>
                   <ul className={styles.menu}>
                     <li className={styles.menu__item}>
-                      <Link to={'/new-building'} className={styles.menu__link}>
+                      <Link to={'/join'} className={styles.menu__link}>
                         Новостройки
                       </Link>
                     </li>
 
                     <li className={styles.menu__item}>
-                      <Link to={'/ipoteka'} className={styles.menu__link}>
+                      <Link to={'/mortgage'} className={styles.menu__link}>
                         Ипотека
                       </Link>
                     </li>
@@ -182,7 +182,7 @@ export const Footer = () => {
                       </Link>
                     </li>
                     <li className={styles.menu__item}>
-                      <Link to={'/articles'} className={styles.menu__link}>
+                      <Link to={'/blog'} className={styles.menu__link}>
                         Статьи
                       </Link>
                     </li>
@@ -201,12 +201,12 @@ export const Footer = () => {
                     </li>
 
                     <li className={styles.menu__item}>
-                      <Link to={'/residential-complexes'} className={styles.menu__link}>
+                      <Link to={'/residential-estates'} className={styles.menu__link}>
                         Жилые Комплексы
                       </Link>
                     </li>
                     <li className={styles.menu__item}>
-                      <Link to={'/regions'} className={styles.menu__link}>
+                      <Link to={'/districts'} className={styles.menu__link}>
                         Районы
                       </Link>
                     </li>

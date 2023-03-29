@@ -9,21 +9,23 @@ import { ApartmentSelect } from '../pages/apartmentSelect';
 import { Booking } from '../pages/booking';
 import { Classes, Comforts, Library, Regions } from '../pages/library';
 import { Developers } from '../pages/developers';
+import { Estates } from '../pages/estates';
 
 export const routes = [
   { path: '/', element: Main },
-  { path: '/about-services', element: AboutServices },
+  { path: '/about', element: AboutServices },
   { path: '/test', element: TestModal },
-  { path: '/ipoteka', element: IpotekaOrder },
+  { path: '/mortgage', element: IpotekaOrder },
   { path: '/login', element: Login },
-  { path: '/result', element: ResultSearch },
-  { path: '/residential-complexes', element: ResidentialComplexes },
-  { path: '/apartment/:id', element: ApartmentSelect },
+  { path: '/search-result', element: ResultSearch },
+  { path: '/residential-estates', element: Estates },
+  { path: '/residential-estates/:id', element: ResidentialComplexes },
+  { path: '/residential-estates/:id/choice-flat', element: ApartmentSelect },
   { path: '/booking/:id', element: Booking },
   { path: '/library', element: Library },
   { path: '/library/classes', element: Classes },
   { path: '/library/classes/comforts', element: Comforts },
-  { path: '/regions', element: Regions },
-  { path: '/regions/:id', element: Regions },
+  { path: '/districts', element: Regions },
+  { path: '/districts/:id', element: Regions },
   { path: '/developers', element: Developers }
 ];

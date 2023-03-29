@@ -34,7 +34,7 @@ export const IpotekaOrder = () => {
     <>
       <div className="container">
         <div className={s.container}>
-          <HistoryLink links={[{ name: 'Ипотека', link: '/ipoteka' }]} />
+          <HistoryLink links={[{ name: 'Ипотека', link: '/mortgage' }]} />
 
           <div className={s.row__center}>
             <div className={s.left}>

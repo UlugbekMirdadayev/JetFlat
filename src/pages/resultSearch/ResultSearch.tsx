@@ -334,7 +334,7 @@ export const ResultSearch = () => {
   return (
     <div className="result_container">
       <div className="container">
-        <HistoryLink links={[{ name: 'Результат поиска', link: '/result' }]} />
+        <HistoryLink links={[{ name: 'Результат поиска', link: '/search-result' }]} />
         <div className="row_result mobile_col">
           <div className="title_result">
             <h2>

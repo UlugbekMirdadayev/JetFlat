@@ -99,7 +99,7 @@ export const SelectHouse = () => {
                   <Button
                     variant="outlined"
                     className="mt30 mb10 md-mb-0"
-                    onClick={() => navigate('/apartment/:id')}>
+                    onClick={() => navigate('/residential-estates/:id/choice-flat')}>
                     <span className="md-fs-13">Выбрать квартиру</span>
                   </Button>
                 </div>

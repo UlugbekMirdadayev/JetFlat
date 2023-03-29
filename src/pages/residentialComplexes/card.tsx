@@ -101,7 +101,7 @@ function Card() {
         <Button
           variant="primary"
           className="md-mt40 md-m-btn sm-full-btn sm-outline-orange-btn"
-          onClick={() => navigate('/apartment/1')}>
+          onClick={() => navigate('/residential-estates/1/choice-flat')}>
           <span className="md-fs-13">Выбрать квартиру</span>
         </Button>
       </div>

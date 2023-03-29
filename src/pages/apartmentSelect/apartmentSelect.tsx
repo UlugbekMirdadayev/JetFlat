@@ -26,9 +26,9 @@ export const ApartmentSelect = () => {
       <div className="container">
         <HistoryLink
           links={[
-            { name: 'Жилые комплексы', link: '/residential-complexes' },
-            { name: 'Зелёный остров', link: '/#residential-complexes' },
-            { name: 'Выбор квартиры', link: `/apartment/${id}` }
+            { name: 'Жилые комплексы', link: '/residential-estates' },
+            { name: 'Зелёный остров', link: `/residential-estates/${id}`},
+            { name: 'Выбор квартиры', link: `/residential-estates/${id}/choice-flat`}
           ]}
         />
         <div className="row space-between md-col mb50 md-mb-40">
@@ -41,7 +41,7 @@ export const ApartmentSelect = () => {
             <div className="row lg-gap-20 sm-mt-20 sm-fld-column">
               <button className="outline-primary py19 px40 btn-head-row">
                 <span className="button_inner  weight600">
-                  <Link to={'/residential-complexes'}>Вернуться к ЖК </Link>
+                  <Link to={'/residential-estates'}>Вернуться к ЖК </Link>
                 </span>
               </button>
 

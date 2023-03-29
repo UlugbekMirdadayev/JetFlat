@@ -30,14 +30,14 @@ export const Header = () => {
         }
         className={styles.list_mobile}>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/new-building'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/join'} className={styles.list__link}>
             Новостройки
           </Link>
         </li>
         <li className={styles.list__item}>
           <Link
             onClick={() => setOpen(false)}
-            to={'/residential-complexes'}
+            to={'/residential-estates'}
             className={styles.list__link}>
             Жилые комплексы
           </Link>
@@ -48,7 +48,7 @@ export const Header = () => {
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/ipoteka'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/mortgage'} className={styles.list__link}>
             Ипотека
           </Link>
         </li>
@@ -58,12 +58,12 @@ export const Header = () => {
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/articles'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/blog'} className={styles.list__link}>
             Статьи
           </Link>
         </li>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/about-services'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/about'} className={styles.list__link}>
             О сервисе
           </Link>
         </li>
@@ -90,12 +90,12 @@ export const Header = () => {
               Екатеринбург
             </div>
             <div className="row">
-              <Link onClick={() => setOpen(false)} to={'/new-building'}>
+              <Link onClick={() => setOpen(false)} to={'/join'}>
                 <Button className={styles.add} variant="outlinedWhite">
                   Добавить новостройку
                 </Button>
               </Link>
-              <Link onClick={() => setOpen(false)} to={'/user-account'}>
+              <Link onClick={() => setOpen(false)} to={'/lk'}>
                 <Button className={styles.lk} variant="outlined">
                   Личный кабинет
                 </Button>
@@ -114,7 +114,7 @@ export const Header = () => {
               <li className={styles.list__item}>
                 <Link
                   onClick={() => setOpen(false)}
-                  to={'/new-building'}
+                  to={'/join'}
                   className={styles.list__link}>
                   Новостройки
                 </Link>
@@ -122,7 +122,7 @@ export const Header = () => {
               <li className={styles.list__item}>
                 <Link
                   onClick={() => setOpen(false)}
-                  to={'/residential-complexes'}
+                  to={'/residential-estates'}
                   className={styles.list__link}>
                   Жилые комплексы
                 </Link>
@@ -136,7 +136,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={'/ipoteka'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/mortgage'} className={styles.list__link}>
                   Ипотека
                 </Link>
               </li>
@@ -146,14 +146,14 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link onClick={() => setOpen(false)} to={'/articles'} className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/blog'} className={styles.list__link}>
                   Статьи
                 </Link>
               </li>
               <li className={styles.list__item}>
                 <Link
                   onClick={() => setOpen(false)}
-                  to={'/about-services'}
+                  to={'/about'}
                   className={styles.list__link}>
                   О сервисе
                 </Link>
@@ -177,7 +177,7 @@ export const Header = () => {
               </li>
               <li className={styles.bar__item}>
                 <NavLink
-                  to={'/comparison'}
+                  to={'/compare'}
                   className={({ isActive }) =>
                     clsx([styles.bar__link, isActive ? styles.active_link : ''])
                   }>
@@ -186,7 +186,7 @@ export const Header = () => {
               </li>
               <li className={styles.bar__item}>
                 <NavLink
-                  to={'/likes'}
+                  to={'/favourite'}
                   className={({ isActive }) =>
                     clsx([styles.bar__link, isActive ? styles.active_link : ''])
                   }>

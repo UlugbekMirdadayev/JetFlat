@@ -29,9 +29,9 @@ export const Regions: FC<Props> = () => {
       <div className="container">
         <HistoryLink
           links={[
-            { name: 'Екатеринбург', link: '/regions' },
-            { name: 'Районы', link: `/residential-complexes` },
-            id ? { name: 'ВИЗ', link: `/regions/${id}` } : null
+            { name: 'Екатеринбург', link: '/districts/Екатеринбург' },
+            { name: 'Районы', link: '/districts' },
+            id ? { name: 'ВИЗ', link: `/districts/${id}` } : null
           ]}
         />
         <div className={s.container}>
@@ -110,7 +110,7 @@ export const Regions: FC<Props> = () => {
               you feel the mix.
             </div>
             <button>
-              <Link to={'/residential-complexes'}> 142 жилых комплекса</Link>
+              <Link to={'/residential-estates'}> 142 жилых комплекса</Link>
             </button>
           </div>
           <div className={s.gallery__slider}>
@@ -138,7 +138,7 @@ export const Regions: FC<Props> = () => {
                   </button>
                 </div>
                 <button className={s.link__btn}>
-                  <Link to={'/residential-complexes'}> 142 жилых комплекса</Link>
+                  <Link to={'/residential-estates'}> 142 жилых комплекса</Link>
                 </button>
               </div>
             </div>

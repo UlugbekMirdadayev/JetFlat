@@ -20,7 +20,7 @@ export const AboutServices = () => {
   return (
     <div className={s.container}>
       <div className="container">
-        <HistoryLink links={[{ name: 'О сервисе', link: '/about-services' }]} />
+        <HistoryLink links={[{ name: 'О сервисе', link: '/about' }]} />
         <div className={s.title}>О сервисе</div>
         <div className={s.row}>
           <div className={s.col}>
@@ -111,7 +111,7 @@ export const AboutServices = () => {
                 <ArrowIcon />
               </button>
             </div>
-            <Link className={s.navigations__btn} to={'/residential-complexes'}>
+            <Link className={s.navigations__btn} to={'/residential-estates'}>
               142 жилых комплекса
             </Link>
           </div>

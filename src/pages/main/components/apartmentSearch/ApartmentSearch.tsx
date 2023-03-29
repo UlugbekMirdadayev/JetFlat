@@ -104,7 +104,7 @@ export const ApartmentSearch = () => {
         </div>
         <div className={styles.center_button}>
           <Button variant="orange">
-            <Link to={'/regions'}>Показать все районы</Link>
+            <Link to={'/districts'}>Показать все районы</Link>
           </Button>
         </div>
       </div>

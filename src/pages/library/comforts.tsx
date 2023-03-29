@@ -38,7 +38,7 @@ export const Comforts: FC<Props> = () => {
               <div className={clsx([s.status, s.status__comfort])}>Комфорт</div>
               <div className={s.title__row}>
                 <Location />
-                <DownloadIcon/>
+                <DownloadIcon />
                 <ShareIcon />
               </div>
             </div>
@@ -171,7 +171,9 @@ export const Comforts: FC<Props> = () => {
               premium performance base toggle paddles. You can adjust your FX mix from Dry to Wet as
               you feel the mix.
             </div>
-            <button>142 жилых комплекса</button>
+            <Link to={'/residential-estates'} className={s.link__btn}>
+              <button> 142 жилых комплекса</button>
+            </Link>
           </div>
           <div className={s.gallery__slider}>
             <Swiper slidesPerView={1} ref={sliderRef}>
@@ -198,7 +200,7 @@ export const Comforts: FC<Props> = () => {
                   </button>
                 </div>
                 <button className={s.link__btn}>
-                  <Link to={'/residential-complexes'}> 142 жилых комплекса</Link>
+                  <Link to={'/residential-estates'}> 142 жилых комплекса</Link>
                 </button>
               </div>
             </div>

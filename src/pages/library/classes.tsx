@@ -89,7 +89,7 @@ export const Classes: FC<Props> = () => {
               you feel the mix.
             </div>
             <button>
-              <Link to={'/residential-complexes'}> 142 жилых комплекса</Link>
+              <Link to={'/residential-estates'}> 142 жилых комплекса</Link>
             </button>
           </div>
           <div className={s.gallery__slider}>
@@ -117,7 +117,7 @@ export const Classes: FC<Props> = () => {
                   </button>
                 </div>
                 <button className={s.link__btn}>
-                  <Link to={'/residential-complexes'}> 142 жилых комплекса</Link>
+                  <Link to={'/residential-estates'}> 142 жилых комплекса</Link>
                 </button>
               </div>
             </div>

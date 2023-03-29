@@ -81,6 +81,9 @@
       grid-template-columns: repeat(4, 1fr);
       row-gap: 60px;
       margin: 60px 0;
+      a:nth-child(4n + 4) [class='border__rightBorder'] {
+        display: none;
+      }
       @media screen and (max-width: 1920px) {
         margin: 3.125vw 0;
         row-gap: 3.125vw;
@@ -88,10 +91,23 @@
           grid-template-columns: repeat(2, 1fr);
           gap: 0;
           margin: 7.8125vw 0;
+          a:nth-child(4n + 4) [class='border__rightBorder'] {
+            display: block;
+          }
+          a:nth-child(2n + 2) [class='border__rightBorder'] {
+            display: none;
+          }
+          [class='card__inner__texts'] {
+            padding-left: 0;
+            padding-right: 0;
+          }
           @media screen and (max-width: 425px) {
             grid-template-columns: repeat(1, 1fr);
             row-gap: 11.11111111111111vw;
             margin: 11.11111111111111vw 0;
+            a [class='border__rightBorder'] {
+              display: none;
+            }
           }
         }
       }
@@ -149,5 +165,122 @@
         text-align: center;
       }
     }
+  }
+}
+.row_card {
+  &_text {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 5px;
+    @media screen and (max-width: 1920px) {
+      gap: 1.0416666666666667vw;
+      margin-bottom: 0.2604166666666667vw;
+      @media screen and (max-width: 1024px) {
+        gap: 1.3020833333333333vw;
+        margin-bottom: 1.953125vw;
+        justify-content: space-around;
+        @media screen and (max-width: 425px) {
+          justify-content: space-between;
+        }
+      }
+    }
+    span {
+      color: #008891;
+      font-weight: 600;
+    }
+    div {
+      color: #242424;
+      opacity: 0.77;
+    }
+  }
+  &_location {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+
+    @media screen and (max-width: 1920px) {
+      margin-bottom: 1.0416666666666667vw;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 2.6041666666666665vw;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        gap: 1.3020833333333333vw;
+        @media screen and (max-width: 425px) {
+          gap: 2.7777777777777777vw;
+          margin-bottom: 5.555555555555555vw;
+        }
+      }
+    }
+    svg {
+      width: 34px;
+      height: 34px;
+      @media screen and (max-width: 1920px) {
+        width: 1.7708333333333333vw;
+        height: 1.7708333333333333vw;
+        @media screen and (max-width: 1024px) {
+          width: 3.90625vw;
+          height: 3.90625vw;
+          @media screen and (max-width: 425px) {
+            width: 8.333333333333334vw;
+            height: 8.333333333333334vw;
+          }
+        }
+      }
+    }
+  }
+  &_status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    background: #ceeeef;
+    font-weight: 600;
+    line-height: 120%;
+    color: #242424;
+    width: max-content;
+    margin-bottom: 15px;
+    text-align: center;
+    @media screen and (max-width: 1920px) {
+      margin-bottom: 0.78125vw;
+      padding: 0.5208333333333334vw 1.3020833333333333vw;
+      @media screen and (max-width: 1024px) {
+        padding: 1.3020833333333333vw 3.2552083333333335vw;
+        margin-bottom: 1.953125vw;
+        width: 100%;
+        @media screen and (max-width: 425px) {
+          padding: 2.7777777777777777vw 8.333333333333334vw;
+          margin-bottom: 5.555555555555555vw;
+        }
+      }
+    }
+  }
+}
+.card__tabs {
+  display: flex;
+  align-items: center;
+  div {
+    flex: 0.5;
+    padding: 10px 25px;
+    text-align: center;
+    @media screen and (max-width: 1920px) {
+      padding: 0.5208333333333334vw 1.3020833333333333vw;
+      @media screen and (max-width: 1024px) {
+        padding: 1.3020833333333333vw 3.2552083333333335vw;
+        @media screen and (max-width: 425px) {
+          padding: 2.7777777777777777vw 8.333333333333334vw;
+        }
+      }
+    }
+  }
+  &__elit {
+    background: #af62c5;
+    color: #fff;
+  }
+  &__gray {
+    background: #7d8790;
+    color: #fff;
   }
 }

@@ -38,7 +38,7 @@ export const Filters = () => {
           <LocationIcon /> Смотреть на карте
         </Link>
         <div className={styles.pc_btn}>
-          <Button variant="orange" onClick={() => navigate('/result')}>
+          <Button variant="orange" onClick={() => navigate('/search-result')}>
             <span>Проверить цены</span>
           </Button>
         </div>

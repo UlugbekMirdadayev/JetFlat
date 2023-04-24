@@ -346,7 +346,7 @@ export const ResultSearch = () => {
               variant={'outlined'}
               className={openCharact ? 'active' : ''}
               onClick={() => {
-                setOpenCharact(true);
+                setOpenCharact(!openCharact);
                 setOpenMap(false);
                 setOpenFilter(false);
                 setOpenSort(false);

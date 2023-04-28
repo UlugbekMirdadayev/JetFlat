@@ -1,12 +1,14 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import clsx from 'clsx';
 import s from './style.module.scss';
 import { ReactComponent as DownloadIcon } from '../../assets/svg/download.svg';
 import { ReactComponent as ShareIcon } from '../../assets/svg/share.svg';
+import { useNavigate } from 'react-router-dom';
 
 type Props = { step: number };
 
 const LastStep: FC<Props> = ({ step }) => {
+  const navigate = useNavigate();
   return step === 2 ? (
     <div className={s.step__last}>
       <div className="container">
@@ -39,7 +41,9 @@ const LastStep: FC<Props> = ({ step }) => {
               <li className={s.paragraph}>в мобильном приложении</li>
             </ul>
             <div className={s.space_between}>
-              <button>Перейти к бронированию в личный кабинет</button>
+              <button onClick={() => navigate('/lk')}>
+                Перейти к бронированию в личный кабинет
+              </button>
               <div className={s.row__icons}>
                 <DownloadIcon />
                 <ShareIcon />

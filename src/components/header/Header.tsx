@@ -30,7 +30,7 @@ export const Header = () => {
         }
         className={styles.list_mobile}>
         <li className={styles.list__item}>
-          <Link onClick={() => setOpen(false)} to={'/join'} className={styles.list__link}>
+          <Link onClick={() => setOpen(false)} to={'/search-result'} className={styles.list__link}>
             Новостройки
           </Link>
         </li>
@@ -114,7 +114,7 @@ export const Header = () => {
               <li className={styles.list__item}>
                 <Link
                   onClick={() => setOpen(false)}
-                  to={'/join'}
+                  to={'/search-result'}
                   className={styles.list__link}>
                   Новостройки
                 </Link>

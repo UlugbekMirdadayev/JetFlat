@@ -1,9 +1,10 @@
 import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 import s from './style.module.scss';
 import { ReactComponent as DownloadIcon } from '../../assets/svg/download.svg';
 import { ReactComponent as ShareIcon } from '../../assets/svg/share.svg';
-import { useNavigate } from 'react-router-dom';
+
 
 type Props = { step: number };
 

@@ -151,10 +151,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className={styles.list__item}>
-                <Link
-                  onClick={() => setOpen(false)}
-                  to={'/about'}
-                  className={styles.list__link}>
+                <Link onClick={() => setOpen(false)} to={'/about'} className={styles.list__link}>
                   О сервисе
                 </Link>
               </li>
@@ -162,9 +159,13 @@ export const Header = () => {
 
             <ul className={styles.bar}>
               <li className={styles.bar__item}>
-                <div className={styles.bar__link}>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://play.google.com/store/games?hl=ru&gl=US"
+                  className={styles.bar__link}>
                   <JfIcon />
-                </div>
+                </a>
               </li>
               <li className={clsx([styles.bar__item, styles.user_mobile_btn])}>
                 <NavLink
@@ -194,9 +195,9 @@ export const Header = () => {
                 </NavLink>
               </li>
               <li className={styles.bar__item}>
-                <div className={styles.bar__link}>
+                <NavLink to="/privacy-policy" className={styles.bar__link}>
                   <InfoIcon />
-                </div>
+                </NavLink>
               </li>
             </ul>
           </div>

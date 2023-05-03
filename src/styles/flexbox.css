@@ -1,0 +1,20 @@
+.container {
+  max-width: 1688px;
+  width: 100%;
+  padding: 0 44px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.container--mod {
+  padding: 0 24px;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+}/*# sourceMappingURL=flexbox.css.map */

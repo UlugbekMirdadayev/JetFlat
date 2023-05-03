@@ -1,0 +1,129 @@
+.label {
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  margin-left: 15px;
+}
+@media screen and (max-width: 1920px) {
+  .label {
+    font-size: 0.7291666667vw;
+    margin-left: 0.78125vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .label {
+    font-size: 1.8229166667vw;
+    margin-left: 0.78125vw;
+  }
+}
+
+.checkbox-icon {
+  background: transparent;
+  border: 1px solid #74c6c9;
+  display: block;
+  height: 28px;
+  width: 28px;
+  flex: none;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+@media screen and (max-width: 1920px) {
+  .checkbox-icon {
+    width: 1.4583333333vw;
+    height: 1.4583333333vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .checkbox-icon {
+    width: 2.6041666667vw;
+    height: 2.6041666667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .checkbox-icon {
+    width: 5.5555555556vw;
+    height: 5.5555555556vw;
+  }
+}
+.checkbox-icon:after {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 17px;
+  left: 1px;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: -1px;
+  transform: rotate(45deg);
+  width: 9px;
+}
+@media screen and (max-width: 1920px) {
+  .checkbox-icon:after {
+    height: 0.8854166667vw;
+    border-width: 0 0.1041666667vw 0.1041666667vw 0;
+    left: 0.0520833333vw;
+    width: 0.46875vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .checkbox-icon:after {
+    width: 0.604167vw;
+    height: 1.504167vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .checkbox-icon:after {
+    width: 1.604167vw;
+    height: 3.504167vw;
+  }
+}
+
+.input {
+  cursor: pointer;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+.input:disabled ~ .checkbox-icon {
+  border-color: rgba(125, 135, 144, 0.5);
+}
+.input:checked ~ .checkbox-icon:after {
+  border-color: #fff;
+}
+.input:checked ~ .checkbox-icon {
+  background: #74c6c9;
+  border-width: 2px;
+}
+@media screen and (max-width: 1920px) {
+  .input:checked ~ .checkbox-icon {
+    border-width: 0.1041666667vw;
+  }
+}
+
+.label-container {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+@media screen and (max-width: 1920px) {
+  .label-container span {
+    font-size: 0.9375vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .label-container span {
+    font-size: 1.8229166667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .label-container span {
+    font-size: 3.3333333333vw;
+  }
+}/*# sourceMappingURL=style.module.css.map */

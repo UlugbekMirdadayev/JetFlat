@@ -1,0 +1,127 @@
+.test_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 620px;
+  margin: 230px auto 150px auto;
+  padding: 50px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px 1px rgba(70, 119, 182, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .test_modal {
+    width: auto;
+  }
+}
+.test_modal h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  color: #242424;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 450px) {
+  .test_modal h1 {
+    font-size: 26px;
+  }
+}
+.test_modal form {
+  width: 100%;
+}
+.test_modal form div {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  border: 1px solid #74c6c9;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.test_modal form div input {
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0;
+}
+@media screen and (max-width: 450px) {
+  .test_modal form div input {
+    font-size: 14px;
+  }
+}
+
+._arrow_img {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+._arrow_img button {
+  background: transparent;
+}
+._arrow_img button img {
+  cursor: pointer;
+}
+._arrow_img_two_btn {
+  transform: rotate(180deg);
+}
+
+.test_modal_one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 620px;
+  margin: 230px auto 150px auto;
+  padding: 50px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px 1px rgba(70, 119, 182, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .test_modal_one {
+    width: auto;
+  }
+}
+.test_modal_one h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  color: #242424;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 450px) {
+  .test_modal_one h1 {
+    font-size: 26px;
+  }
+}
+.test_modal_one form {
+  width: 100%;
+}
+.test_modal_one form button {
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #7d8790;
+  border: 1px solid #74c6c9;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  background: transparent;
+  cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+  .test_modal_one form button {
+    padding: 10px;
+  }
+}
+.test_modal_one form button:focus {
+  background: #74c6c9;
+  border: 1px solid #74c6c9;
+  color: white;
+}
+.test_modal_one form button div {
+  padding: 20px;
+}/*# sourceMappingURL=style.module.css.map */

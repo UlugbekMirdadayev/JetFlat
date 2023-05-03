@@ -1,0 +1,198 @@
+.selectList {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  z-index: 999;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 13px 0;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px 1px rgba(70, 119, 182, 0.2);
+}
+@media screen and (max-width: 1920px) {
+  .selectList {
+    padding: 0.6770833333vw 0;
+  }
+}
+
+.listItem {
+  transition: 0.3s;
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.listItem:focus, .listItem:hover {
+  background: #f0f4f8;
+  border-radius: 0px 0px 4px 4px;
+}
+@media screen and (max-width: 1920px) {
+  .listItem {
+    padding: 0.3645833333vw 1.0416666667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .listItem {
+    padding: 2.4739583333vw;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #7d8790;
+}
+@media screen and (max-width: 1920px) {
+  .text {
+    font-size: 0.8333333333vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .text {
+    font-size: 1.8229166667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .text {
+    font-size: 3.3333333333vw;
+  }
+}
+
+.dropDownContainer {
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+@media screen and (max-width: 1920px) {
+  .dropDownContainer {
+    margin-bottom: 1.5625vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .dropDownContainer {
+    margin-bottom: 2.6041666667vw;
+  }
+}
+
+.dropDownHeader {
+  position: relative;
+  padding: 5px 12px;
+  width: 100%;
+  height: 45px;
+  transition: 200ms ease-in-out;
+  border: 1px solid #74c6c9;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--dark);
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1920px) {
+  .dropDownHeader {
+    font-size: 0.9375vw;
+    height: 2.34375vw;
+    padding: 0.2604166667vw 0.625vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .dropDownHeader {
+    padding: 1.8229166667vw 2.6041666667vw;
+    font-size: 1.953125vw;
+    height: 6.5104166667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .dropDownHeader {
+    padding: 4.1666666667vw 5.5555555556vw;
+    height: 13.8888888889vw;
+    font-size: 3.8888888889vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 992px) {
+  .dropDownHeader {
+    transition: none;
+  }
+}
+.dropDownHeader:focus, .dropDownHeader:focus-visible {
+  outline: none;
+  border-color: #8a2be2;
+}
+.dropDownHeader:focus span::before, .dropDownHeader:focus-visible span::before {
+  color: #caa5ec;
+}
+@media (max-width: 992px) {
+  .dropDownHeader:focus span::before, .dropDownHeader:focus-visible span::before {
+    color: #263238;
+  }
+}
+
+.dropDownHeaderContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-right: 48px;
+}
+@media screen and (max-width: 1920px) {
+  .dropDownHeaderContent {
+    padding-right: 2.5vw;
+  }
+}
+.dropDownHeaderContent span {
+  margin-top: 5px;
+}
+@media screen and (max-width: 1920px) {
+  .dropDownHeaderContent span {
+    margin-top: 0.2604166667vw;
+  }
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  margin-right: 3px;
+  transition: 0.3s;
+  transform: translateY(-50%) rotate(0);
+  margin-left: auto;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  display: block;
+  transform-origin: center;
+}
+.arrow.active {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.arrow svg {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1920px) {
+  .arrow {
+    width: 1.25vw;
+    height: 1.25vw;
+    margin-right: 0.15625vw;
+    right: 1.0416666667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .arrow {
+    width: 1.8229166667vw;
+    height: 1.8229166667vw;
+    margin-right: 2.6041666667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .arrow {
+    height: 3.8888888889vw;
+    width: 3.8888888889vw;
+    margin-right: 5.5555555556vw;
+  }
+}/*# sourceMappingURL=style.module.css.map */

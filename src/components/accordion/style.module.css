@@ -1,0 +1,267 @@
+.accord {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: 300ms ease;
+}
+.accord__row {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 30px;
+  transition: 300ms ease;
+  border-bottom: 1px solid #909090;
+  cursor: pointer;
+}
+.accord__row ::-moz-selection {
+  background: transparent;
+}
+.accord__row ::selection {
+  background: transparent;
+}
+@media screen and (min-width: 1024px) {
+  .accord__row:hover .accord__arrow svg {
+    transform: rotate(0);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+  .accord__row:hover .accord__arrow svg {
+    transform: rotate(-135deg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .accord__row:hover .accord__arrow svg path {
+    stroke: #ed6616;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+  .accord__row:hover .accord__arrow svg path {
+    stroke: #000000;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .accord__row:hover .accord__label {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .accord__row {
+    max-width: 62.5vw;
+    padding: 2.0833333333vw 1.5625vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .accord__row {
+    max-width: 100%;
+    padding: 6.1197916667vw 3.90625vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .accord__row {
+    padding: 11.1111111111vw 8.3333333333vw;
+  }
+}
+.accord__label {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 140%;
+  color: #242424;
+  width: 38.3333333333%;
+  margin-right: 2.5%;
+  opacity: 0.77;
+}
+@media screen and (max-width: 1920px) {
+  .accord__label {
+    font-size: 1.4583333333vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .accord__label {
+    font-size: 2.34375vw;
+    width: auto;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .accord__label {
+    width: 80%;
+    font-size: 4.4444444444vw;
+  }
+}
+.accord__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #242424;
+  opacity: 0.8;
+  width: 47.5%;
+  margin-right: 2.5%;
+  display: none;
+}
+@media screen and (max-width: 1920px) {
+  .accord__description {
+    font-size: 0.9375vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .accord__description {
+    font-size: 1.8229166667vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .accord__description {
+    width: 100%;
+    font-size: 3.8888888889vw;
+    margin-top: 5.5555555556vw;
+  }
+}
+.accord__arrow {
+  margin-right: 2.5%;
+  display: flex;
+  align-items: flex-end;
+}
+.accord__arrow svg {
+  transition: 300ms ease;
+  transform: rotate(-45deg);
+}
+@media screen and (max-width: 1920px) {
+  .accord__arrow svg {
+    width: 1.09375vw;
+    height: 1.09375vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .accord__arrow svg {
+    transform: rotate(0);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 2.734375vw;
+    height: 2.734375vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .accord__arrow svg {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .accord__arrow svg path {
+    stroke: #008891;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .accord__arrow {
+    position: relative;
+  }
+}
+.accord .image_block {
+  max-width: calc(100% - 1240px);
+  height: 100%;
+  width: 100%;
+  transition: 300ms ease;
+  transform: scale(0);
+  transform-origin: center;
+  padding-left: 40px;
+}
+.accord .image_block img {
+  position: absolute;
+}
+@media screen and (max-width: 1920px) {
+  .accord .image_block {
+    max-width: calc(100% - 64.5833333333vw);
+    padding-left: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .accord .image_block {
+    display: none;
+  }
+}
+
+.active {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.active .image_block {
+  transform: scale(1);
+}
+.active .image_block img {
+  position: relative;
+  max-height: 230px;
+}
+@media screen and (max-width: 1920px) {
+  .active .image_block img {
+    max-height: 11.9791666667vw;
+  }
+}
+.active .accord__row {
+  padding: 20px 30px;
+  border: 0;
+  box-shadow: 0px 4px 20px rgba(10, 69, 103, 0.2);
+}
+@media screen and (max-width: 1920px) {
+  .active .accord__row {
+    padding: 1.0416666667vw 1.5625vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .active .accord__row {
+    padding: 7.8125vw 4.6875vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .active .accord__row {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 11.1111111111vw 8.3333333333vw;
+    box-shadow: unset;
+  }
+}
+.active .accord__description {
+  display: unset;
+}
+.active .accord__label {
+  opacity: 1;
+}
+@media screen and (max-width: 425px) {
+  .active .accord__label {
+    width: 100%;
+  }
+}
+.active .accord__arrow svg {
+  transform: rotate(0);
+}
+.active .accord__arrow svg path {
+  stroke: #ed6616;
+}
+@media screen and (max-width: 1024px) {
+  .active .accord__arrow svg path {
+    stroke: #000000;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .active .accord__arrow svg {
+    transform: rotate(-135deg);
+  }
+}
+@media screen and (max-width: 1920px) {
+  .active {
+    margin-top: 2.0833333333vw;
+    margin-bottom: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) {
+  .active {
+    margin-top: 5.2083333333vw;
+    margin-bottom: 5.2083333333vw;
+  }
+}
+@media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
+  .active {
+    margin-top: 5.5555555556vw;
+    margin-bottom: 5.5555555556vw;
+  }
+}/*# sourceMappingURL=style.module.css.map */

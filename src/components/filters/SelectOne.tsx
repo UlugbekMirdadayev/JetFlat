@@ -57,25 +57,7 @@ export const SelectOne = () => {
   };
 
   const onHandleRooms = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    const newRoomsList = roomsList.map((item) =>
-      item.name === name ? { ...item, checked: checked } : item
-    );
-
-    const key = newRoomsList.findIndex((i) => i.name === '1' && i.checked);
-
-    if (key == -1) {
-      const newRoomType = roomType.map((item) => {
-        return item.id === 1 ? { ...item, checked: false, disabled: true } : item;
-      });
-      setRoomType(newRoomType);
-    } else {
-      const newRoomType = roomType.map((item) => {
-        return item.id === 1 ? { ...item, disabled: false } : item;
-      });
-      setRoomType(newRoomType);
-    }
-    setRoomsList(newRoomsList);
+    return;
   };
 
   return (
@@ -102,6 +84,7 @@ export const SelectOne = () => {
                   type="checkbox"
                   checked={room.checked}
                   onChange={onHandleRooms}
+                  id={String(room.id)}
                 />
                 <span className={styles.room__item}>{room.name}</span>
               </label>

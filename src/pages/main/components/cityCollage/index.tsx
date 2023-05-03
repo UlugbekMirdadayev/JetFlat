@@ -4,9 +4,11 @@ import clsx from 'clsx';
 import { Button } from '../../../../components/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ReactComponent as ArrowIcon } from '../../../../assets/svg/arrow-right.svg';
+import { useNavigate } from 'react-router-dom';
 
 export const CityCollage = () => {
   const sliderRef = useRef<any>(null);
+  const navigate = useNavigate()
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current?.swiper.slidePrev();
@@ -74,7 +76,7 @@ export const CityCollage = () => {
                     <h3 className={styles.card__title}>{city.title}</h3>
                     <p className="heading__desc">{city.desc}</p>
                   </div>
-                  <div className={styles.card__img}>
+                  <div onClick={() => navigate("/search-result")} className={styles.card__img}>
                     <img src={city.image} alt="" />
                   </div>
                 </div>
@@ -87,7 +89,7 @@ export const CityCollage = () => {
                     <h3 className={styles.card__title}>{city.title}</h3>
                     <p className="heading__desc">{city.desc}</p>
                   </div>
-                  <div className={styles.card__img}>
+                  <div onClick={() => navigate("/search-result")} className={styles.card__img}>
                     <img src={city.image} alt="" />
                   </div>
                 </div>

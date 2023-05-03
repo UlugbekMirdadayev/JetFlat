@@ -31,14 +31,14 @@ export const ApartmentTypeSearch = () => {
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
                     <span>
-                      <Link to="/library/classes">Смотреть варианты</Link>
+                      <Link to="/search-result">Смотреть варианты</Link>
                     </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>
-                    <Link to="/library/classes">Смотреть варианты</Link>
+                    <Link to="/search-result">Смотреть варианты</Link>
                   </span>
                   <ArrowLinkIcon />
                 </div>
@@ -61,14 +61,14 @@ export const ApartmentTypeSearch = () => {
                   уютными балконами или лоджиями, изолированными комнатами и кухней.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
                     <span>
-                      <Link to="/library/classes">Смотреть варианты</Link>
+                      <Link to="/search-result">Смотреть варианты</Link>
                     </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>
-                    <Link to="/library/classes">Смотреть варианты</Link>
+                    <Link to="/search-result">Смотреть варианты</Link>
                   </span>
                   <ArrowLinkIcon />
                 </div>
@@ -93,14 +93,14 @@ export const ApartmentTypeSearch = () => {
                   классе жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
                     <span>
-                      <Link to="/library/classes">Смотреть варианты</Link>
+                      <Link to="/search-result">Смотреть варианты</Link>
                     </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>
-                    <Link to="/library/classes">Смотреть варианты</Link>
+                    <Link to="/search-result">Смотреть варианты</Link>
                   </span>
                   <ArrowLinkIcon />
                 </div>
@@ -122,14 +122,14 @@ export const ApartmentTypeSearch = () => {
                   Грамотно продуманные планировки квартир, с небольшими холлами и коридорами.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
                     <span>
-                      <Link to="/library/classes">Смотреть варианты</Link>
+                      <Link to="/search-result">Смотреть варианты</Link>
                     </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>
-                    <Link to="/library/classes">Смотреть варианты</Link>
+                    <Link to="/search-result">Смотреть варианты</Link>
                   </span>
                   <ArrowLinkIcon />
                 </div>
@@ -153,14 +153,14 @@ export const ApartmentTypeSearch = () => {
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
                     <span>
-                      <Link to="/library/classes">Смотреть варианты</Link>
+                      <Link to="/search-result">Смотреть варианты</Link>
                     </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>
-                    <Link to="/library/classes">Смотреть варианты</Link>
+                    <Link to="/search-result">Смотреть варианты</Link>
                   </span>
                   <ArrowLinkIcon />
                 </div>
@@ -184,14 +184,14 @@ export const ApartmentTypeSearch = () => {
                   жилья, как правило, во всех квартирах один санузел, часто совмещённый.
                   <span className={clsx([styles.box__link, styles.box__link_md])}>
                     <span>
-                      <Link to="/library/classes">Смотреть варианты</Link>
+                      <Link to="/search-result">Смотреть варианты</Link>
                     </span>
                     <ArrowLinkIcon />
                   </span>
                 </p>
                 <div className={styles.box__link}>
                   <span>
-                    <Link to="/library/classes">Смотреть варианты</Link>
+                    <Link to="/search-result">Смотреть варианты</Link>
                   </span>
                   <ArrowLinkIcon />
                 </div>

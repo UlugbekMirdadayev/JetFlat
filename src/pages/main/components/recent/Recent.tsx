@@ -38,7 +38,7 @@ export const Recent = () => {
             className="mySwiper">
             {[1, 2, 3, 4, 5, 6].map((_, key) => (
               <SwiperSlide key={key} className={styles.slide}>
-                <Link to={'/'} className={styles.card}>
+                <Link to={'/residential-estates/0.'} className={styles.card}>
                   <div className={styles.card__inner}>
                     <img src={image} className={styles.card__img} alt="" />
                     <div className={styles.card__info}>

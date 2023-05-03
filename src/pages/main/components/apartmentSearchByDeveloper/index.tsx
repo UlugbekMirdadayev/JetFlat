@@ -8,7 +8,7 @@ import { ReactComponent as GolosIcon } from '../../../../assets/svg/golos.svg';
 import { ReactComponent as PickIcon } from '../../../../assets/svg/pick.svg';
 import { Button } from '../../../../components/button';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const brands = [
   { id: 0, brand: Gk7Icon },
@@ -30,6 +30,7 @@ const brands = [
 
 export const ApartmentSearchByDeveloper = () => {
   const [selectedIbdex, setSelectedIndex] = useState(0);
+  const navigate = useNavigate();
   return (
     <section className="apartment">
       <div className="container">
@@ -53,7 +54,7 @@ export const ApartmentSearchByDeveloper = () => {
       <div className="container container--mod">
         <div className={styles.list}>
           {brands.map(({ id, brand: Brand }) => (
-            <div key={id} className={styles.box}>
+            <div key={id} className={styles.box} onClick={() => navigate('/search-result')}>
               <Brand />
             </div>
           ))}

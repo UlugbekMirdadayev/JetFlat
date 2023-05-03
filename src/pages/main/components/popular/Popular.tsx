@@ -35,7 +35,7 @@ export const Popular = ({ title, description, bigLayout = true }: any) => {
             <div className={styles.list}>
               {bigLayout && (
                 <>
-                  <Link to={'/residential-estates'} className={clsx(styles.card, styles['card--big'])}>
+                  <Link to={'/residential-estates/0'} className={clsx(styles.card, styles['card--big'])}>
                     <div className={styles['card--big-half']}>
                       <div className={clsx(styles.card__info, styles['card__info--big'])}>
                         <h4 className={clsx(styles.card__title, 'cWhite')}>Repin Towers</h4>

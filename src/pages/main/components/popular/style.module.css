@@ -103,7 +103,7 @@
 
 @media screen and (max-width: 425px) {
   .slide {
-    max-width: 88.8888888889vw;
+    max-width: 66.6666666667vw;
   }
 }
 
@@ -147,7 +147,7 @@
 }
 @media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
   .card__img {
-    height: 55.5555555556vw;
+    height: 42.6666666667vw;
   }
 }
 .card--big {
@@ -202,9 +202,9 @@
   .card__ship {
     top: 5.5555555556vw;
     right: 5.5555555556vw;
-    font-size: 3.8888888889vw;
-    width: 37.2222222222vw;
-    height: 13.8888888889vw;
+    font-size: 3.2vw;
+    width: 29.3333333333vw;
+    height: 8.8vw;
   }
 }
 .card__info {
@@ -257,7 +257,7 @@
 }
 @media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
   .card__title {
-    font-size: 5vw;
+    font-size: 4.2666666667vw;
     margin-bottom: 2.2222222222vw;
   }
 }
@@ -281,7 +281,7 @@
 }
 @media screen and (max-width: 1920px) and (max-width: 1024px) and (max-width: 425px) {
   .card__desc {
-    font-size: 3.8888888889vw;
+    font-size: 3.2vw;
     margin-bottom: 2.2222222222vw;
   }
 }

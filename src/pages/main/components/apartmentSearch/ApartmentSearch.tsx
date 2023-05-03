@@ -12,9 +12,10 @@ import ap2 from '../../../../assets/image/ap2.jpg';
 import ap3 from '../../../../assets/image/ap3.jpg';
 import ap4 from '../../../../assets/image/ap4.jpg';
 import { ReactComponent as ArrowIcon } from '../../../../assets/svg/arrow-right.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const images = [ap1, ap2, ap3, ap4, ap1, ap2];
 export const ApartmentSearch = () => {
+  const navigate = useNavigate();
   const [selectedIbdex, setSelectedIndex] = useState(0);
   const sliderRef = useRef<any>(null);
 
@@ -71,7 +72,7 @@ export const ApartmentSearch = () => {
             className="mySwiper">
             {[1, 2, 3, 4, 5, 6].map((_, key) => (
               <SwiperSlide key={key} className={styles.slide}>
-                <div className={styles.card}>
+                <div onClick={() => navigate('/search-result')} className={styles.card}>
                   <div className={styles.card__inner}>
                     <div className={styles.card__img}>
                       <span className={clsx('ship', styles.card__ship)}>32 ЖК</span>

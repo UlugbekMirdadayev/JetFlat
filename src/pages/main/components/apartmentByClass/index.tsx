@@ -4,9 +4,10 @@ import ap1 from '../../../../assets/image/ap1.jpg';
 import ap2 from '../../../../assets/image/ap2.jpg';
 import ap3 from '../../../../assets/image/ap3.jpg';
 import ap4 from '../../../../assets/image/ap4.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const ApartmentByClass = () => {
+  const navigate = useNavigate();
   return (
     <section className={styles.apartment}>
       <div className="container">
@@ -19,7 +20,7 @@ export const ApartmentByClass = () => {
         </div>
 
         <div className={styles.list}>
-          <div className={styles.card}>
+          <div onClick={() => navigate('/search-result')} className={styles.card}>
             <div className={styles.card__inner}>
               <div className={styles.card__img}>
                 <span className={clsx('ship ship--gray', styles.card__ship)}>
@@ -35,7 +36,7 @@ export const ApartmentByClass = () => {
             <div className={clsx([styles.border_y, 'border__topBorder'])} />
             <div className={clsx([styles.border_y, 'border__bottomBorder'])} />
           </div>
-          <div className={styles.card}>
+          <div onClick={() => navigate('/search-result')} className={styles.card}>
             <div className={clsx(styles.card__inner, styles.green)}>
               <div className={styles.card__img}>
                 <span className={clsx('ship ship--green', styles.card__ship)}>
@@ -51,7 +52,7 @@ export const ApartmentByClass = () => {
             <div className={clsx([styles.border_y, 'border__topBorder'])} />
             <div className={clsx([styles.border_y, 'border__bottomBorder'])} />
           </div>
-          <div className={styles.card}>
+          <div onClick={() => navigate('/search-result')} className={styles.card}>
             <div className={clsx(styles.card__inner, styles.teal)}>
               <div className={styles.card__img}>
                 <span className={clsx('ship ship--teal', styles.card__ship)}>
@@ -67,7 +68,7 @@ export const ApartmentByClass = () => {
             <div className={clsx([styles.border_y, 'border__topBorder'])} />
             <div className={clsx([styles.border_y, 'border__bottomBorder'])} />
           </div>
-          <div className={styles.card}>
+          <div onClick={() => navigate('/search-result')} className={styles.card}>
             <div className={clsx(styles.card__inner, styles.purple)}>
               <div className={styles.card__img}>
                 <span className={clsx('ship ship--purple', styles.card__ship)}>

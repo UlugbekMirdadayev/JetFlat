@@ -10,6 +10,7 @@ import { Booking } from '../pages/booking';
 import { Classes, Comforts, Library, Regions } from '../pages/library';
 import { Developers } from '../pages/developers';
 import { Estates } from '../pages/estates';
+import { AllDistrict } from '../pages/allDistrict';
 
 export const routes = [
   { path: '/', element: Main },
@@ -25,7 +26,7 @@ export const routes = [
   { path: '/library', element: Library },
   { path: '/library/classes', element: Classes },
   { path: '/library/classes/comforts', element: Comforts },
-  { path: '/districts', element: Regions },
+  { path: '/districts', element: AllDistrict },
   { path: '/districts/:id', element: Regions },
   { path: '/developers', element: Developers }
 ];

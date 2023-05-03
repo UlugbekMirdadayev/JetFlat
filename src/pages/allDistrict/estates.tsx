@@ -1,16 +1,15 @@
 import { FC, useState, useMemo } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card } from '../../components/card';
 import { HistoryLink } from '../../components/historyLink';
 import { Select } from '../../components/select/Select';
 import Popup from '../apartmentSelect/popup';
 import s from './style.module.scss';
-import { ReactComponent as Location } from '../../assets/svg/location-with-border.svg';
+
 
 type Props = {};
 
 export const AllDistrict: FC<Props> = () => {
-  const navigate = useNavigate();
   const [selectedIbdex, setSelectedIndex] = useState<number>(0);
   const [arrayLength, setArrayLength] = useState<number>(8);
   const cardProps = {

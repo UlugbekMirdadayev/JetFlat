@@ -50,14 +50,32 @@ export const SelectOne = () => {
   const onHandleSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
     const newRoomType = roomType.map((item) => {
-      return item.label === name ? { ...item, checked: checked } : item;
+      return item.label === name ? { ...item, checked: checked } : { ...item, checked: false };
     });
 
     setRoomType(newRoomType);
   };
 
   const onHandleRooms = (e: React.ChangeEvent<HTMLInputElement>) => {
-    return;
+    const { name, checked } = e.target;
+    const newRoomsList = roomsList.map((item) =>
+      item.name === name ? { ...item, checked: checked } : { ...item, checked: false }
+    );
+
+    const key = newRoomsList.findIndex((i) => i.name === '1' && i.checked);
+
+    if (key == -1) {
+      const newRoomType = roomType.map((item) => {
+        return item.id === 1 ? { ...item, checked: false, disabled: true } : item;
+      });
+      setRoomType(newRoomType);
+    } else {
+      const newRoomType = roomType.map((item) => {
+        return item.id === 1 ? { ...item, disabled: false } : item;
+      });
+      setRoomType(newRoomType);
+    }
+    setRoomsList(newRoomsList);
   };
 
   return (

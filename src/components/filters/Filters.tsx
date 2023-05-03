@@ -6,8 +6,10 @@ import { SelectOne } from './SelectOne';
 import { SelectTwo } from './SelectTwo';
 import { ReactComponent as LocationIcon } from '../../assets/svg/location_primary.svg';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Filters = () => {
+  const [radio, setRadio] = useState<null | number>(null);
   const navigate = useNavigate();
   return (
     <div className={styles.filters}>
@@ -27,10 +29,10 @@ export const Filters = () => {
       </div>
       <div className={styles.filters__bottom}>
         <div className={styles.filters__bottom}>
-          <Checkbox>
+          <Checkbox onChange={() => setRadio(radio === 0 ? null : 0)} checked={radio === 0}>
             <p className="ml10 f18 mr40">Готовые квартиры</p>
           </Checkbox>
-          <Checkbox>
+          <Checkbox onChange={() => setRadio(radio === 1 ? null : 1)} checked={radio === 1}>
             <p className="ml10 f18 mr40">Заселение до года</p>
           </Checkbox>
         </div>

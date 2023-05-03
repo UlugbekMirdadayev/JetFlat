@@ -81,9 +81,12 @@
   display: block;
   height: 260px;
   @media screen and (max-width: 1920px) {
-    width: 21.354166666666668vw;
+    width: 400px;
     height: 13.541666666666666vw;
     padding: 2.0833333333333335vw;
+    @media screen and (max-width: 1600px) {
+      width: calc((100vw - 88px) / 4);
+    }
     @media screen and (max-width: 1024px) {
       width: 48.567708333333336vw;
       height: 31.770833333333332vw;

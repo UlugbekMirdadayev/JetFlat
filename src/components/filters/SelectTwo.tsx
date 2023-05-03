@@ -76,34 +76,36 @@ export const SelectTwo = () => {
               </div>
             ))}
           </div>
-          <div className={styles.bankList}>
-            <Scrollbars
-              renderView={({ style, ...props }) => (
-                <div style={{ ...style, overflowX: 'auto', marginBottom: '0px' }} {...props} />
-              )}
-              renderThumbVertical={({ style, ...props }) => (
-                <div {...style} className="thumbVertical" style={{ width: '4px' }} {...props} />
-              )}
-              thumbSize={15}
-              renderTrackVertical={(props) => <div className="trackVertical" {...props} />}
-              style={{ height: 162, right: -5 }}>
-              <div>
-                {roomType.map((item) => (
-                  <div key={item.id} className={styles.bankList__item}>
-                    <Checkbox
-                      disabled={item.disabled}
-                      name={item.label}
-                      checked={item.checked}
-                      onChange={onHandleSelect}>
-                      <span className={clsx('ml10 f18', item.disabled && 'cTealLight')}>
-                        {item.label}
-                      </span>
-                    </Checkbox>
-                  </div>
-                ))}
-              </div>
-            </Scrollbars>
-          </div>
+          {activeRadio === 2 && (
+            <div className={styles.bankList}>
+              <Scrollbars
+                renderView={({ style, ...props }) => (
+                  <div style={{ ...style, overflowX: 'auto', marginBottom: '0px' }} {...props} />
+                )}
+                renderThumbVertical={({ style, ...props }) => (
+                  <div {...style} className="thumbVertical" style={{ width: '4px' }} {...props} />
+                )}
+                thumbSize={15}
+                renderTrackVertical={(props) => <div className="trackVertical" {...props} />}
+                style={{ height: 162, right: -5 }}>
+                <div>
+                  {roomType.map((item) => (
+                    <div key={item.id} className={styles.bankList__item}>
+                      <Checkbox
+                        disabled={item.disabled}
+                        name={item.label}
+                        checked={item.checked}
+                        onChange={onHandleSelect}>
+                        <span className={clsx('ml10 f18', item.disabled && 'cTealLight')}>
+                          {item.label}
+                        </span>
+                      </Checkbox>
+                    </div>
+                  ))}
+                </div>
+              </Scrollbars>
+            </div>
+          )}
         </div>
       )}
     </div>

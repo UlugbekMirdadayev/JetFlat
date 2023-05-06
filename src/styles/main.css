@@ -70,6 +70,11 @@ img {
   border-width: 0px 2px 0px 2px;
   width: 8px;
 }
+@media screen and (max-width: 768px) {
+  .wrapper::-webkit-scrollbar {
+    width: 0px;
+  }
+}
 .wrapper::-webkit-scrollbar-thumb {
   background: #74c6c9;
   border-radius: 20px;

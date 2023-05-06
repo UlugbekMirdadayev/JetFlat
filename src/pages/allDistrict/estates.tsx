@@ -46,7 +46,7 @@ export const AllDistrict: FC<Props> = () => {
         <HistoryLink
           links={[
             { name: 'Екатеринбург', link: '/districts/Екатеринбург' },
-            { name: 'Жилые комплексы', link: `/residential-estates` }
+            { name: 'Районы', link: `/residential-estates` }
           ]}
         />
         <div className={s.container}>

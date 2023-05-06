@@ -19,7 +19,7 @@ import SalePopup from './salePopup';
 import { Radio } from '../../components/radio';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Characteristics from './characteristics';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const checkboxes = [
   {
@@ -104,6 +104,7 @@ const checkboxes = [
   }
 ];
 export const ResultSearch = () => {
+  const navigate = useNavigate();
   const [index, setIndex] = useState<number>(0);
   const [openFilters, setOpenFilters] = useState<boolean>(false);
   const [openFilter, setOpenFilter] = useState<boolean>(false);
@@ -262,14 +263,16 @@ export const ResultSearch = () => {
           </div>
           <div className="infos_card">
             <div className="row_result">
-              <div className="title_">Зеленый остров</div>
-              <div className="row_result ismobile_accord">
+              <div onClick={() => navigate('/residential-estates/1')} className="title_">
+                Зеленый остров
+              </div>
+              <div onClick={() => setOpenCommentModal(true)} className="row_result ismobile_accord">
                 <button className="like_btn">
                   <Like />
                 </button>
                 <div className="col_text">
                   <h3>8,5</h3>
-                  <p onClick={() => setOpenCommentModal(true)}>41 отзыв</p>
+                  <p>41 отзыв</p>
                 </div>
                 <button className="chart_icon">
                   <ChartIcon />
@@ -307,14 +310,21 @@ export const ResultSearch = () => {
               </p>
               <div className="col_price_">
                 <p>52 м2, дом 1, 2 этаж</p>
-                <div className="price_">
+                <div
+                  onClick={() => {
+                    setOpenCharact(!openCharact);
+                    setOpenMap(false);
+                    setOpenFilter(false);
+                    setOpenSort(false);
+                  }}
+                  className="price_ __price">
                   <span>4 985 590₽</span> <b>4 785 590₽</b>
                 </div>
               </div>
             </div>
 
             <div className="row_result align_end mb15 mobile_none">
-              <Button className="btn_outlined" variant="outlined">
+              <Button onClick={() => navigate("/residential-estates/1/choice-flat")} className="btn_outlined" variant="outlined">
                 <span>Посмотреть квартиры</span>
               </Button>
               <div className="col_price_ text_right f18">
@@ -346,10 +356,11 @@ export const ResultSearch = () => {
               variant={'outlined'}
               className={openCharact ? 'active' : ''}
               onClick={() => {
-                setOpenCharact(!openCharact);
-                setOpenMap(false);
-                setOpenFilter(false);
-                setOpenSort(false);
+                // setOpenCharact(!openCharact);
+                // setOpenMap(false);
+                // setOpenFilter(false);
+                // setOpenSort(false);
+                navigate('/districts/0');
               }}>
               <span className="inner_btn text_trans_none">Характеристика района</span>
             </Button>
@@ -468,7 +479,7 @@ export const ResultSearch = () => {
                         <Button>
                           <Minus />
                         </Button>
-                        <span>от</span>
+                        <span contentEditable>от</span>
                         <Button>
                           <Plus />
                         </Button>
@@ -477,7 +488,7 @@ export const ResultSearch = () => {
                         <Button>
                           <Minus />
                         </Button>
-                        <span>123 000 000</span>
+                        <span contentEditable>123 000 000</span>
                         <Button>
                           <Plus />
                         </Button>
